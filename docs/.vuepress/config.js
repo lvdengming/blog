@@ -6,21 +6,20 @@
 module.exports = {
   title: 'lvdengming',
   description: 'A blog website of lvdengming',
-  base: '/blog/',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }],
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+  ],
   port: 8080,
   theme: 'reco',
   themeConfig: {
     type: 'blog',
     author: 'lvdengming',
-    authorAvatar: '/logo.png',
-    logo: '/logo.png',
+    authorAvatar: '/assets/img/logo.png',
+    logo: '/assets/img/logo.png',
     sidebar: 'auto',
     lastUpdated: 'Last Updated',
     noFoundPageByTencent: false,
-    head: [
-      ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-      ['link', { rel: 'icon', href: '/logo.png' }]
-    ],
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
