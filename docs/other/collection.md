@@ -1,10 +1,17 @@
-# 我的收藏
+---
+title: 个人收藏
+date: 2022-12-12
+sidebar: 'auto'
+categories:
+ - 其它
+---
 
-## 收藏链接
+## 链接收藏
 
-1. 前端知识文档==超全==：https://github.com/tsejx/tsejx
-2. 前端练手项目：https://github.com/fengxianqi/front_end-demos
++ 前端知识文档：https://github.com/tsejx/tsejx
++ 前端练手项目：https://github.com/fengxianqi/front_end-demos
++ AI 聊天：https://openai.com/blog/chatgpt/
 
-## 收藏工具
+## 工具收藏
 
-1. Windows 命令行工具：[Windows Terminal](https://github.com/microsoft/terminal)
++ Windows 命令行工具：[Windows Terminal](https://github.com/microsoft/terminal)
