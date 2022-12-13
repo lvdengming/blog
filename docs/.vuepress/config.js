@@ -43,7 +43,7 @@ module.exports = {
         title: '西瓜皮儿',
         desc: 'Enjoy your grow up!',
         logo: 'https://coderhdy.com/assets/img/snapshot.png',
-        link: 'coderhdy.com'
+        link: 'https://coderhdy.com'
       },
       {
         title: 'vuepress-theme-reco',
