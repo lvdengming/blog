@@ -1,10 +1,10 @@
 ---
 title: '小程序学习笔记'
-publish: true
 date: 2022-12-11
 sidebar: 'auto'
 categories:
 - 前端
+- 学习笔记
 tags:
 - 小程序
 ---
@@ -255,4 +255,3 @@ Page({
     }
 });
 ```
-
