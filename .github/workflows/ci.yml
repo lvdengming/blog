@@ -13,5 +13,6 @@ jobs:
         with:
           node-version: '16'
       - run: npm i
-      - run: cat deploy.sh
+      - run: git config --global user.email lvdengming@foxmail.com
+      - run: git config --global user.name lvdengming
       - run: sh deploy.sh
