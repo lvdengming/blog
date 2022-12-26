@@ -15,4 +15,5 @@ jobs:
       - run: npm i
       - run: git config --global user.email lvdengming@foxmail.com
       - run: git config --global user.name lvdengming
+      - run: echo ${{ secrets.GIT_PRIVATE_KEY }} >> cat ~/.ssh/id_rsa
       - run: sh deploy.sh
