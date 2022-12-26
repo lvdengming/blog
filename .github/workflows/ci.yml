@@ -13,6 +13,5 @@ jobs:
         with:
           node-version: '16'
       - run: npm i
-      - run: pwd
-      - run: ls
-      - run: deploy.sh
+      - run: cat deploy.sh
+      - run: sh deploy.sh
