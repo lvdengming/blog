@@ -1,9 +1,11 @@
 ---
-title: UI 设计
+title: 设计收藏
 date: 2023-02-13
 sidebar: 'auto'
 categories:
-- 其它
+- 设计
+tags:
+- 收藏
 ---
 
 ## 颜色

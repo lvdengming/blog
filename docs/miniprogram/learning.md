@@ -1,12 +1,11 @@
 ---
-title: '小程序学习笔记'
+title: '小程序'
 date: 2022-12-11
 sidebar: 'auto'
 categories:
 - 前端
 tags:
 - 小程序
-- 学习笔记
 ---
 
 ## 1.初识小程序

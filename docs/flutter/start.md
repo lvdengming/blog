@@ -1,12 +1,11 @@
 ---
-title: Flutter 学习笔记
+title: Flutter 环境搭建
 date: 2022-12-15
 sidebar: 'auto'
 categories:
 - 前端
 tags:
 - flutter
-- 学习笔记
 ---
 
 ## 1. 相关链接
