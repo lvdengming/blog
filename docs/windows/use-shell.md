@@ -37,7 +37,7 @@ tags:
 "terminal.integrated.defaultProfile.windows": "Git-Bash"
 ```
 
-> 注意：path 处填写电脑上 Git 对应的安装位置，对应的 `.exe` 是 bin 目录下的才行
+> 注意：path 处填写电脑上 Git 对应的安装位置，对应的 `.exe` 是 bin 目录下的 `bash.exe`
 
 4. 重启 VSCode
 
