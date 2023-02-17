@@ -44,3 +44,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 console.log(process.env.VERSION); // 1.0.11.1
 ```
+
+## xlsx
+
+支持多种环境解析 excel 表格的模块
