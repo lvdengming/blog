@@ -38,9 +38,7 @@ npm set registry https://registry.npmmirror.com
 
 > 两者效果相同
 
-### 常见配置
-
-#### [registry](https://docs.npmjs.com/cli/v9/using-npm/config#registry)
+### registry
 
 设置模块安装来源，在国内使用 npm 来源速度较慢或不能使用，需要设置国内镜像，常见镜像有：
 
@@ -48,7 +46,7 @@ npm set registry https://registry.npmmirror.com
 2. [淘宝镜像](https://npmmirror.com/)：`https://registry.npmmirror.com/`
 3. ……
 
-#### [prefix](https://docs.npmjs.com/cli/v9/using-npm/config#prefix)
+### prefix
 
 npm 全局模块默认安装位置，默认位置如下：
 
@@ -72,7 +70,7 @@ source ~/.bashrc
 
 > Windows 也可以使用 shell 命令行终端，可以参考 [https://lvdengming.com/windows/use-shell.html](https://lvdengming.com/windows/use-shell.html) 进行配置
 
-### [cache](https://docs.npmjs.com/cli/v9/using-npm/config#registry)
+### cache
 
 npm 缓存目录存放位置，默认位置如下：
 
