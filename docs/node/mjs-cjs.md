@@ -18,5 +18,5 @@ categories:
 
 ## 更多
 
-1、官方文档：[https://nodejs.org/api/modules.html#enabling](https://nodejs.org/api/modules.html#enabling)
-2、阮一峰的文章：[https://www.ruanyifeng.com/blog/2020/08/how-nodejs-use-es6-module.html](https://www.ruanyifeng.com/blog/2020/08/how-nodejs-use-es6-module.html)
+1. 官方文档：[https://nodejs.org/api/modules.html#enabling](https://nodejs.org/api/modules.html#enabling)
+2. 阮一峰的文章：[https://www.ruanyifeng.com/blog/2020/08/how-nodejs-use-es6-module.html](https://www.ruanyifeng.com/blog/2020/08/how-nodejs-use-es6-module.html)
