@@ -41,9 +41,9 @@ tags:
 
 4. 重启 VSCode
 
-更过 VSCode 配置，请参考：[https://code.visualstudio.com/docs/terminal/basics](https://code.visualstudio.com/docs/terminal/basics)
+更多 VSCode 配置，请参考：[https://code.visualstudio.com/docs/terminal/basics](https://code.visualstudio.com/docs/terminal/basics)
 
-最后，我的全部个人配置如下：
+我的配置如下：
 
 ```json
 {
@@ -61,3 +61,25 @@ tags:
     "terminal.integrated.defaultProfile.windows": "Git-Bash"
 }
 ```
+
+5. 实现效果
+
+![image.png](https://s2.loli.net/2023/02/19/51C9W6muUcasqfS.png)
+
+## 修改用户名和计算机名
+
+从**实现效果**中可以看到 `ming@REN7000K-261AB` 这样一个字符串，这是由用户名和计算机名称组成的，如果其中存在中文显示会乱码，修改方式如下：
+
+1. 修改用户名（使用本地账户登录）
+
+以 win11 为例，通过 `设置 -> 账户 -> 使用本地账号登录` 路径进行修改，如图：
+
+![image.png](https://s2.loli.net/2023/02/19/dAJHtOTG8Ig5Vyc.png)
+
+> 此处我已进行修改，所以看不到 “使用本地账户登录” 的选项
+
+2. 修改计算机名
+
+以 win11 为例，通过 `设置 -> 系统 -> 重命名进行设置` 路径进行修改，如图：
+
+![image.png](https://s2.loli.net/2023/02/19/VkUxpb85QDTymEi.png)
