@@ -4,7 +4,7 @@
  */
 
 module.exports = {
-  title: 'lvdengming',
+  title: 'ming',
   description: 'A blog website of lvdengming',
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],

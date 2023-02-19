@@ -1,5 +1,5 @@
 ---
-title: npm 相关
+title: npm
 date: 2023-02-17
 sidebar: 'auto'
 categories:
