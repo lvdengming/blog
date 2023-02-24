@@ -15,8 +15,8 @@ module.exports = {
   themeConfig: {
     type: 'blog',
     author: 'lvdengming',
-    authorAvatar: '/assets/img/logo.png',
-    logo: '/assets/img/logo.png',
+    authorAvatar: 'https://sm.ms/image/dafqtRsmwOzcAF6',
+    logo: 'https://sm.ms/image/dafqtRsmwOzcAF6',
     sidebar: 'auto',
     lastUpdated: 'Last Updated',
     noFoundPageByTencent: false,
@@ -42,13 +42,13 @@ module.exports = {
       {
         title: '西瓜皮儿',
         desc: 'Enjoy your grow up!',
-        logo: 'https://coderhdy.com/assets/img/snapshot.png',
+        logo: 'https://sm.ms/image/VXyGOH6KRoxkbqt',
         link: 'https://coderhdy.com'
       },
       {
         title: 'vuepress-theme-reco',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        logo: "https://sm.ms/image/cUPOgQq4G2i1oAS",
         link: 'https://vuepress-theme-reco.recoluan.com'
       },
       {
