@@ -1,7 +1,4 @@
-/**
- * @author lvdengming
- * @date 2022-12-05
- */
+const { ImgPath } = require('./constant');
 
 module.exports = {
   title: 'ming',
@@ -15,8 +12,8 @@ module.exports = {
   themeConfig: {
     type: 'blog',
     author: 'lvdengming',
-    authorAvatar: 'https://sm.ms/image/dafqtRsmwOzcAF6',
-    logo: 'https://sm.ms/image/dafqtRsmwOzcAF6',
+    authorAvatar: ImgPath.PROFILE,
+    logo: ImgPath.PROFILE,
     sidebar: 'auto',
     lastUpdated: 'Last Updated',
     noFoundPageByTencent: false,
@@ -42,13 +39,13 @@ module.exports = {
       {
         title: '西瓜皮儿',
         desc: 'Enjoy your grow up!',
-        logo: 'https://sm.ms/image/VXyGOH6KRoxkbqt',
+        logo: ImgPath.HDY,
         link: 'https://coderhdy.com'
       },
       {
         title: 'vuepress-theme-reco',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: "https://sm.ms/image/cUPOgQq4G2i1oAS",
+        logo: ImgPath.RECO,
         link: 'https://vuepress-theme-reco.recoluan.com'
       },
       {
