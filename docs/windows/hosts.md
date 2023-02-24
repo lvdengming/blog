@@ -16,6 +16,8 @@ tags:
 
 文件存放位置：`C:\Windows\System32\drivers\etc\hosts`
 
+> Mac 位于 `/etc/hosts`
+
 ```sh
 # 前者为 IP 地址，后者为域名
 127.0.0.1 baidu.com

@@ -17,3 +17,5 @@ tags:
 ## 工具收藏
 
 + Windows 命令行工具：[Windows Terminal](https://github.com/microsoft/terminal)
++ Windows/Mac 截图、钉图工具：[Snipaste](https://www.snipaste.com/)
++ Windows 录屏、屏幕标尺工具：[FastStone Capture](https://www.faststone.org/index.htm)
