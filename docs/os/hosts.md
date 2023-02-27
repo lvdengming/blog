@@ -3,7 +3,7 @@ title: hosts 文件 —— 在本地实现主机名与 IP 地址映射
 date: 2023-2-19
 sidebar: 'auto'
 categories:
-- windows
+- 操作系统
 tags:
 - 配置
 ---
