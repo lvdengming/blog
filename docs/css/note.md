@@ -50,7 +50,7 @@ tags:
 
 `top`、`right`、`bottom`、`left` 属性的简写，写法和 `margin` 类似
 
-## [display: grid;](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+## [display: grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 
 网格布局
 
