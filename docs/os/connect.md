@@ -4,6 +4,7 @@ date: 2023-02-27
 sidebar: 'auto'
 categories:
 - 操作系统
+- 服务搭建
 tags:
 - 配置
 ---
