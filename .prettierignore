@@ -1,7 +1,9 @@
 # project ignore
-node_modules
-dist
+**/git
+**/node_modules
+**/dist
 package-lock.json
+LICENSE
 
 # OS ignore
 .DS_Store

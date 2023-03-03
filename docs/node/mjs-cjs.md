@@ -3,7 +3,7 @@ title: Node 模块加载
 date: 2023-02-19
 sidebar: 'auto'
 categories:
-- node
+  - node
 ---
 
 ## 介绍

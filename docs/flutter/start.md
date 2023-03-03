@@ -3,21 +3,21 @@ title: Flutter 环境搭建
 date: 2022-12-15
 sidebar: 'auto'
 categories:
-- 前端
-- flutter
+  - 前端
+  - flutter
 tags:
-- 环境搭建
+  - 环境搭建
 ---
 
 ## 1. 相关链接
 
-+ github：[https://github.com/flutter/flutter](https://github.com/flutter/flutter)
-+ flutter 首页：[https://flutter.dev/](https://flutter.dev/)
-+ flutter 中文首页：[https://flutter.cn/](https://flutter.cn/)
-+ dart 首页：[https://dart.dev/](https://dart.dev/)
-+ 安装 SDK 以及配置开发环境：[https://flutter.cn/docs/get-started/install](https://flutter.cn/docs/get-started/install)
-+ 真机调试及打包：[https://www.jianshu.com/p/58a6e272a038](https://www.jianshu.com/p/58a6e272a038)
-+ Flutter 与 Web 语法对比：[https://flutter.cn/docs/get-started/flutter-for/web-devs](https://flutter.cn/docs/get-started/flutter-for/web-devs)
+- github：[https://github.com/flutter/flutter](https://github.com/flutter/flutter)
+- flutter 首页：[https://flutter.dev/](https://flutter.dev/)
+- flutter 中文首页：[https://flutter.cn/](https://flutter.cn/)
+- dart 首页：[https://dart.dev/](https://dart.dev/)
+- 安装 SDK 以及配置开发环境：[https://flutter.cn/docs/get-started/install](https://flutter.cn/docs/get-started/install)
+- 真机调试及打包：[https://www.jianshu.com/p/58a6e272a038](https://www.jianshu.com/p/58a6e272a038)
+- Flutter 与 Web 语法对比：[https://flutter.cn/docs/get-started/flutter-for/web-devs](https://flutter.cn/docs/get-started/flutter-for/web-devs)
 
 ## 2. 环境搭建
 
@@ -25,8 +25,8 @@ tags:
 
 从归档的压缩包下载 SDK，以 MacOS 为例：
 
-+ Intel：[https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.3.8-stable.zip](https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.3.8-stable.zip)
-+ Apple：[https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.3.8-stable.zip](https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.3.8-stable.zip)
+- Intel：[https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.3.8-stable.zip](https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_3.3.8-stable.zip)
+- Apple：[https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.3.8-stable.zip](https://storage.flutter-io.cn/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.3.8-stable.zip)
 
 通过 git 下载 SDK：
 

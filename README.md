@@ -1,6 +1,6 @@
 # Blog
 
-A personal blog project built with [VuePress](https://vuepress.vuejs.org/zh/)、[vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
+A personal blog project built with [VuePress](https://vuepress.vuejs.org/zh/), [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
 
 ## Create a blog
 
@@ -26,5 +26,5 @@ npm run format
 
 ## Contact me
 
-+ Email: lvdengming@foxmail.com
-+ Wechat: lvdengming0104
+- Email: lvdengming@foxmail.com
+- Wechat: lvdengming0104
