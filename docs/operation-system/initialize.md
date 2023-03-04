@@ -75,7 +75,7 @@ export PATH
 
 ## 安装 Git
 
-### 通过 `yum` 安装：
+### 通过 `yum` 安装
 
 ```sh
 # 安装
