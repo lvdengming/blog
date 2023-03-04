@@ -13,13 +13,13 @@ tags:
 
 官方文档：[https://github.com/nodejs/help/wiki/Installation](https://github.com/nodejs/help/wiki/Installation)
 
-### 下载包
+### 下载源码
 
 [Node.js](https://nodejs.org/zh-cn/) `v16.15.0` 下载地址：[https://nodejs.org/download/release/v16.15.0/](https://nodejs.org/download/release/v16.15.0/)
 
-在 linux 指定目录下执行 `wget https://nodejs.org/download/release/v16.15.0/node-v16.15.0-linux-x64.tar.xz` 命令下载包
+在 linux 指定目录下执行 `wget https://nodejs.org/download/release/v16.15.0/node-v16.15.0-linux-x64.tar.xz` 命令下载源码
 
-### 解压包
+### 解压
 
 解压安装脚本：
 
@@ -50,6 +50,8 @@ sudo tar -xJvf node-$VERSION-$DISTRO.tar.xz -C $LOCATION
 export PATH=/usr/local/lib/nodejs/node-v16.15.0-linux-x64/bin/:$PATH
 ```
 
+> 系统环境变量是在 `/etc/profile` 中定义的
+
 ### 扩展
 
 1. 本质上 `.bashrc` 也是一个 shell 脚本，会在打开终端时就执行
@@ -70,3 +72,71 @@ export PATH
 注意：需要通过 `chmod +x filename` 命令给目录下脚本文件添加可执行权限、删除文件后缀，最后重启终端
 
 输入脚本名称即可和 `node`、`npm`、`npx` 等一样，拥有自己的自定义命令!!!
+
+## 安装 Git
+
+### 通过 `yum` 安装：
+
+```sh
+# 安装
+yum install git
+
+# 卸载
+yum remove git
+```
+
+> 此方式安装 git 版本比较老
+
+### 通过源码安装
+
+linux 镜像：[https://mirrors.edge.kernel.org/pub/software/scm/git/](https://mirrors.edge.kernel.org/pub/software/scm/git/)
+
+windows 镜像：[https://registry.npmmirror.com/binary.html?path=git-for-windows/](https://registry.npmmirror.com/binary.html?path=git-for-windows/)
+
+通过以下脚本安装 git：
+
+```sh
+# 下载源码
+wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.36.1.tar.xz
+
+# 解压（可在末尾添加 -C path，解压到指定目录）
+sudo tar -xJvf git-2.36.1.tar.xz
+
+cd git-2.36.1
+
+# 编译
+make configure
+# 指定编译产物存放路径
+./configure --prefix=/usr/local/lib/git-2.36.1
+make prefix=/usr/local/lib/git-2.36.1
+make install
+```
+
+遇到的问题 & 解决方案：
+
+```sh
+# make /bin/sh: autoconf: command not found
+yum install autoconf
+
+# git-compat-util.h:1427:18: fatal error: zlib.h: No such file or directory
+yum install zlib-devel
+```
+
+在 `.bashrc` 中添加环境变量配置（内容紧接安装 Node.js）：
+
+```sh
+# Config environment variables
+PATH=/usr/local/lib/nodejs/node-v16.15.0-linux-x64/bin:$PATH
+PATH=/usr/local/lib/git-2.36.1/bin:$PATH
+export PATH
+```
+
+验证：
+
+```sh
+# 使修改立即生效
+source ~/.bashrc
+
+# 验证
+git --version
+```
