@@ -1,5 +1,5 @@
 ---
-title: 命令行
+title: 系统命令行
 date: 2023-03-04
 sidebar: 'auto'
 categories:

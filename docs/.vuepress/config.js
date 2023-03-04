@@ -20,8 +20,12 @@ module.exports = {
     author: 'lvdengming',
     authorAvatar: ImgPath.PROFILE,
     logo: ImgPath.PROFILE,
+    startYear: '2023',
+    startYear: '2023',
     sidebar: 'auto',
+    lastUpdated: '上次修改',
     lastUpdated: 'Last Updated',
+    lastUpdated: '上次修改',
     noFoundPageByTencent: false,
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
@@ -72,6 +76,6 @@ module.exports = {
     '@vuepress-reco/loading-page',
     '@vuepress-reco/comments',
     '@vuepress-reco/pagation',
-    '@vuepress-reco/kan-ban-niang',
+    '@vuepress/last-updated',
   ],
 };

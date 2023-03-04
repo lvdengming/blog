@@ -60,15 +60,13 @@ export PATH=/usr/local/lib/nodejs/node-v16.15.0-linux-x64/bin/:$PATH
 
 > `npm -> ../lib/node_modules/npm/bin/npm-cli.js` 表示文件重定向（JS 只要有 Node.js 环境也可以像 `/bin/bash` 一样作为一种终端类型）
 
-在[连接远程服务器](/operation-system/connect.html)章节提到的 `alias` 方式可以进一步升级，将连接脚本的目录在配置文件（`.bashrc`、`.zshrc` 等）中添加到环境变量中：
+在[连接远程服务器](/operation-system/connect.html#设置命令别名)章节提到的 `alias` 方式可以进一步升级，将连接脚本的目录在配置文件（`.bashrc`、`.zshrc` 等）中添加到环境变量中：
 
 ```sh
 PATH=directory_path:$PATH
 export PATH
 ```
 
-1. 通过 `chmod +x filename` 命令给脚本文件添加可执行权限
-2. 删除文件后缀
-3. 重启终端
+注意：需要通过 `chmod +x filename` 命令给目录下脚本文件添加可执行权限、删除文件后缀，最后重启终端
 
 输入脚本名称即可和 `node`、`npm`、`npx` 等一样，拥有自己的自定义命令!!!
