@@ -58,27 +58,6 @@ export PATH=/usr/local/lib/nodejs/node-v16.15.0-linux-x64/bin/:$PATH
 
 > 系统环境变量是在 `/etc/profile` 中定义的
 
-### 扩展
-
-1. 本质上 `.bashrc` 也是一个 shell 脚本，会在打开终端时就执行
-2. 只要给文件添加可执行权限：`chmod +x filename`，不管该文件是否有 `.sh` 后缀，该文件就是一个 shell 脚本，例如 `.bashrc`、`.zshrc`
-3. 环境变量是一系列目录的组合，每个目录包含的 shell 脚本在命令行中可以直接执行，例如 Node.js 目录：
-
-![image.png](https://s2.loli.net/2023/03/04/tJceUbjQ2fRG6TO.png)
-
-> `npm -> ../lib/node_modules/npm/bin/npm-cli.js` 表示文件重定向（JS 只要有 Node.js 环境也可以像 `/bin/bash` 一样作为一种终端类型）
-
-在[连接远程服务器](/operation-system/connect.html#设置命令别名)章节提到的 `alias` 方式可以进一步升级，将连接脚本的目录在配置文件（`.bashrc`、`.zshrc` 等）中添加到环境变量中：
-
-```sh
-PATH=directory_path:$PATH
-export PATH
-```
-
-注意：需要通过 `chmod +x filename` 命令给目录下脚本文件添加可执行权限、删除文件后缀，最后重启终端
-
-输入脚本名称即可和 `node`、`npm`、`npx` 等一样，拥有自己的自定义命令!!!
-
 ## 安装 Git
 
 ### 通过 `yum` 安装
@@ -191,7 +170,7 @@ sudo yum-config-manager \
 - 阿里云：http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 - 清华大学：https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
 
-> 代码仓默认存放位置：`/etc/yum.repos.d/docker-ce.repo`
+> 代码仓配置文件存放位置：`/etc/yum.repos.d/docker-ce.repo`
 
 **2. 安装最新版本 Docker**
 
@@ -233,13 +212,13 @@ sudo docker run hello-world
 
 参考链接：[https://docs.docker.com/engine/install/centos/#install-using-the-convenience-script](https://docs.docker.com/engine/install/centos/#install-using-the-convenience-script)
 
-## 安装 Ngnix
+## 安装 nginx
 
 官方开源版下载源：[https://nginx.org/en/download.html](https://nginx.org/en/download.html)
 
 Linux 安装文档：[https://nginx.org/en/linux_packages.html](https://nginx.org/en/linux_packages.html)
 
-### 创建 yum ngnix 仓库配置文件
+### 创建 yum nginx 仓库配置文件
 
 ```sh
 touch /etc/yum.repos.d/nginx.repo
@@ -267,13 +246,13 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 module_hotfixes=true
 ```
 
-默认会使用稳定版 ngnix 包，如果要使用开发版（mainline）包，需要运行以下命令：
+默认会使用稳定版 nginx 包，如果要使用开发版（mainline）包，需要运行以下命令：
 
 ```sh
 sudo yum-config-manager --enable nginx-mainline
 ```
 
-### 安装 ngnix
+### 安装 nginx
 
 ```sh
 sudo yum install nginx
@@ -285,5 +264,88 @@ sudo yum install nginx
 
 ```sh
 nginx -v
+# nginx version: nginx/1.22.1
+```
+
+## 扩展（一）自定义终端命令
+
+1. 本质上 `.bashrc` 是一个 shell 脚本，会在打开终端时就执行
+2. 只要给文件添加可执行权限：`chmod +x filename`，不管该文件是否有 `.sh` 后缀，该文件就是一个 shell 脚本，例如 `.bashrc`、`.zshrc`
+3. 环境变量是一系列目录的组合，每个目录包含的 shell 脚本在命令行中可以直接执行，例如 Node.js 目录：
+
+![image.png](https://s2.loli.net/2023/03/04/tJceUbjQ2fRG6TO.png)
+
+> `npm -> ../lib/node_modules/npm/bin/npm-cli.js` 表示文件重定向（JS 只要有 Node.js 环境也可以像 `/bin/bash` 一样作为一种终端类型）
+
+在[连接远程服务器](/operation-system/connect.html#设置命令别名)章节提到的 `alias` 方式可以进一步升级，将连接脚本的目录在配置文件（`.bashrc`、`.zshrc` 等）中添加到环境变量中：
+
+```sh
+PATH=directory_path:$PATH
+export PATH
+```
+
+注意：需要通过 `chmod +x filename` 命令给目录下脚本文件添加可执行权限、删除文件后缀，最后重启终端
+
+输入脚本名称即可和 `node`、`npm`、`npx` 等一样，拥有自己的自定义命令!!!
+
+## 扩展（二）查看 yum install 后文件存放位置
+
+参考博客：[如何查看 yum 安装的软件路径（不要再忘了）](https://blog.csdn.net/wd2014610/article/details/79659073)
+
+以 nginx 为例
+
+### 查找安装包
+
+```sh
+rpm -qa | grep nginx
+# nginx-filesystem-1.20.1-10.el7.noarch
+# nginx-1.22.1-1.el7.ngx.x86_64
+```
+
+> rpm：redhat package manager，用于管理套件，更多请参考 [https://www.runoob.com/linux/linux-comm-rpm.html](https://www.runoob.com/linux/linux-comm-rpm.html)
+
+### 查找安装路径
+
+```sh
+rpm -ql nginx-1.22.1-1.el7.ngx.x86_64
+# /etc/logrotate.d/nginx
+# /etc/nginx
+# /etc/nginx/conf.d
+# /etc/nginx/conf.d/default.conf
+# /etc/nginx/fastcgi_params
+# /etc/nginx/mime.types
+# /etc/nginx/modules
+# /etc/nginx/nginx.conf
+# /etc/nginx/scgi_params
+# /etc/nginx/uwsgi_params
+# /usr/lib/systemd/system/nginx-debug.service
+# /usr/lib/systemd/system/nginx.service
+# /usr/lib64/nginx
+# /usr/lib64/nginx/modules
+# /usr/libexec/initscripts/legacy-actions/nginx
+# /usr/libexec/initscripts/legacy-actions/nginx/check-reload
+# /usr/libexec/initscripts/legacy-actions/nginx/upgrade
+# /usr/sbin/nginx
+# /usr/sbin/nginx-debug
+# /usr/share/doc/nginx-1.22.1
+# /usr/share/doc/nginx-1.22.1/COPYRIGHT
+# /usr/share/man/man8/nginx.8.gz
+# /usr/share/nginx
+# /usr/share/nginx/html
+# /usr/share/nginx/html/50x.html
+# /usr/share/nginx/html/index.html
+# /var/cache/nginx
+# /var/log/nginx
+```
+
+### 查看 `nginx` 命令脚本位置
+
+```sh
+# 查看环境变量
+echo $PATH
+# /usr/local/lib/git-2.36.1/bin:/usr/local/lib/nodejs/node-v16.15.0-linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+
+# 对比 rpm 查询的安装路径，不难发现，nginx 命令脚本位于 /usr/sbin/nginx
+/usr/sbin/nginx -v
 # nginx version: nginx/1.22.1
 ```
