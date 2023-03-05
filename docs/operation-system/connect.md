@@ -59,3 +59,22 @@ alias your_alias="your_script_path"
 ## 连接远程服务器
 
 在任意目录下，执行 `your_alias` 命令即可连接远程服务器
+
+## 设置连接状态保持时长
+
+参考自：[http://bluebiu.com/blog/iterm2-ssh-session-idle.html](http://bluebiu.com/blog/iterm2-ssh-session-idle.html)
+
+Mac 设置方式如下：
+
+在 `~/.ssh/config` 中添加以下内容：
+
+```sh
+# 让所有 SSH 会话保持连接，不自动断开
+HOST *
+  ServerAliveInterval 60
+```
+
+其中:
+
+- `HOST *` 表示通过 ssh 连接的所有主机，可以将 `*` 修改为指定 IP，并且可以设置多个
+- `ServerAliveInterval 60` 表示 ssh 客户端每隔 60 秒给远程主机发送一个 no-op 包，no-op 是无任何操作的意思，这样远程主机就不会关闭这个 SSH 会话

@@ -9,6 +9,12 @@ tags:
   - 配置
 ---
 
+## 概述
+
+本文介绍了如何在云服务器中搭建服务运行环境
+
+> 以下基于 `CentOS 7.9` 环境
+
 ## 安装 Node.js
 
 官方文档：[https://github.com/nodejs/help/wiki/Installation](https://github.com/nodejs/help/wiki/Installation)
@@ -139,4 +145,145 @@ source ~/.bashrc
 
 # 验证
 git --version
+```
+
+## 安装 Docker
+
+官方文档：[https://docs.docker.com/engine/install/centos/](https://docs.docker.com/engine/install/centos/)
+
+### 卸载旧版本
+
+老版本的 Docker 命名为 docker 或 docker-engine，安装新版本的 Docker 之前需要卸载老版本及其依赖项，卸载命令如下：
+
+```sh
+sudo yum remove docker \
+                docker-client \
+                docker-client-latest \
+                docker-common \
+                docker-latest \
+                docker-latest-logrotate \
+                docker-logrotate \
+                docker-engine
+```
+
+注意：存储在 `/var/lib/docker/` 目录下的镜像不会在卸载老版本 Docker 时自动删除
+
+### 通过代码仓安装（推荐）
+
+通过 Docker 代码仓进行安装，后续升级也通过代码仓，官方推荐
+
+**1. 在下载代码仓之前，需要安装 `yum-utils`，它提供了 `yum-config-manager` 工具**
+
+```sh
+sudo yum install -y yum-utils
+```
+
+通过 `yum-config-manager` 下载代码仓：
+
+```sh
+sudo yum-config-manager \
+  --add-repo \
+  https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+国内镜像：
+
+- 阿里云：http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+- 清华大学：https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
+
+> 代码仓默认存放位置：`/etc/yum.repos.d/docker-ce.repo`
+
+**2. 安装最新版本 Docker**
+
+```sh
+sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+安装过程中如果提示是否需要接受 GPG key，验证 `Fingerprint` 如果为 `060a 61c5 1b55 8a7f 742b 77aa c52f eb6b 621e 9f35`时，选择接受，如下：
+
+![image.png](https://s2.loli.net/2023/03/05/cBeHlgGZjyUpJ9Y.png)
+
+> 安装完成后，Docker 默认是没有启动的，安装过程中自动创建了 `docker` 用户组但没有添加用户
+
+**3. 启动 Docker**
+
+```sh
+sudo systemctl start docker
+```
+
+> `systemctl` 命令是 Systemd 中最重要的一个命令，用于对服务进行启动，停止等操作
+
+**4. 验证安装结果**
+
+```sh
+sudo docker run hello-world
+```
+
+该命令下载了一个测试镜像并在容器中运行，当测试镜像在容器中运行时，会打印确认成功的信息，如下：
+
+![image.png](https://s2.loli.net/2023/03/05/DgWHKuYUABJsxTI.png)
+
+### 通过 rpm 包安装
+
+此方式需要下载 rpm 包后手动进行安装，后续升级仍需要重复前面操作，适用于无法联网的机器
+
+安装教程参考：[https://docs.docker.com/engine/install/centos/#install-from-a-package](https://docs.docker.com/engine/install/centos/#install-from-a-package)
+
+### 通过脚本安装
+
+参考链接：[https://docs.docker.com/engine/install/centos/#install-using-the-convenience-script](https://docs.docker.com/engine/install/centos/#install-using-the-convenience-script)
+
+## 安装 Ngnix
+
+官方开源版下载源：[https://nginx.org/en/download.html](https://nginx.org/en/download.html)
+
+Linux 安装文档：[https://nginx.org/en/linux_packages.html](https://nginx.org/en/linux_packages.html)
+
+### 创建 yum ngnix 仓库配置文件
+
+```sh
+touch /etc/yum.repos.d/nginx.repo
+```
+
+### 修改配置文件
+
+在配置文件中添加以下内容：
+
+```sh
+[nginx-stable]
+name=nginx stable repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
+
+[nginx-mainline]
+name=nginx mainline repo
+baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
+```
+
+默认会使用稳定版 ngnix 包，如果要使用开发版（mainline）包，需要运行以下命令：
+
+```sh
+sudo yum-config-manager --enable nginx-mainline
+```
+
+### 安装 ngnix
+
+```sh
+sudo yum install nginx
+```
+
+安装过程中如果提示是否需要接受 GPG key，验证 `Fingerprint` 如果为 `573b fd6b 3d8f bc64 1079 a6ab abf5 bd82 7bd9 bf62`时，选择接受
+
+### 验证
+
+```sh
+nginx -v
+# nginx version: nginx/1.22.1
 ```
