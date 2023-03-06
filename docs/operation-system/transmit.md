@@ -1,7 +1,7 @@
 ---
 title: 文件传输
 date: 2023-03-04
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 操作系统
   - 服务搭建

@@ -1,7 +1,7 @@
 ---
 title: 常用系统命令
 date: 2023-03-04
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 操作系统
 ---
@@ -17,4 +17,42 @@ mkdir -p /root/a/b/c
 # 查看系统版本
 lsb_release -a
 uname -a
+
+# 查看端口号占用进程
+netstat -tunlp | grep 80
+
+# 查看所有进程，可搭配 grep 进行使用
+ps -ef
+
+# 关闭进程
+kill -9 PID
+
+# 查看所有用户
+cat /etc/passwd
+
+# 查看用户组及其组内成员
+groups nginx
+
+# 查看当前登录用户
+whoami
+
+# 给文件添加可执行权限，更多：https://www.runoob.com/linux/linux-comm-chmod.html
+chmod +x deploy.sh
+
+# 改变文件拥有权限，更多：https://www.runoob.com/linux/linux-comm-chown.html
+chown -R zhangsan:person imgs
+
+# 添加用户并创建用户目录，更多：https://www.runoob.com/linux/linux-comm-useradd.html
+useradd -m zhangsan
+# 删除用户并删除用户目录，更多：https://www.runoob.com/linux/linux-comm-userdel.html
+userdel -r zhangsan
+
+# 切换用户
+su zhangsan
+
+# 
+visudo
+
+# 
+whereis nginx
 ```

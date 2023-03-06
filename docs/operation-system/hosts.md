@@ -1,7 +1,7 @@
 ---
 title: hosts 文件 —— 在本地实现主机名与域名映射
 date: 2023-2-19
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 操作系统
 tags:

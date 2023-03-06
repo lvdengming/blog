@@ -1,7 +1,7 @@
 ---
-title: '小程序'
+title: 小程序
 date: 2022-12-11
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 前端
   - 小程序

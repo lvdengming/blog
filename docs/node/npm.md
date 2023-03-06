@@ -1,7 +1,7 @@
 ---
 title: npm
 date: 2023-02-17
-sidebar: 'auto'
+sidebar: auto
 categories:
   - node
 tags:

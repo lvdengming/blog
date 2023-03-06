@@ -1,7 +1,7 @@
 ---
 title: CSS 笔记
 date: 2023-02-25
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 前端
   - css

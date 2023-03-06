@@ -1,7 +1,7 @@
 ---
 title: docker 常用命令
 date: 2023-03-05
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 操作系统
 tags:

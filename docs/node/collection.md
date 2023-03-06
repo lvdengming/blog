@@ -1,7 +1,7 @@
 ---
 title: 第三方模块收藏
 date: 2023-02-15
-sidebar: 'auto'
+sidebar: auto
 categories:
   - node
 tags:

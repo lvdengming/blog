@@ -1,7 +1,7 @@
 ---
 title: 在 VSCode 中使用 Shell 终端（Git-Bash）
 date: 2023-2-14
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 操作系统
 tags:

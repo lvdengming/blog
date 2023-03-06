@@ -1,7 +1,7 @@
 ---
 title: 连接远程服务器
 date: 2023-02-27
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 操作系统
   - 服务搭建

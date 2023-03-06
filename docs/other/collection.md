@@ -1,7 +1,7 @@
 ---
 title: 个人收藏
 date: 2022-12-12
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 其它
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 设计收藏
 date: 2023-02-13
-sidebar: 'auto'
+sidebar: auto
 categories:
   - 设计
 tags:
