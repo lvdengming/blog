@@ -17,8 +17,8 @@ tags:
 
 参考文档：
 
-+ [nginx静态资源服务器简单配置](https://blog.csdn.net/name_is_wl/article/details/52958472)
-+ [静态资源服务器](https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/)
+- [nginx 静态资源服务器简单配置](https://blog.csdn.net/name_is_wl/article/details/52958472)
+- [静态资源服务器](https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/)
 
 ### 在服务器上创建网站
 
@@ -29,7 +29,9 @@ tags:
 3. 通过 git 一个网页代码仓库到服务器，在服务器上安装 git 可参考 [搭建服务器环境 - 安装 Git](/operation-system/initialize.html#安装-git) 章节
 4. ……
 
-注意：nginx 启动用户默认不是 root，请确保该用户对网站文件具有访问权限（可在 nginx.conf 文件 user 字段处进行查看）
+注意：nginx 启动用户默认不是 root，而是 nginx，请确保该用户对网站文件具有访问权限（可在 nginx.conf 文件 user 字段处进行查看）
+
+> 如果不熟悉配置，网站不要放在 `/root` 下
 
 ### 配置 nginx
 

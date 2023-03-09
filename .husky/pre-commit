@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# git hooks: https://git-scm.com/docs/githooks
+# husky 文档：https://typicode.github.io/husky/#/
+npx lint-staged
