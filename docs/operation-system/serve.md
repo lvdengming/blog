@@ -70,6 +70,16 @@ server {
 
 日志默认存放于 `/var/log/nginx/error.log`，可在 nginx.conf 文件中进行查看和配置
 
+### 常见错误
+
+1、html 文件存放在 `/root` 目录下，导致 `nginx` 用户无法访问
+
+解决方案：将 html 文件放到其它目录，例如 `/home/nginx` 目录下
+
+2、`80` 端口无法正常访问，这是由于 nginx 默认配置会使用 `80` 端口
+
+解决方案：修改 nginx 默认配置文件 `/etc/nginx/conf.d/default.conf` server 端口号，例如将 `listen 80` 改为 `listen 8000`
+
 ### 常用命令
 
 ```sh
