@@ -1,6 +1,7 @@
 const { ImgPath } = require('./constant');
 
 module.exports = {
+  base: '/blog/',
   title: 'ming',
   description: 'A blog website of lvdengming',
   head: [
@@ -69,6 +70,9 @@ module.exports = {
       appId: 'T8i2WDyg4UVySXYpwe2NnsHR-gzGzoHsz',
       appKey: 'rG0d5JeIzsdwpW2yWXunxwO8',
     },
+    record: '蜀ICP备2023006422号-1',
+    recordLink: 'https://beian.miit.gov.cn',
+    startYear: '2022',
   },
   plugins: [
     '@vuepress/plugin-medium-zoom',
