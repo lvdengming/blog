@@ -56,13 +56,13 @@ mkdir cert
 
 在 server 下添加以下内容：
 
-```conf
+```text
 server {
   listen              443 ssl;
   server_name         www.lvdengming.com;
-  ssl_certificate	    cert/9606710_lvdengming.com.pem;
-  ssl_certificate_key	cert/9606710_lvdengming.com.key;
-  ssl_protocols		    TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+  ssl_certificate     cert/9606710_lvdengming.com.pem;
+  ssl_certificate_key cert/9606710_lvdengming.com.key;
+  ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
   ssl_ciphers         ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
 
   # 优化 ssl
@@ -83,3 +83,7 @@ nginx -s stop
 
 nginx
 ```
+
+4、验证
+
+访问 [https://www.lvdengming.com](https://www.lvdengming.com)
