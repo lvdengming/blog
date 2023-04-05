@@ -53,18 +53,6 @@ module.exports = {
         logo: ImgPath.HDY,
         link: 'https://coderhdy.com',
       },
-      {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: ImgPath.RECO,
-        link: 'https://vuepress-theme-reco.recoluan.com',
-      },
-      {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: 'recoluan@qq.com',
-        link: 'https://www.recoluan.com',
-      },
     ],
     valineConfig: {
       appId: 'T8i2WDyg4UVySXYpwe2NnsHR-gzGzoHsz',
