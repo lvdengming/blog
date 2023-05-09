@@ -67,6 +67,26 @@ npm 地址：[https://www.npmjs.com/package/serve](https://www.npmjs.com/package
 
 ## moment
 
-一个处理时间的第三方库
+一个处理时间的第三方模块
 
 官网：[https://momentjs.com/](https://momentjs.com/)
+
+## npm-run-all
+
+A CLI tool to run multiple npm-scripts in parallel or sequential.
+
+一个提供并行、串行运行多个 npm 脚本的第三方模块
+
+官网：[npm-run-all](https://github.com/mysticatea/npm-run-all)
+
+## ngx-charts
+
+适用于 angular 的 echarts 版本，做了很多处理
+
+官网：[https://swimlane.github.io/ngx-charts/#/ngx-charts/bar-vertical](https://swimlane.github.io/ngx-charts/#/ngx-charts/bar-vertical)
+
+## ng-swagger-gen
+
+通过配置文件动态生成 angular 网络请求的 service
+
+官网：[https://github.com/cyclosproject/ng-swagger-gen](https://github.com/cyclosproject/ng-swagger-gen)
