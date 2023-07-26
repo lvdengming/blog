@@ -90,3 +90,9 @@ A CLI tool to run multiple npm-scripts in parallel or sequential.
 通过配置文件动态生成 angular 网络请求的 service
 
 官网：[https://github.com/cyclosproject/ng-swagger-gen](https://github.com/cyclosproject/ng-swagger-gen)
+
+## rxjs
+
+RxJS 是一个使用可观察序列编写异步和基于事件的程序的库
+
+官网：[https://rxjs.tech/](https://rxjs.tech/)
