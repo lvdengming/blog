@@ -84,3 +84,8 @@ flutter create my_app
 # 运行项目
 flutter run
 ```
+
+### 2.5 VSCode 扩展程序
+
+- Flutter Widget Snippets
+- Awesome Flutter Snippets

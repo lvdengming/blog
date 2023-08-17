@@ -45,3 +45,26 @@ flutter run
 # c Clear the screen
 # q Quit (terminate the application on the device).
 ```
+
+## 目录介绍
+
+├── .dart_tool dart 第三方依赖
+├── .idea 编译器相关
+├── README.md
+├── analysis_options.yaml 分析 dart 语法的文件，老项目升级成新项目有警告信息的话，可以删除此文件
+├── android Android 资源目录
+├── build
+├── flutter01.iml
+├── ios iOS 资源目录
+├── lib 项目目录
+│   └── main.dart
+├── linux linux 平台资源目录
+├── macos mac 平台资源目录
+├── pubspec.lock
+├── pubspec.yaml 项目依赖、版本
+├── test 测试代码目录
+├── web web 目录
+└── windows windows 平台资源目录
+
+> MacOS 生成方式 `tree | pbcopy`
+> 前期重点关注 lib 目录和 pubspec.yaml 文件
