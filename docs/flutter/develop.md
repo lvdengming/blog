@@ -73,7 +73,7 @@ flutter run
 
 ### 组件介绍
 
-**1、MaterialApp**
+**MaterialApp**
 
 封装了应用程序实现 Material Design 所需要的一些 Widget，一般作为顶层 widget 使用，常用的属性：
 
@@ -84,7 +84,7 @@ flutter run
 - routes（路由）
   ……
 
-**2、Scaffold**
+**Scaffold**
 
 Scaffold 是 Material Design 布局结构的基本实现，此类提供了用于显示 drawer、snackbar 和底部 sheet 的 API
 
@@ -113,6 +113,193 @@ void main(List<String> args) {
       ),
     ),
   ));
+}
+```
+
+**Container**
+
+类似 `div`，主要有以下属性：
+
+- alignment：对其方式，topCenter 顶部居中对齐，topLeft 顶部左对齐……
+- decoration：设置背景颜色、圆角、边框、阴影等
+- margin：外边距
+- padding：内边距
+- transform：类似 css transform
+- height：容器高度
+- width：容器宽度
+- child：容器子元素
+
+示例：
+
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Container(
+      alignment: Alignment.center,
+      width: 200,
+      height: 200,
+      decoration: BoxDecoration(
+          color: Colors.yellow,
+          border: Border.all(color: Colors.red, width: 2),
+          borderRadius: BorderRadius.circular(5),
+          boxShadow: const [BoxShadow(color: Colors.blue, blurRadius: 20)],
+          gradient: const LinearGradient(colors: [Colors.red, Colors.yellow])),
+      child: const Text(
+        'hello, flutter',
+        style: TextStyle(color: Colors.white),
+      ),
+    ));
+  }
+}
+```
+
+按钮示例：
+
+```dart
+class MyButton extends StatelessWidget {
+  const MyButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 50,
+      decoration: BoxDecoration(
+          color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+      margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+      alignment: Alignment.center,
+      child: const Text(
+        '确定',
+        style: TextStyle(color: Colors.white, fontSize: 18),
+      ),
+    );
+  }
+}
+```
+
+**Text**
+
+- textAlign：文本对齐方式
+- textDirection：文本方向
+- overflow：文本超出屏幕之后的处理方式
+- textScaleFactor：字体显示倍率
+- maxLines：文字显示最大行数
+- style：字体的样式设置
+
+TextStyle 属性：
+
+- decoration：文本装饰线（删除、下划线等）
+- decorationColor：文本装饰线颜色
+- decorationStyle：文本装饰线风格（虚线、实线……）
+- wordSpacing：单词间隙
+- letterSpacing：字母间隙
+- fontStyle：文本样式（斜体、正常体）
+- fontSize：文本大小
+- color：文本颜色
+- fontWeight：字体粗细
+
+示例：
+
+```dart
+class MyText extends StatelessWidget {
+  const MyText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      decoration: const BoxDecoration(color: Colors.black),
+      margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+      child: const Text(
+        '你好你好你好你好你好你好你好你好你好你好你好你好',
+        style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2),
+        textAlign: TextAlign.left,
+        overflow: TextOverflow.ellipsis,
+      ),
+    );
+  }
+}
+```
+
+**Image**
+
+类似 img 标签
+
+- Image.network 从网络加载图片
+- Image.asset 从本地加载图片
+
+属性：
+
+- fit：BoxFit，类似背景图片的几种方式，fill、cover、contain……
+- repeat：ImageRepeat，平铺
+- width：宽度高度结合 ClipOval 才有效
+- height
+
+背景图片实现方式
+
+```dart
+decoration: BoxDecoration(
+  image: const DecorationImage(
+    image: NetworkImage(url),
+    fix: BoxFit.cover
+  )
+)
+```
+
+**ClipOval**
+
+圆角图片
+
+```dart
+class MyClipOval extends StatelessWidget {
+  const MyClipOval({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipOval(
+      child: Image.network(
+          'https://i1.hdslb.com/bfs/face/0cd621a535d99cc5eed5bd9243355c21d64a0e39.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif',
+          width: 150,
+          height: 150,
+          fit: BoxFit.cover),
+    );
+  }
+}
+```
+
+本地加载图片，首先要到 pubspec.yaml 文件 flutter 属性下添加图片资源
+
+```yaml
+flutter:
+  assets:
+    - imgs/a.jpg
+    - imgs/1.0x/a.jpg
+    - imgs/2.0x/a.jpg
+```
+
+> Flutter 会自动根据设备屏幕分辨率加载对应尺寸图片
+
+```dart
+class LocalImage extends StatelessWidget {
+  const LocalImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      child: Image.asset('imgs/a.jpg'),
+    );
+  }
 }
 ```
 
