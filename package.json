@@ -66,5 +66,8 @@
     "stylelint-config-standard": "^30.0.1",
     "vuepress": "^1.9.7",
     "vuepress-theme-reco": "^1.6.16"
+  },
+  "dependencies": {
+    "vue": "^2.7.14"
   }
 }

@@ -73,7 +73,7 @@ flutter run
 
 ### 组件介绍
 
-**MaterialApp**
+#### MaterialApp
 
 封装了应用程序实现 Material Design 所需要的一些 Widget，一般作为顶层 widget 使用，常用的属性：
 
@@ -84,7 +84,25 @@ flutter run
 - routes（路由）
   ……
 
-**Scaffold**
+设置 AppBar 主题色
+
+```dart
+void main(List<String> args) {
+  runApp(MaterialApp(
+    theme: ThemeData(primarySwatch: Colors.purple),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      body: const Center(
+        child: Text('Text'),
+      ),
+    ),
+  ));
+}
+```
+
+#### Scaffold
 
 Scaffold 是 Material Design 布局结构的基本实现，此类提供了用于显示 drawer、snackbar 和底部 sheet 的 API
 
@@ -116,7 +134,7 @@ void main(List<String> args) {
 }
 ```
 
-**Container**
+#### Container
 
 类似 `div`，主要有以下属性：
 
@@ -181,7 +199,7 @@ class MyButton extends StatelessWidget {
 }
 ```
 
-**Text**
+#### Text
 
 - textAlign：文本对齐方式
 - textDirection：文本方向
@@ -230,7 +248,7 @@ class MyText extends StatelessWidget {
 }
 ```
 
-**Image**
+#### Image
 
 类似 img 标签
 
@@ -303,6 +321,88 @@ class LocalImage extends StatelessWidget {
 }
 ```
 
+#### ListView
+
+列表布局是项目开发中最常见的一种布局方式，在 Flutter 中通过 ListView 来定义列表项
+
+列表组件常用参数：
+
+- scrollDirection
+- padding
+- resolve，组件反向排序
+- children，列表元素
+
+简单的 ListView
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: const <Widget>[
+        // 列表项
+        ListTile(
+          leading: Icon(Icons.home, color: Colors.blue,),
+          title: Text('这是一个列表项'),
+          trailing: Icon(Icons.chevron_right_sharp),
+        ),
+        // 分割线
+        Divider(),
+        ListTile(
+          leading: Icon(Icons.propane, color: Colors.purple,),
+          title: Text('这是一个列表项'),
+          trailing: Icon(Icons.chevron_right_sharp),
+        ),
+        Divider(),
+        ListTile(
+          leading: Icon(Icons.unarchive_rounded, color: Colors.pink,),
+          title: Text('这是一个列表项'),
+          trailing: Icon(Icons.chevron_right_sharp),
+        ),
+        Divider(),
+      ],
+    );
+  }
+}
+```
+
+横向的 ListView
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 100,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.all(10),
+        children: <Widget>[
+          Container(
+            width: 200,
+            // 高度是自适应，设置没有效果
+            height: 100,
+            decoration: const BoxDecoration(color: Colors.red),
+          ),
+          Container(
+            width: 200,
+            decoration: const BoxDecoration(color: Colors.green),
+          ),
+          Container(
+            width: 200,
+            decoration: const BoxDecoration(color: Colors.blue),
+          )
+        ],
+      ),
+    );
+  }
+}
+```
+
 ### 自定义组件
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget
@@ -330,3 +430,119 @@ class MyApp extends StatelessWidget {
 ```
 
 > 快速生成方式：stateW + Enter，需要安装 [Awesome Flutter Snippets](https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets) 扩展程序
+
+### 自带图标组件
+
+Icon 组件，可以使用 Icons 来引用内置图标，并且可以设置图标尺寸、颜色等
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: const [
+      // 该组件可用来设置间距
+      SizedBox(
+        height: 20,
+      ),
+      Icon(
+        Icons.home,
+        size: 30,
+      ),
+      Icon(
+        Icons.settings,
+        size: 40,
+        color: Colors.purple,
+      )
+    ]);
+  }
+}
+```
+
+支持的图标列表：[https://fonts.google.com/icons](https://fonts.google.com/icons)
+
+### 自定义图标
+
+除了 Material 的图标外，我们也可以使用自定义图标，在 Flutter 中使用 ttf 格式实现：
+
+1、下载字体图标，在项目配置文件（pubspec.yaml）中声明：
+
+> iconfont 中选择好图标后，点击【下载代码】，即可获得相应的 ttf 文件
+
+```yml
+flutter:
+  fonts:
+    - family: myFont # 指定字体名
+      fonts:
+        - asset: fonts/iconfont.ttf
+    - family: Trajan Pro
+      fonts:
+        - asset: fonts/TrajanPro.ttf
+        - asset: fonts/TrajanPro_Bold.ttf
+          weight: 700
+          style: italic
+```
+
+2、创建字体组件
+
+```dart
+class MyFont {
+  // 微信图标
+  static const IconData wechat = IconData(
+    // iconfont 下载代码解压 json 文件 中的 unicode 编码
+    0xe658,
+    // 在 pubspec.yaml 文件中定义的字体名
+    fontFamily: 'myFont',
+    matchTextDirection: true
+  );
+
+  // 鲜花图标
+  static const IconData flower = IconData(
+    0xe63d,
+    fontFamily: 'myFont',
+    matchTextDirection: true
+  );
+}
+```
+
+3、使用字体组件
+
+```dart
+import './font.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: const [
+      // 该组件可用来设置间距
+      SizedBox(
+        height: 20,
+      ),
+      Icon(
+        Icons.home,
+        size: 30,
+        color: Colors.purple,
+      ),
+      SizedBox(
+        height: 20,
+      ),
+      Icon(
+        MyFont.wechat,
+        size: 40,
+        color: Colors.blue,
+      ),
+      SizedBox(
+        height: 20,
+      ),
+      Icon(
+        MyFont.flower,
+        size: 50,
+        color: Colors.red,
+      )
+    ]);
+  }
+}
+```
