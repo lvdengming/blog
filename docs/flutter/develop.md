@@ -403,6 +403,142 @@ class HomePage extends StatelessWidget {
 }
 ```
 
+使用 `ListView.builder` 创建 ListView
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: 5,
+      itemBuilder: (context, index) {
+        return ListTile(title: Text('这是第$index条数据'));
+      },
+    );
+  }
+}
+```
+
+#### GridView
+
+GridView 创建网格列表主要有以下三种方式：
+
+1. `GridView.count`
+2. `GridView.extent`
+3. `GridView.builder`
+
+常用属性：
+
+- scrollDirection，滚动方法
+- padding，内边距
+- resolve：组件反向排序
+- crossAxisSpacing，水平子 Widget 之间的间距
+- mainAxisSpacing，垂直子 Widget 之间的间距
+- crossAxisCount，一行 Widget 数量（int 用在 GridView.count）
+- maxCrossAxisExtend，横轴子元素的最大长度（double 用在 GridView.extent）
+- childAspectRatio：子 Widget 宽高比例
+- children
+- gridDelegate：控制布局，主要用在 GridView.builder
+
+示例：
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  List<Container> _createBoxs(int count) {
+    List<Container> list = [];
+    for (var i = 0; i < count; i++) {
+      list.add(Container(
+        alignment: Alignment.center,
+        decoration: const BoxDecoration(color: Colors.blue),
+        child: Text(
+          '第$i个元素',
+          style: const TextStyle(fontSize: 20),
+        ),
+      ));
+    }
+
+    return list;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.count(
+      crossAxisCount: 2,
+      padding: const EdgeInsets.all(10),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      childAspectRatio: 2,
+      children: _createBoxs(8),
+    );
+  }
+}
+```
+
+通过 builder 进行构造：
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  Widget _createBoxs(context, index) {
+    return Container(
+      alignment: Alignment.center,
+      decoration: const BoxDecoration(color: Colors.blue),
+      child: Text(
+        '第$index个元素',
+        style: const TextStyle(fontSize: 20),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+        padding: const EdgeInsets.all(10),
+        itemCount: 8,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          childAspectRatio: 2,
+        ),
+        itemBuilder: _createBoxs);
+  }
+}
+```
+
+#### Padding
+
+给 child 添加 padding，功能单一
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      child: const Text('home'),
+    );
+  }
+}
+
+// 如果只添加 padding 效果，使用 pdding 组件
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(padding: EdgeInsets.all(10), child: Text('home'));
+  }
+}
+```
+
 ### 自定义组件
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget
