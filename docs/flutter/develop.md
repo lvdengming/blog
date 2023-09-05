@@ -539,6 +539,152 @@ class HomePage extends StatelessWidget {
 }
 ```
 
+#### Row
+
+控制一行元素显示方式，类似 flex 布局，常用属性：
+
+- mainAxisAlignment：主轴的排序方式
+- crossAxisAlignment：次轴的排序方式
+- children：组件子元素
+
+> crossAxisAlignment 相对于父容器的位置
+> 外部没有 Container，行是自适应的
+
+示例：
+
+```dart
+void main(List<String> args) {
+  runApp(MaterialApp(
+    theme: ThemeData(primarySwatch: Colors.blue),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      body: Container(
+        width: 400,
+        height: 600,
+        padding: const EdgeInsets.all(10),
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              MyIcon(Icons.home, Colors.blue),
+              MyIcon(Icons.search, Colors.pink)
+            ]),
+      ),
+    ),
+  ));
+}
+
+class MyIcon extends StatelessWidget {
+  Color color;
+  IconData icon;
+
+  MyIcon(this.icon, this.color, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      width: 120,
+      height: 120,
+      color: color,
+      child: Icon(icon, color: Colors.white, size: 28),
+    );
+  }
+}
+```
+
+扩展：`double.infinity` 和 `double.maxFinite` 可以让当前元素的 width 或 height 达到父元素的尺寸
+
+#### Column
+
+控制一列的显示方式，类似 flex 布局，`flex-direction: column`，常用属性
+
+- mainAxisAlignment：主轴的排序方式
+- crossAxisAlignment：次轴的排序方式
+- children：组件子元素
+
+#### Flex Expanded
+
+Flex 组件可以沿着水平方向或垂直方向排列子组件，如果知道主轴方向，使用 Row、Column 更方便，因为 Row 和 Column 都继承自 Flex，参数基本相同
+
+可以结合 Flex、Expanded 实现弹性布局
+
+宽度比 2:1
+
+```dart
+// 直接使用 Row
+void main(List<String> args) {
+  runApp(MaterialApp(
+    theme: ThemeData(primarySwatch: Colors.blue),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      body: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(10),
+        child: Row(children: [
+          Expanded(flex: 2, child: MyIcon(Icons.home, Colors.blue)),
+          Expanded(flex: 1, child: MyIcon(Icons.search, Colors.pink))
+        ]),
+      ),
+    ),
+  ));
+}
+
+// 使用 Flex
+void main(List<String> args) {
+  runApp(MaterialApp(
+    theme: ThemeData(primarySwatch: Colors.blue),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      body: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(10),
+        child: Flex(direction: Axis.horizontal, children: [
+          Expanded(flex: 2, child: MyIcon(Icons.home, Colors.blue)),
+          Expanded(flex: 1, child: MyIcon(Icons.search, Colors.pink))
+        ]),
+      ),
+    ),
+  ));
+}
+```
+
+左边宽度自适应，右侧固定
+
+```dart
+void main(List<String> args) {
+  runApp(MaterialApp(
+    theme: ThemeData(primarySwatch: Colors.blue),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      body: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(10),
+        child: Flex(direction: Axis.horizontal, children: [
+          Expanded(flex: 1, child: MyIcon(Icons.home, Colors.blue)),
+          MyIcon(Icons.search, Colors.pink)
+        ]),
+      ),
+    ),
+  ));
+}
+```
+
+#### Stack
+
+可以使用 Stack 或者 Stack 结合 Align、Positioned 来实现页面的定位
+
+- alignment：配置所有子元素的显示位置
+- children：子组件
+
 ### 自定义组件
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget
