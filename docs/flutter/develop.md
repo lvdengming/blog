@@ -685,6 +685,461 @@ void main(List<String> args) {
 - alignment：配置所有子元素的显示位置
 - children：子组件
 
+案例一：让所有子组件居中显示
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        Container(
+          width: 200,
+          height: 200,
+          color: Colors.blue
+        ),
+        Container(
+          width: 100,
+          height: 100,
+          color: Colors.orange,
+        ),
+        const Text('Hello')
+      ],
+    );
+  }
+}
+```
+
+Positioned 组件的属性：
+
+- top：子元素距离顶部的距离
+- bottom：子元素距离底部的距离
+- left：子元素距离左侧距离
+- right：子元素距离右侧距离
+- child：子组件
+- width：子组件的宽度（该组件宽度、高度必须是固定值，没法使用 double.infinity）
+- height：子组件的高度
+
+案例二：红色盒子元素左下角显示，文本靠右 top 100 显示
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 300,
+      color: Colors.blue,
+      child: Stack(
+        children: [
+          Positioned(
+            bottom: 0,
+            left: 0,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.red
+            ),
+          ),
+          const Positioned(
+            top: 100,
+            right: 0,
+            child: Text('hello')
+          )
+        ],
+      ),
+    );
+  }
+}
+```
+
+> Stack 组件是相对于外部容器进行定位，如果没有外部容器就相对于整个屏幕进行定位
+
+案例三：带导航栏的列表
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    return Stack(
+      children: [
+        ListView(
+          padding: const EdgeInsets.only(top: 50),
+          children: const [
+            // 此处有 100 个列表项
+            // ...
+            ListTile(title: Text('这是一个列表项')),
+          ],
+        ),
+        Positioned(
+            top: 0,
+            left: 0,
+            child: Container(
+              width: size.width,
+              height: 50,
+              color: Colors.black,
+              alignment: Alignment.center,
+              child: const Text(
+                '二级菜单',
+                style: TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+            ))
+      ],
+    );
+  }
+}
+```
+
+> Flutter 查询设备宽高 API：`MediaQuery.of(context).size;`
+
+#### Align
+
+Center 组件是 Align 组件的子组件，只控制子元素在父元素中的显示位置
+
+案例：控制文本在 Container 右中显示
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 300,
+      color: Colors.red,
+      child: const Align(
+        alignment: Alignment.centerRight,
+        child: Text('hello'),
+      ),
+    );
+  }
+}
+```
+
+#### AspectRatio
+
+控制元素的宽高比
+
+示例：设置高度为宽度的一半：
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(aspectRatio: 2 / 1, child: Container(color: Colors.red));
+  }
+}
+```
+
+#### Card
+
+Card 是卡片组件块，常用属性：
+
+- margin
+- child
+- elevation：阴影的深度
+- color：背景颜色
+- shadowColorl：阴影颜色
+- margin：外边距
+- clipBehavior：内容溢出裁剪方式（值为 Clip 类型）
+- Shape：阴影效果，默认为长方形边
+
+示例：名片
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          elevation: 10,
+          margin: const EdgeInsets.all(10),
+          child: Column(children: const [
+            ListTile(
+              title: Text(
+                'zhangsan',
+                style: TextStyle(fontSize: 24),
+              ),
+              subtitle: Text('高级软件开发工程师'),
+            ),
+            Divider(),
+            ListTile(title: Text('Tel: 183xxxxxxxx'))
+          ]),
+        ),
+        Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          elevation: 10,
+          margin: const EdgeInsets.all(10),
+          child: Column(children: const [
+            ListTile(
+              title: Text(
+                'zhangsan',
+                style: TextStyle(fontSize: 24),
+              ),
+              subtitle: Text('高级软件开发工程师'),
+            ),
+            Divider(),
+            ListTile(title: Text('Tel: 183xxxxxxxx'))
+          ]),
+        )
+      ],
+    );
+  }
+}
+```
+
+#### CircleAvatar
+
+```dart
+class MyStack extends StatelessWidget {
+  const MyStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CircleAvatar(
+        backgroundImage: NetworkImage(
+            'https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg'));
+  }
+}
+```
+
+#### Button
+
+按钮组件如下：
+
+- ElevatedButton：普通按钮
+- TextButton：文本按钮
+- OutlinedButton：边框按钮
+- IconButton：图标按钮
+
+```dart
+class MyPage extends StatelessWidget {
+  const MyPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  print('click elevated button');
+                },
+                child: const Text('普通按钮')),
+            TextButton(
+                onPressed: () {
+                  print('click text button');
+                },
+                child: const Text('文本按钮')),
+            OutlinedButton(
+                onPressed: () {
+                  print('click outline button');
+                },
+                child: const Text('边框按钮')),
+            IconButton(
+                onPressed: () {
+                  print('click icon button');
+                },
+                icon: const Icon(Icons.search))
+          ],
+        ),
+        const SizedBox(
+          height: 25,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton.icon(
+                onPressed: () {},
+                label: const Text('发送'),
+                icon: const Icon(Icons.send)),
+            TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.info),
+                label: const Text('信息')),
+            OutlinedButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.add),
+                label: const Text('增加'))
+          ],
+        ),
+        const SizedBox(height: 25),
+        // 修改按钮背景颜色
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.red),
+                    foregroundColor: MaterialStateProperty.all(Colors.white)),
+                onPressed: () {},
+                child: const Text('普通按钮'))
+          ],
+        ),
+        const SizedBox(height: 25),
+        // 修改按钮尺寸（可以在按钮外层添加 SizedBox 或者 Container）
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 100,
+              height: 40,
+              child: ElevatedButton(onPressed: () {}, child: const Text('确定')),
+            )
+          ],
+        ),
+        const SizedBox(height: 25),
+        // 通过 Expanded 组件实现自适应按钮
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+                flex: 1,
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  child: SizedBox(
+                    height: 40,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.red),
+                          foregroundColor:
+                              MaterialStateProperty.all(Colors.white)),
+                      child: const Text('登录'),
+                      onPressed: () {},
+                    ),
+                  ),
+                ))
+          ],
+        ),
+        const SizedBox(height: 25),
+        // 圆角按钮
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              style: ButtonStyle(
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)))),
+              onPressed: () {},
+              child: const Text('圆角按钮'),
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                  shape: MaterialStateProperty.all(const CircleBorder(
+                      side: BorderSide(color: Colors.yellow)))),
+              onPressed: () {},
+              child: const Text('圆角按钮'),
+            ),
+          ],
+        ),
+        const SizedBox(height: 25),
+        // 修改边框颜色
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            OutlinedButton(
+              style: ButtonStyle(
+                  side: MaterialStateProperty.all(
+                      const BorderSide(width: 1, color: Colors.red))),
+              onPressed: () {},
+              child: const Text('边框按钮'),
+            )
+          ],
+        )
+      ],
+    );
+  }
+}
+```
+
+#### Wrap
+
+流式布局，单行内容不足后，换行显示，常用属性：
+
+- direction，主轴的方向
+- alignment，主轴对齐方向
+- spacing，主轴方向间距
+- runSpacing，副轴方向间距
+- ……
+
+示例：
+
+```dart
+class Button extends StatelessWidget {
+  String text;
+  void Function()? onPressed;
+  Button(this.text, {super.key, this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    onPressed = onPressed ?? () {};
+
+    return ElevatedButton(
+      style: ButtonStyle(
+        backgroundColor:
+            MaterialStateProperty.all(Colors.black12),
+        foregroundColor: MaterialStateProperty.all(Colors.black),
+      ),
+      onPressed: onPressed,
+      child: Text(text),
+    );
+  }
+}
+
+class MyPage extends StatelessWidget {
+  const MyPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Wrap(
+        alignment: WrapAlignment.start,
+        // 水平间距
+        spacing: 10,
+        // 垂直间距
+        runSpacing: 10,
+        // 排列方向
+        // direction: Axis.vertical,
+        children: [
+          Button('第一集'),
+          Button('第二集'),
+          Button('第三集'),
+          Button('第四集'),
+          Button('第五集'),
+          Button('第六集'),
+          Button('第七集'),
+          Button('第八集'),
+          Button('第九集'),
+        ],
+      ),
+    );
+  }
+}
+```
+
 ### 自定义组件
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget
