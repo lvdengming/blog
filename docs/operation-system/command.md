@@ -50,9 +50,23 @@ userdel -r zhangsan
 # 切换用户
 su zhangsan
 
-# 
+#
 visudo
 
-# 
+#
 whereis nginx
+
+# 编辑定时任务
+crontab -e
+# 查看定时任务
+crontab -l
+# 删除定时任务
+crontab -r
+
+# 使用 for 循环模拟，末尾 & 表示在后台执行
+# sleep 3600 秒
+for i in {1..100}; do echo 'hello'; sleep 3600; done &
+
+# 查看邮件（输入编号即可查看，输入 q 退出查看状态）
+mail
 ```
