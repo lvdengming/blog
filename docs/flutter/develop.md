@@ -1147,7 +1147,7 @@ class MyPage extends StatelessWidget {
 - **StatelessWidget** 是无状态组件，状态不可变的 widget
 - **StatefulWidget** 是有状态组件，持有的状态可能在 widget 生命周期改变
 
-示例：
+#### StatelessWidget
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -1167,6 +1167,111 @@ class MyApp extends StatelessWidget {
 ```
 
 > 快速生成方式：stateW + Enter，需要安装 [Awesome Flutter Snippets](https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets) 扩展程序
+
+#### StatefulWidget
+
+```dart
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Demo',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _count = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      body: Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(
+            '$_count',
+            style: Theme.of(context).textTheme.headline2,
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  _count++;
+                });
+              },
+              child: const Text('增加'))
+        ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            _count++;
+          });
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+动态列表案例：
+
+```dart
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final List<String> _list = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // 改变数据必须加上 setState()
+          setState(() {
+            _list.add('这是一个列表项');
+          });
+        },
+        child: const Icon(Icons.add),
+      ),
+      body: ListView(
+        children: _list.map(((str) {
+          return ListTile(
+            title: Text(str),
+          );
+        })).toList(),
+      ),
+    );
+  }
+}
+```
 
 ### 自带图标组件
 

@@ -13,6 +13,7 @@ tags:
 - 前端知识文档：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
 - 前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
 - AI 聊天：[https://openai.com/blog/chatgpt/](https://openai.com/blog/chatgpt/)
+- 随机图片获取：[https://picsum.photos/](https://picsum.photos/)
 
 ## 工具收藏
 
