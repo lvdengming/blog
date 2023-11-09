@@ -1140,6 +1140,271 @@ class MyPage extends StatelessWidget {
 }
 ```
 
+#### BottomNavigationBar
+
+常用属性：
+
+- `items`：List 底部导航条按钮集合
+- `iconSize`：icon
+- `currentIndex`：默认选中第几个
+- `onTap`：选中后的回调函数
+- `fixedColor`：选中的颜色
+- `type`：`BottomNavigationBarType.fixed`、`BottomNavigationBarType.shifting`，若底部有 4 个及其以上菜单项，需要配置
+
+`lib/main.dart`
+
+```dart
+import 'package:flutter/material.dart';
+import './pages/tabs/tabs.dart';
+
+void main(List<String> args) {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Demo',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const Tabs(),
+    );
+  }
+}
+```
+
+`lib/pages/tabs/tabs.dart`
+
+```dart
+import 'package:flutter/material.dart';
+import './home.dart';
+import './category.dart';
+import './setting.dart';
+
+class Tabs extends StatefulWidget {
+  const Tabs({super.key});
+
+  @override
+  State<Tabs> createState() => _TabsState();
+}
+
+class _TabsState extends State<Tabs> {
+  int _current = 0;
+  final List<String> _titleList = const [
+    'Home',
+    'Category',
+    'Settring',
+  ];
+  final List<Widget> _pageList = const [
+    HomePage(),
+    CategoryPage(),
+    SettingPage(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(_titleList[_current])),
+      body: _pageList[_current],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _current,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
+          BottomNavigationBarItem(icon: Icon(Icons.category), label: '分类'),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: '设置')
+        ],
+        onTap: (index) {
+          setState(() {
+            _current = index;
+          });
+        },
+      ),
+    );
+  }
+}
+```
+
+`lib/pages/tabs/home.dart`
+
+```dart
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Home Page',
+        style: TextStyle(fontSize: 24),
+      ),
+    );
+  }
+}
+```
+
+`lib/pages/tabs/category.dart`
+
+```dart
+import 'package:flutter/material.dart';
+
+class CategoryPage extends StatefulWidget {
+  const CategoryPage({super.key});
+
+  @override
+  State<CategoryPage> createState() => _CategoryPageState();
+}
+
+class _CategoryPageState extends State<CategoryPage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Category Page',
+        style: TextStyle(fontSize: 24),
+      ),
+    );
+  }
+}
+```
+
+`lib/pages/tabs/setting.dart`
+
+```dart
+import 'package:flutter/material.dart';
+
+class SettingPage extends StatefulWidget {
+  const SettingPage({super.key});
+
+  @override
+  State<SettingPage> createState() => _SettingPageState();
+}
+
+class _SettingPageState extends State<SettingPage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        'Setting Page',
+        style: TextStyle(fontSize: 24),
+      ),
+    );
+  }
+}
+```
+
+#### FloatingActionButton
+
+通过 `Scaffold.floatingActionButton` 进行设置
+
+基础案例可见`自定义组件 - StatefuleWidget`
+
+中间底部浮动按钮案例，紧接 `BottomNavigationBar` 章节 Tabs 组件，`build` 方法
+
+```dart
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: Text(_titleList[_current])),
+    body: _pageList[_current],
+    // 使用 Container 调整 FloatingActionButton 大小和位置
+    floatingActionButton: Container(
+      width: 60,
+      height: 60,
+      padding: const EdgeInsets.all(5),
+      margin: const EdgeInsets.only(top: 0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          setState(() {
+            _current = 1;
+          });
+        },
+      ),
+    ),
+    // 配置浮动位置
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    bottomNavigationBar: BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      currentIndex: _current,
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
+        BottomNavigationBarItem(icon: Icon(Icons.category), label: '分类'),
+        BottomNavigationBarItem(icon: Icon(Icons.settings), label: '设置')
+      ],
+      onTap: (index) {
+        setState(() {
+          if (index != 1) {
+            _current = index;
+          }
+        });
+      },
+    ),
+  );
+}
+```
+
+#### Drawer
+
+侧边栏，通过 `Scaffold.drawer`、`Scaffold.endDrawer` 属性分别设置左、右侧侧边栏
+
+```dart
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: Text(_titleList[_current])),
+    body: _pageList[_current],
+	// ...
+    drawer: Drawer(
+      child: Column(
+        children: [
+          Row(
+            children: const [
+              Expanded(
+                flex: 1,
+                child: DrawerHeader(
+                  decoration: BoxDecoration(color: Colors.blue),
+                  child: Text('Header'),
+                ),
+              )
+            ],
+          ),
+          const ListTile(
+            leading: CircleAvatar(
+              child: Icon(Icons.people),
+            ),
+            title: Text('个人中心'),
+          ),
+          const Divider(),
+          const ListTile(
+            leading: CircleAvatar(
+              child: Icon(Icons.settings),
+            ),
+            title: Text('设置中心'),
+          ),
+          const Divider(),
+        ],
+      ),
+    ),
+    endDrawer: const Drawer(
+      child: Text('右侧侧边栏内容'),
+    ),
+  );
+}
+```
+
+> 如果是介绍用户，那么可以使用现成的 `UserAccountsDrawerHeader` 组件
+
 ### 自定义组件
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget

@@ -83,6 +83,14 @@ flutter create my_app
 
 # 运行项目
 flutter run
+
+# 查看当前支持运行的设备列表
+flutter devices
+
+# 运行到指定设备
+# 也可以在 VsCode 右下角状态栏选择运行设备，再执行 flutter run
+# 设备名：chrome、macos
+flutter run -d chrome
 ```
 
 ### 2.5 VSCode 扩展程序
