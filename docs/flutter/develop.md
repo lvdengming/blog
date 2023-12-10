@@ -1405,6 +1405,90 @@ Widget build(BuildContext context) {
 
 > 如果是介绍用户，那么可以使用现成的 `UserAccountsDrawerHeader` 组件
 
+#### AppBar
+
+常用属性：
+
+- leading：在标题前显示一个控件，在首页通常显示应用的 logo，在其它页面通常显示为返回按钮
+- title：标题，通常显示为当前界面的标题文字，可以放组件
+- actions：通常使用 IconButton 来表示，可以放按钮组
+- bottom：通常放 TabBar，标题下面显示一个 Tab 导航栏
+- backgroundColor：导航背景颜色
+- iconTheme：图标样式
+- centerTitle：标题是否居中显示
+
+![image.png](https://s2.loli.net/2023/11/12/l5zYEdX9StZmOAT.png)
+
+```dart
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Demo',
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        // 左侧按钮图标
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: (() {
+            print('点击左侧按钮图标');
+          }),
+        ),
+        title: const Text('Home'),
+        backgroundColor: Colors.red,
+        // 右侧按钮图标
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.people),
+            onPressed: () {
+              print('点击了右侧按钮1');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.cake),
+            onPressed: () {
+              print('点击了右侧按钮2');
+            },
+          ),
+        ],
+        centerTitle: true,
+      ),
+      body: const Text('Home Page'),
+    );
+  }
+}
+```
+
+> 在 MaterialApp 中，通过 `debugShowCheckedModeBanner` 属性控制是否显示 debug 标签
+
+#### Dialog
+
+AlertDialog、SimpleDialog、
+
 ### 自定义组件
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget
@@ -1650,6 +1734,380 @@ class HomePage extends StatelessWidget {
         color: Colors.red,
       )
     ]);
+  }
+}
+```
+
+### 路由
+
+在 Flutter 中通过 Navigator 组件管理路由导航，分为基本路由和命名路由
+
+#### 基本路由
+
+```dart
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('跳转到搜索页面'),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) {
+                return const SearchPage();
+              }),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+```
+
+传参：
+
+```dart
+import 'package:flutter/material.dart';
+
+class SettingPage extends StatefulWidget {
+  final String id;
+  const SettingPage({super.key, required this.id});
+
+  @override
+  State<SettingPage> createState() => _SettingPageState();
+}
+
+class _SettingPageState extends State<SettingPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('设置')),
+      body: Text('用户id: ${widget.id}'),
+    );
+  }
+}
+```
+
+#### 命名路由
+
+```dart
+import 'package:flutter/material.dart';
+import './search.dart';
+import './setting.dart';
+
+void main(List<String> args) {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Demo',
+      // home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/setting': (context) => const SettingPage(),
+        '/search': (context) => const SearchPage()
+      },
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('跳转到设置页面'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/setting');
+          },
+        ),
+      ),
+    );
+  }
+}
+```
+
+路由传值
+
+```dart
+// main.dart
+import 'package:flutter/material.dart';
+import './search.dart';
+import './setting.dart';
+
+void main(List<String> args) {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  // 1、定义路由
+  final Map routes = {
+    '/': (context) => const HomePage(),
+    '/setting': (context) => const SettingPage(),
+    '/search': (context, {arguments}) => SearchPage(arguments: arguments)
+  };
+  MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Demo',
+      // home: HomePage(),
+      initialRoute: '/',
+      // 2、配置 onGenerateRoute 固定写法
+      onGenerateRoute: (RouteSettings settings) {
+        // 路由名称
+        final String? name = settings.name;
+        final Function? pageContentBuilder = routes[name];
+        if (pageContentBuilder != null) {
+          if (settings.arguments != null) {
+            final Route route = MaterialPageRoute(builder: (context) =>
+              pageContentBuilder(context, arguments: settings.arguments)
+            );
+            return route;
+          } else {
+            final Route route = MaterialPageRoute(builder: (context) =>
+              pageContentBuilder(context));
+              return route;
+          }
+        }
+        return null;
+      }
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('跳转到搜索页面'),
+          onPressed: () {
+            Navigator.pushNamed(context, '/search', arguments: {
+              'name': 'zhangsan',
+              'age': 22
+            });
+          },
+        ),
+      ),
+    );
+  }
+}
+
+// search.dart
+import 'package:flutter/material.dart';
+
+class SearchPage extends StatelessWidget {
+  final Map arguments;
+  const SearchPage({super.key, required this.arguments});
+
+  @override
+  Widget build(BuildContext context) {
+    print(this.arguments);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('搜索')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [Text('这是搜索页面')],
+      ),
+    );
+  }
+}
+```
+
+#### 路由操作
+
+- 返回上一级
+
+```dart
+Navigator.of(context).pop();
+```
+
+- 替换路由
+
+```dart
+Navigator.of(context).pushReplacementNamed('/search');
+```
+
+- 返回到根路由
+
+```dart
+Navigator.of(context).pushAndRemoveUntil 方法
+```
+
+## 案例
+
+### Tabbar TabBarView 实现类似头条顶部导航
+
+1、混入 SingleTicketerProviderStateMixin
+
+```dart
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {}
+```
+
+2、定义 TabController
+
+```dart
+late TabController _tabController;
+
+@override
+void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+}
+```
+
+TabBar 常用属性：
+
+- tabs：显示的标签内容，一般使用 Tab 对象，也可以是其它 Widget
+- controller：TabController 对象
+- isScrollable：是否可滚动
+- indicatorColor：指示器颜色
+- indicatorHeight：指示器高度
+- indicatorPadding：地步指示器的 Padding
+- indicator：指示器 decoration，例如边框等
+- indicatorSize：指示器大小计算方式，TabBarIndicatorSize.label 跟文字等宽，TabBarIndicatorSize.tab 跟每个 tab 等宽
+- labelColor：选中 label 颜色
+- labelStyle：选中 label 的 Style
+- labelPadding：每个 label 的 Padding
+- unselectedLabelColor：未选中 label 颜色
+- unselectedLabelStyle：未选中 label 的 Style
+
+![image.png](https://s2.loli.net/2023/11/12/f95PFDV3SbHxvap.png)
+
+```dart
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  // 生命周期函数：当组件初始化的时候触发
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 9, vsync: this);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        // 左侧按钮图标
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: (() {
+            print('点击左侧按钮图标');
+          }),
+        ),
+        title: const Text('Home'),
+        backgroundColor: Colors.red,
+        // 右侧按钮图标
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.people),
+            onPressed: () {
+              print('点击了右侧按钮1');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.cake),
+            onPressed: () {
+              print('点击了右侧按钮2');
+            },
+          ),
+        ],
+        centerTitle: true,
+        bottom: TabBar(
+          controller: _tabController,
+          isScrollable: true,
+          indicatorColor: Colors.white,
+          indicatorWeight: 2,
+          indicatorPadding: const EdgeInsets.all(2),
+          indicatorSize: TabBarIndicatorSize.label,
+          tabs: const [
+            Tab(
+              child: Text('推荐'),
+            ),
+            Tab(
+              child: Text('热门'),
+            ),
+            Tab(
+              child: Text('关注'),
+            ),
+            Tab(
+              child: Text('推荐'),
+            ),
+            Tab(
+              child: Text('热门'),
+            ),
+            Tab(
+              child: Text('关注'),
+            ),
+            Tab(
+              child: Text('推荐'),
+            ),
+            Tab(
+              child: Text('热门'),
+            ),
+            Tab(
+              child: Text('关注'),
+            ),
+          ],
+        ),
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: const [
+          ListTile(
+            title: Text('推荐页'),
+          ),
+          ListTile(
+            title: Text('热门页'),
+          ),
+          ListTile(
+            title: Text('关注页'),
+          ),
+          ListTile(
+            title: Text('推荐页'),
+          ),
+          ListTile(
+            title: Text('热门页'),
+          ),
+          ListTile(
+            title: Text('关注页'),
+          ),
+          ListTile(
+            title: Text('推荐页'),
+          ),
+          ListTile(
+            title: Text('热门页'),
+          ),
+          ListTile(
+            title: Text('关注页'),
+          ),
+        ],
+      ),
+    );
   }
 }
 ```
