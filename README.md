@@ -1,30 +1,32 @@
 # Blog
 
-A personal blog project built with [VuePress](https://vuepress.vuejs.org/zh/), [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
-
-## Create a blog
-
-[VuePress](https://vuepress.vuejs.org/zh/): minimal setup with markdown-centered project structure helps you focus on writing.
-
-Make classified directory in `docs`, create your markdown file blog in your directory.
+A personal blog project built with [VitePress](https://vitepress.dev/)
 
 ## Running command
 
 ```sh
 # init
-npm i
+pnpm install
 
 ## running
-npm run serve
+npm run dev
 
-## build
+# build
 npm run build
 
-## format markdown file
+# eslint files
+npm run lint
+
+# format files
 npm run format
 ```
 
 ## Contact me
 
--   Email: lvdengming@foxmail.com
--   Wechat: lvdengming0104
+[lvdengming@foxmail.com](lvdengming@foxmail.com)
+
+## License
+
+[MIT](https://opensource.org/license/MIT)
+
+Copyright (c) 2017-present, Dengming Lv

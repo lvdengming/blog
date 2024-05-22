@@ -2,7 +2,7 @@
 
 const RULE_TYPE = {
     OFF: 'off',
-    WRAN: 'warn',
+    WARN: 'warn',
     ERROR: 'error'
 };
 
