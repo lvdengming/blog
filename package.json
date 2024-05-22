@@ -1,77 +1,68 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "My blog.",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "husky install",
-    "serve": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lvdengming/blog.git"
-  },
-  "keywords": [
-    "blog"
-  ],
-  "author": "lvdengming@foxmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lvdengming/blog/issues"
-  },
-  "homepage": "https://github.com/lvdengming/blog#readme",
-  "lint-staged": {
-    "*.{js,ts}": [
-      "eslint --fix",
-      "prettier --write"
+    "name": "blog",
+    "version": "0.0.1",
+    "description": "Personal blog site.",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky install",
+        "dev": "vitepress dev",
+        "build": "vitepress build",
+        "preview": "vitepress preview",
+        "lint": "eslint . --ext .js,.cjs,.mjs,.ts,.cts,.mts --fix --ignore-path .gitignore",
+        "format": "prettier . --write --ignore-unknown"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lvdengming/blog.git"
+    },
+    "keywords": [
+        "blog"
     ],
-    "*.{css,less}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.{html,md,json}": [
-      "prettier --write"
-    ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "useTabs": false,
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "quoteProps": "as-needed"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
-    "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "@vuepress/plugin-pwa": "^1.9.9",
-    "eslint": "^8.35.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
-    "prettier": "2.8.4",
-    "stylelint": "^15.2.0",
-    "stylelint-config-standard": "^30.0.1",
-    "vitepress": "^1.1.3",
-    "vuepress": "^1.9.7",
-    "vuepress-theme-reco": "^1.6.16"
-  },
-  "dependencies": {
-    "vue": "^2.7.14"
-  }
+    "author": "lvdengming@foxmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lvdengming/blog/issues"
+    },
+    "homepage": "https://github.com/lvdengming/blog#readme",
+    "lint-staged": {
+        "*.{js,cjs,mjs,ts,cts,mts}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{css,less}": [
+            "stylelint --fix",
+            "prettier --write"
+        ],
+        "*.{html,md,json}": [
+            "prettier --write"
+        ]
+    },
+    "stylelint": {
+        "extends": "stylelint-config-standard"
+    },
+    "prettier": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "none"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
+        "eslint": "^8.35.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.27.5",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.1.2",
+        "prettier": "2.8.4",
+        "stylelint": "^15.2.0",
+        "stylelint-config-standard": "^30.0.1",
+        "vitepress": "^1.2.2"
+    }
 }

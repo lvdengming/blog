@@ -3,8 +3,8 @@ title: 前端埋点方案
 date: 2023-07-26
 sidebar: auto
 categories:
-  - 前端
-  - js
+    - 前端
+    - js
 ---
 
 ## 概要
@@ -13,21 +13,21 @@ categories:
 
 ```js
 const log = {
-  uuid: 'a',
-  pid: 'b',
+    uuid: 'a',
+    pid: 'b'
 };
 
 if (navigator.sendBeacon) {
-  // 通过 Blob 设置 sendBeacon POST Content-Type
-  const blob = new Blob([log], { type: 'application/json' });
-  navigator.sendBeacon(url, blob);
+    // 通过 Blob 设置 sendBeacon POST Content-Type
+    const blob = new Blob([log], { type: 'application/json' });
+    navigator.sendBeacon(url, blob);
 } else {
-  const img = new Image(1, 1);
-  img.src = 'url?uuid=a&pid=b';
+    const img = new Image(1, 1);
+    img.src = 'url?uuid=a&pid=b';
 }
 ```
 
 ## 参考
 
-- navigator.sendBeacon: [https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon)
-- Blob: [https://developer.mozilla.org/zh-CN/docs/Web/API/Blob](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob)
+-   navigator.sendBeacon: [https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon)
+-   Blob: [https://developer.mozilla.org/zh-CN/docs/Web/API/Blob](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob)

@@ -3,10 +3,10 @@ title: 服务部署
 date: 2023-03-05
 sidebar: auto
 categories:
-  - 操作系统
-  - 服务搭建
+    - 操作系统
+    - 服务搭建
 tags:
-  - 配置
+    - 配置
 ---
 
 ## 概述
@@ -17,8 +17,8 @@ tags:
 
 参考文档：
 
-- [nginx 静态资源服务器简单配置](https://blog.csdn.net/name_is_wl/article/details/52958472)
-- [静态资源服务器](https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/)
+-   [nginx 静态资源服务器简单配置](https://blog.csdn.net/name_is_wl/article/details/52958472)
+-   [静态资源服务器](https://tsejx.github.io/devops-guidebook/server/nginx/static-resource-server/)
 
 ### 在服务器上创建网站
 

@@ -1,7 +1,8 @@
 # project ignore
 node_modules
-dist
 package-lock.json
+.vitepress/dist
+.vitepress/cache
 
 # OS ignore
 .DS_Store

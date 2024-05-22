@@ -3,8 +3,8 @@ title: Canvas 手册
 date: 2023-08-12
 sidebar: auto
 categories:
-  - 前端
-  - js
+    - 前端
+    - js
 ---
 
 教程：[https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
@@ -24,8 +24,8 @@ const ctx = canvas.getContext('2d');
 
 ### 矩形
 
-- [fillRect(x, y, width, height)](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillRect)：绘制一个填充的矩形
-- [strokeRect(x, y, width, height)](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/strokeRect)：绘制一个矩形边框
-- [clearRect(x, y, width, height)](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect)：清除指定矩形区域，让清除部分完全透明
+-   [fillRect(x, y, width, height)](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillRect)：绘制一个填充的矩形
+-   [strokeRect(x, y, width, height)](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/strokeRect)：绘制一个矩形边框
+-   [clearRect(x, y, width, height)](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect)：清除指定矩形区域，让清除部分完全透明
 
 更多请参考 MDN 教程：[https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)

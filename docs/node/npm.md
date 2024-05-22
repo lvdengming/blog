@@ -3,9 +3,9 @@ title: npm
 date: 2023-02-17
 sidebar: auto
 categories:
-  - node
+    - node
 tags:
-  - 配置
+    - 配置
 ---
 
 ## npm 命令
@@ -50,7 +50,7 @@ npm set registry https://registry.npmmirror.com
 
 npm 全局模块默认安装位置，默认位置如下：
 
-- windows：`C:\Users\admin\AppData\Roaming\npm`
+-   windows：`C:\Users\admin\AppData\Roaming\npm`
 
 更改后，重新安装全局模块很有可能不会生效，这时候需要修改环境变量：
 
@@ -74,4 +74,4 @@ source ~/.bashrc
 
 npm 缓存目录存放位置，默认位置如下：
 
-- windows：`C:\Users\admin\AppData\Roaming\npm-cache`
+-   windows：`C:\Users\admin\AppData\Roaming\npm-cache`

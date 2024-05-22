@@ -3,8 +3,8 @@ title: Flutter 开发指南
 date: 2023-05-29
 sidebar: auto
 categories:
-  - 前端
-  - flutter
+    - 前端
+    - flutter
 ---
 
 ## 概述
@@ -13,8 +13,8 @@ categories:
 
 ## 常用链接
 
-- 英文文档: [https://docs.flutter.dev/ui/widgets-intro](https://docs.flutter.dev/ui/widgets-intro)
-- 中文文档：[https://flutter.cn/docs/ui/widgets-intro](https://flutter.cn/docs/ui/widgets-intro)
+-   英文文档: [https://docs.flutter.dev/ui/widgets-intro](https://docs.flutter.dev/ui/widgets-intro)
+-   中文文档：[https://flutter.cn/docs/ui/widgets-intro](https://flutter.cn/docs/ui/widgets-intro)
 
 ## 常用命令
 
@@ -77,12 +77,12 @@ flutter run
 
 封装了应用程序实现 Material Design 所需要的一些 Widget，一般作为顶层 widget 使用，常用的属性：
 
-- home（主页）
-- title（标题）
-- color（颜色）
-- theme（主题）
-- routes（路由）
-  ……
+-   home（主页）
+-   title（标题）
+-   color（颜色）
+-   theme（主题）
+-   routes（路由）
+    ……
 
 设置 AppBar 主题色
 
@@ -108,10 +108,10 @@ Scaffold 是 Material Design 布局结构的基本实现，此类提供了用于
 
 Scaffold 有下面几个主要属性：
 
-- appBar：显示在页面顶部的一个 AppBar
-- body：当前页面所显示的主要内容 Widget
-- drawer：抽屉菜单控件
-  ……
+-   appBar：显示在页面顶部的一个 AppBar
+-   body：当前页面所显示的主要内容 Widget
+-   drawer：抽屉菜单控件
+    ……
 
 示例：
 
@@ -138,14 +138,14 @@ void main(List<String> args) {
 
 类似 `div`，主要有以下属性：
 
-- alignment：对其方式，topCenter 顶部居中对齐，topLeft 顶部左对齐……
-- decoration：设置背景颜色、圆角、边框、阴影等
-- margin：外边距
-- padding：内边距
-- transform：类似 css transform
-- height：容器高度
-- width：容器宽度
-- child：容器子元素
+-   alignment：对其方式，topCenter 顶部居中对齐，topLeft 顶部左对齐……
+-   decoration：设置背景颜色、圆角、边框、阴影等
+-   margin：外边距
+-   padding：内边距
+-   transform：类似 css transform
+-   height：容器高度
+-   width：容器宽度
+-   child：容器子元素
 
 示例：
 
@@ -201,24 +201,24 @@ class MyButton extends StatelessWidget {
 
 #### Text
 
-- textAlign：文本对齐方式
-- textDirection：文本方向
-- overflow：文本超出屏幕之后的处理方式
-- textScaleFactor：字体显示倍率
-- maxLines：文字显示最大行数
-- style：字体的样式设置
+-   textAlign：文本对齐方式
+-   textDirection：文本方向
+-   overflow：文本超出屏幕之后的处理方式
+-   textScaleFactor：字体显示倍率
+-   maxLines：文字显示最大行数
+-   style：字体的样式设置
 
 TextStyle 属性：
 
-- decoration：文本装饰线（删除、下划线等）
-- decorationColor：文本装饰线颜色
-- decorationStyle：文本装饰线风格（虚线、实线……）
-- wordSpacing：单词间隙
-- letterSpacing：字母间隙
-- fontStyle：文本样式（斜体、正常体）
-- fontSize：文本大小
-- color：文本颜色
-- fontWeight：字体粗细
+-   decoration：文本装饰线（删除、下划线等）
+-   decorationColor：文本装饰线颜色
+-   decorationStyle：文本装饰线风格（虚线、实线……）
+-   wordSpacing：单词间隙
+-   letterSpacing：字母间隙
+-   fontStyle：文本样式（斜体、正常体）
+-   fontSize：文本大小
+-   color：文本颜色
+-   fontWeight：字体粗细
 
 示例：
 
@@ -252,15 +252,15 @@ class MyText extends StatelessWidget {
 
 类似 img 标签
 
-- Image.network 从网络加载图片
-- Image.asset 从本地加载图片
+-   Image.network 从网络加载图片
+-   Image.asset 从本地加载图片
 
 属性：
 
-- fit：BoxFit，类似背景图片的几种方式，fill、cover、contain……
-- repeat：ImageRepeat，平铺
-- width：宽度高度结合 ClipOval 才有效
-- height
+-   fit：BoxFit，类似背景图片的几种方式，fill、cover、contain……
+-   repeat：ImageRepeat，平铺
+-   width：宽度高度结合 ClipOval 才有效
+-   height
 
 背景图片实现方式
 
@@ -298,10 +298,10 @@ class MyClipOval extends StatelessWidget {
 
 ```yaml
 flutter:
-  assets:
-    - imgs/a.jpg
-    - imgs/1.0x/a.jpg
-    - imgs/2.0x/a.jpg
+    assets:
+        - imgs/a.jpg
+        - imgs/1.0x/a.jpg
+        - imgs/2.0x/a.jpg
 ```
 
 > Flutter 会自动根据设备屏幕分辨率加载对应尺寸图片
@@ -327,10 +327,10 @@ class LocalImage extends StatelessWidget {
 
 列表组件常用参数：
 
-- scrollDirection
-- padding
-- resolve，组件反向排序
-- children，列表元素
+-   scrollDirection
+-   padding
+-   resolve，组件反向排序
+-   children，列表元素
 
 简单的 ListView
 
@@ -431,16 +431,16 @@ GridView 创建网格列表主要有以下三种方式：
 
 常用属性：
 
-- scrollDirection，滚动方法
-- padding，内边距
-- resolve：组件反向排序
-- crossAxisSpacing，水平子 Widget 之间的间距
-- mainAxisSpacing，垂直子 Widget 之间的间距
-- crossAxisCount，一行 Widget 数量（int 用在 GridView.count）
-- maxCrossAxisExtend，横轴子元素的最大长度（double 用在 GridView.extent）
-- childAspectRatio：子 Widget 宽高比例
-- children
-- gridDelegate：控制布局，主要用在 GridView.builder
+-   scrollDirection，滚动方法
+-   padding，内边距
+-   resolve：组件反向排序
+-   crossAxisSpacing，水平子 Widget 之间的间距
+-   mainAxisSpacing，垂直子 Widget 之间的间距
+-   crossAxisCount，一行 Widget 数量（int 用在 GridView.count）
+-   maxCrossAxisExtend，横轴子元素的最大长度（double 用在 GridView.extent）
+-   childAspectRatio：子 Widget 宽高比例
+-   children
+-   gridDelegate：控制布局，主要用在 GridView.builder
 
 示例：
 
@@ -543,9 +543,9 @@ class HomePage extends StatelessWidget {
 
 控制一行元素显示方式，类似 flex 布局，常用属性：
 
-- mainAxisAlignment：主轴的排序方式
-- crossAxisAlignment：次轴的排序方式
-- children：组件子元素
+-   mainAxisAlignment：主轴的排序方式
+-   crossAxisAlignment：次轴的排序方式
+-   children：组件子元素
 
 > crossAxisAlignment 相对于父容器的位置
 > 外部没有 Container，行是自适应的
@@ -601,9 +601,9 @@ class MyIcon extends StatelessWidget {
 
 控制一列的显示方式，类似 flex 布局，`flex-direction: column`，常用属性
 
-- mainAxisAlignment：主轴的排序方式
-- crossAxisAlignment：次轴的排序方式
-- children：组件子元素
+-   mainAxisAlignment：主轴的排序方式
+-   crossAxisAlignment：次轴的排序方式
+-   children：组件子元素
 
 #### Flex Expanded
 
@@ -682,8 +682,8 @@ void main(List<String> args) {
 
 可以使用 Stack 或者 Stack 结合 Align、Positioned 来实现页面的定位
 
-- alignment：配置所有子元素的显示位置
-- children：子组件
+-   alignment：配置所有子元素的显示位置
+-   children：子组件
 
 案例一：让所有子组件居中显示
 
@@ -715,13 +715,13 @@ class MyStack extends StatelessWidget {
 
 Positioned 组件的属性：
 
-- top：子元素距离顶部的距离
-- bottom：子元素距离底部的距离
-- left：子元素距离左侧距离
-- right：子元素距离右侧距离
-- child：子组件
-- width：子组件的宽度（该组件宽度、高度必须是固定值，没法使用 double.infinity）
-- height：子组件的高度
+-   top：子元素距离顶部的距离
+-   bottom：子元素距离底部的距离
+-   left：子元素距离左侧距离
+-   right：子元素距离右侧距离
+-   child：子组件
+-   width：子组件的宽度（该组件宽度、高度必须是固定值，没法使用 double.infinity）
+-   height：子组件的高度
 
 案例二：红色盒子元素左下角显示，文本靠右 top 100 显示
 
@@ -848,14 +848,14 @@ class MyStack extends StatelessWidget {
 
 Card 是卡片组件块，常用属性：
 
-- margin
-- child
-- elevation：阴影的深度
-- color：背景颜色
-- shadowColorl：阴影颜色
-- margin：外边距
-- clipBehavior：内容溢出裁剪方式（值为 Clip 类型）
-- Shape：阴影效果，默认为长方形边
+-   margin
+-   child
+-   elevation：阴影的深度
+-   color：背景颜色
+-   shadowColorl：阴影颜色
+-   margin：外边距
+-   clipBehavior：内容溢出裁剪方式（值为 Clip 类型）
+-   Shape：阴影效果，默认为长方形边
 
 示例：名片
 
@@ -926,10 +926,10 @@ class MyStack extends StatelessWidget {
 
 按钮组件如下：
 
-- ElevatedButton：普通按钮
-- TextButton：文本按钮
-- OutlinedButton：边框按钮
-- IconButton：图标按钮
+-   ElevatedButton：普通按钮
+-   TextButton：文本按钮
+-   OutlinedButton：边框按钮
+-   IconButton：图标按钮
 
 ```dart
 class MyPage extends StatelessWidget {
@@ -1078,11 +1078,11 @@ class MyPage extends StatelessWidget {
 
 流式布局，单行内容不足后，换行显示，常用属性：
 
-- direction，主轴的方向
-- alignment，主轴对齐方向
-- spacing，主轴方向间距
-- runSpacing，副轴方向间距
-- ……
+-   direction，主轴的方向
+-   alignment，主轴对齐方向
+-   spacing，主轴方向间距
+-   runSpacing，副轴方向间距
+-   ……
 
 示例：
 
@@ -1144,12 +1144,12 @@ class MyPage extends StatelessWidget {
 
 常用属性：
 
-- `items`：List 底部导航条按钮集合
-- `iconSize`：icon
-- `currentIndex`：默认选中第几个
-- `onTap`：选中后的回调函数
-- `fixedColor`：选中的颜色
-- `type`：`BottomNavigationBarType.fixed`、`BottomNavigationBarType.shifting`，若底部有 4 个及其以上菜单项，需要配置
+-   `items`：List 底部导航条按钮集合
+-   `iconSize`：icon
+-   `currentIndex`：默认选中第几个
+-   `onTap`：选中后的回调函数
+-   `fixedColor`：选中的颜色
+-   `type`：`BottomNavigationBarType.fixed`、`BottomNavigationBarType.shifting`，若底部有 4 个及其以上菜单项，需要配置
 
 `lib/main.dart`
 
@@ -1409,13 +1409,13 @@ Widget build(BuildContext context) {
 
 常用属性：
 
-- leading：在标题前显示一个控件，在首页通常显示应用的 logo，在其它页面通常显示为返回按钮
-- title：标题，通常显示为当前界面的标题文字，可以放组件
-- actions：通常使用 IconButton 来表示，可以放按钮组
-- bottom：通常放 TabBar，标题下面显示一个 Tab 导航栏
-- backgroundColor：导航背景颜色
-- iconTheme：图标样式
-- centerTitle：标题是否居中显示
+-   leading：在标题前显示一个控件，在首页通常显示应用的 logo，在其它页面通常显示为返回按钮
+-   title：标题，通常显示为当前界面的标题文字，可以放组件
+-   actions：通常使用 IconButton 来表示，可以放按钮组
+-   bottom：通常放 TabBar，标题下面显示一个 Tab 导航栏
+-   backgroundColor：导航背景颜色
+-   iconTheme：图标样式
+-   centerTitle：标题是否居中显示
 
 ![image.png](https://s2.loli.net/2023/11/12/l5zYEdX9StZmOAT.png)
 
@@ -1493,8 +1493,8 @@ AlertDialog、SimpleDialog、
 
 在 Flutter 中自定义组件其实就是一个类，这个类需要继承 StatelessWidget/StatefulWidget
 
-- **StatelessWidget** 是无状态组件，状态不可变的 widget
-- **StatefulWidget** 是有状态组件，持有的状态可能在 widget 生命周期改变
+-   **StatelessWidget** 是无状态组件，状态不可变的 widget
+-   **StatefulWidget** 是有状态组件，持有的状态可能在 widget 生命周期改变
 
 #### StatelessWidget
 
@@ -1663,16 +1663,16 @@ class HomePage extends StatelessWidget {
 
 ```yml
 flutter:
-  fonts:
-    - family: myFont # 指定字体名
-      fonts:
-        - asset: fonts/iconfont.ttf
-    - family: Trajan Pro
-      fonts:
-        - asset: fonts/TrajanPro.ttf
-        - asset: fonts/TrajanPro_Bold.ttf
-          weight: 700
-          style: italic
+    fonts:
+        - family: myFont # 指定字体名
+          fonts:
+              - asset: fonts/iconfont.ttf
+        - family: Trajan Pro
+          fonts:
+              - asset: fonts/TrajanPro.ttf
+              - asset: fonts/TrajanPro_Bold.ttf
+                weight: 700
+                style: italic
 ```
 
 2、创建字体组件
@@ -1938,19 +1938,19 @@ class SearchPage extends StatelessWidget {
 
 #### 路由操作
 
-- 返回上一级
+-   返回上一级
 
 ```dart
 Navigator.of(context).pop();
 ```
 
-- 替换路由
+-   替换路由
 
 ```dart
 Navigator.of(context).pushReplacementNamed('/search');
 ```
 
-- 返回到根路由
+-   返回到根路由
 
 ```dart
 Navigator.of(context).pushAndRemoveUntil 方法
@@ -1980,19 +1980,19 @@ void initState() {
 
 TabBar 常用属性：
 
-- tabs：显示的标签内容，一般使用 Tab 对象，也可以是其它 Widget
-- controller：TabController 对象
-- isScrollable：是否可滚动
-- indicatorColor：指示器颜色
-- indicatorHeight：指示器高度
-- indicatorPadding：地步指示器的 Padding
-- indicator：指示器 decoration，例如边框等
-- indicatorSize：指示器大小计算方式，TabBarIndicatorSize.label 跟文字等宽，TabBarIndicatorSize.tab 跟每个 tab 等宽
-- labelColor：选中 label 颜色
-- labelStyle：选中 label 的 Style
-- labelPadding：每个 label 的 Padding
-- unselectedLabelColor：未选中 label 颜色
-- unselectedLabelStyle：未选中 label 的 Style
+-   tabs：显示的标签内容，一般使用 Tab 对象，也可以是其它 Widget
+-   controller：TabController 对象
+-   isScrollable：是否可滚动
+-   indicatorColor：指示器颜色
+-   indicatorHeight：指示器高度
+-   indicatorPadding：地步指示器的 Padding
+-   indicator：指示器 decoration，例如边框等
+-   indicatorSize：指示器大小计算方式，TabBarIndicatorSize.label 跟文字等宽，TabBarIndicatorSize.tab 跟每个 tab 等宽
+-   labelColor：选中 label 颜色
+-   labelStyle：选中 label 的 Style
+-   labelPadding：每个 label 的 Padding
+-   unselectedLabelColor：未选中 label 颜色
+-   unselectedLabelStyle：未选中 label 的 Style
 
 ![image.png](https://s2.loli.net/2023/11/12/f95PFDV3SbHxvap.png)
 

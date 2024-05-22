@@ -3,8 +3,8 @@ title: Dart
 date: 2023-08-12
 sidebar: auto
 categories:
-  - 前端
-  - flutter
+    - 前端
+    - flutter
 ---
 
 ## 初始化
@@ -95,26 +95,26 @@ Symbol 对象表示在 Dart 程序中声明的运算符或标识符，符号以 
 
 ### 运算符
 
-- 算术运算符：`+  -   *   /   ~/(取整)    %(取余)`
-- 关系运算符：`==   !=  >   <   >=  <=`
-- 逻辑运算符：`!    &&  ||`
-- 赋值运算符
-  - 基础赋值运算符：`=  ??=`，例如 `a ??= 1`，表示如果 a 为空的话，把 1 赋值给 a（要用 var 声明）
-  - 复合赋值运算符：`+= -= *= /= %= ~/=`
-- `if-else`、`switch-case`、三目运算符、空值运算 `??`
+-   算术运算符：`+  -   *   /   ~/(取整)    %(取余)`
+-   关系运算符：`==   !=  >   <   >=  <=`
+-   逻辑运算符：`!    &&  ||`
+-   赋值运算符
+    -   基础赋值运算符：`=  ??=`，例如 `a ??= 1`，表示如果 a 为空的话，把 1 赋值给 a（要用 var 声明）
+    -   复合赋值运算符：`+= -= *= /= %= ~/=`
+-   `if-else`、`switch-case`、三目运算符、空值运算 `??`
 
 ### 类型转换
 
-- 转换成 String：`toString()`
-- 转换成 int：`int.parse()`
+-   转换成 String：`toString()`
+-   转换成 int：`int.parse()`
 
 > 字符串判断是否为空，需要使用 `str.isEmpty`，数字通过 `num.isNaN` 判断是否为 NaN
 
 ### List、Map、Set 详解
 
-- [List](https://api.dart.cn/stable/2.16.1/dart-core/List-class.html)
-- [Map](https://api.dart.cn/stable/3.0.5/dart-core/Map-class.html)
-- [Set](https://api.dart.cn/stable/2.15.1/dart-core/Set-class.html)
+-   [List](https://api.dart.cn/stable/2.16.1/dart-core/List-class.html)
+-   [Map](https://api.dart.cn/stable/3.0.5/dart-core/Map-class.html)
+-   [Set](https://api.dart.cn/stable/2.15.1/dart-core/Set-class.html)
 
 ### 函数
 
@@ -274,12 +274,12 @@ class C with A,B {}
 Dart 库一共分为三类：
 
 1. 系统内置库，例如：
-   1. `import 'dart:math'`
-   2. `import 'dart:io'`
+    1. `import 'dart:math'`
+    2. `import 'dart:io'`
 2. Pub 包管理系统中的库
-   1. [https://pub.dev/pacakges](ttps://pub.dev/pacakges)
-   2. [https://pub.flutter-io.cn/packages](https://pub.flutter-io.cn/packages)
-   3. [https://pub.dartlang.org/flutter](https://pub.dartlang.org/flutter)
+    1. [https://pub.dev/pacakges](ttps://pub.dev/pacakges)
+    2. [https://pub.flutter-io.cn/packages](https://pub.flutter-io.cn/packages)
+    3. [https://pub.dartlang.org/flutter](https://pub.dartlang.org/flutter)
 3. 自定义库，例如 `import 'util.dart'`
 
 如何在项目中使用第三方库？
@@ -289,9 +289,9 @@ Dart 库一共分为三类：
 ```yml
 name: xxx
 environment:
-  sdk: '>=2.10.0 <3.0.0'
+    sdk: '>=2.10.0 <3.0.0'
 dependencies:
-  http: ^0.13.5
+    http: ^0.13.5
 ```
 
 2. 运行安装命令：
@@ -322,12 +322,12 @@ import 'xxx.dart' hide abc;
 
 ## 新特性
 
-- Null safety：`int`、`double` 等基础类型不能赋值 `null`，可以通过 `?` 设置为可空类型，例如 `int? num = null;`
+-   Null safety：`int`、`double` 等基础类型不能赋值 `null`，可以通过 `?` 设置为可空类型，例如 `int? num = null;`
 
 > 内容可能随版本更替而有所不同
 
-- 类型断言(`!`)：相对于可空类型，断言该数据是存在的
-- `late` 关键字，用于延迟初始化
+-   类型断言(`!`)：相对于可空类型，断言该数据是存在的
+-   `late` 关键字，用于延迟初始化
 
 ```dart
 class Animal {
@@ -338,7 +338,7 @@ class Animal {
 }
 ```
 
-- `required` 关键字，表示这个是一个必须传入的命名参数
+-   `required` 关键字，表示这个是一个必须传入的命名参数
 
 ```dart
 class Person {
@@ -351,7 +351,7 @@ class Person {
 }
 ```
 
-- `identical(obj1, obj2)` 判断 obj1、obj2 是否指向同一对象
+-   `identical(obj1, obj2)` 判断 obj1、obj2 是否指向同一对象
 
 ```dart
 // 普通创建对象方式可以不使用 new 关键字
@@ -390,5 +390,5 @@ if (a is String) {
 
 ## 参考
 
-- 一个 UP 主，视频地址：[https://www.bilibili.com/video/BV1UY4y1L7Pa](https://www.bilibili.com/video/BV1UY4y1L7Pa)，代码库地址：[https://gitlab.com/xy101](https://gitlab.com/xy101)
-- bilibili 视频：[https://www.bilibili.com/video/BV1S4411E7LY/?spm_id_from=333.337.search-card.all.click](https://www.bilibili.com/video/BV1S4411E7LY/?spm_id_from=333.337.search-card.all.click)
+-   一个 UP 主，视频地址：[https://www.bilibili.com/video/BV1UY4y1L7Pa](https://www.bilibili.com/video/BV1UY4y1L7Pa)，代码库地址：[https://gitlab.com/xy101](https://gitlab.com/xy101)
+-   bilibili 视频：[https://www.bilibili.com/video/BV1S4411E7LY/?spm_id_from=333.337.search-card.all.click](https://www.bilibili.com/video/BV1S4411E7LY/?spm_id_from=333.337.search-card.all.click)

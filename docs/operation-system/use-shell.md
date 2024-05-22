@@ -3,9 +3,9 @@ title: 在 VSCode 中使用 Shell 终端（Git-Bash）
 date: 2023-02-14
 sidebar: auto
 categories:
-  - 操作系统
+    - 操作系统
 tags:
-  - 配置
+    - 配置
 ---
 
 ## 概述
@@ -51,18 +51,18 @@ tags:
 
 ```json
 {
-  "workbench.colorTheme": "Atom One Dark",
-  "editor.fontSize": 18,
-  "editor.tabSize": 2,
-  "window.zoomLevel": 1,
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.profiles.windows": {
-    "Git-Bash": {
-      "path": "D:\\Apps\\Git\\bin\\bash.exe",
-      "args": []
-    }
-  },
-  "terminal.integrated.defaultProfile.windows": "Git-Bash"
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.fontSize": 18,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 1,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.profiles.windows": {
+        "Git-Bash": {
+            "path": "D:\\Apps\\Git\\bin\\bash.exe",
+            "args": []
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Git-Bash"
 }
 ```
 

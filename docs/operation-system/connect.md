@@ -3,10 +3,10 @@ title: 连接远程服务器
 date: 2023-02-27
 sidebar: auto
 categories:
-  - 操作系统
-  - 服务搭建
+    - 操作系统
+    - 服务搭建
 tags:
-  - 配置
+    - 配置
 ---
 
 ## 概述
@@ -76,5 +76,5 @@ HOST *
 
 其中:
 
-- `HOST *` 表示通过 ssh 连接的所有主机，可以将 `*` 修改为指定 IP，并且可以设置多个
-- `ServerAliveInterval 60` 表示 ssh 客户端每隔 60 秒给远程主机发送一个 no-op 包，no-op 是无任何操作的意思，这样远程主机就不会关闭这个 SSH 会话
+-   `HOST *` 表示通过 ssh 连接的所有主机，可以将 `*` 修改为指定 IP，并且可以设置多个
+-   `ServerAliveInterval 60` 表示 ssh 客户端每隔 60 秒给远程主机发送一个 no-op 包，no-op 是无任何操作的意思，这样远程主机就不会关闭这个 SSH 会话

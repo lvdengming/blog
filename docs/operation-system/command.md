@@ -3,7 +3,7 @@ title: 常用系统命令
 date: 2023-03-04
 sidebar: auto
 categories:
-  - 操作系统
+    - 操作系统
 ---
 
 ## 概述

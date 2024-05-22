@@ -3,20 +3,20 @@ title: 小程序
 date: 2022-12-11
 sidebar: auto
 categories:
-  - 前端
-  - 小程序
+    - 前端
+    - 小程序
 tags:
-  - 学习笔记
+    - 学习笔记
 ---
 
 ## 1.初识小程序
 
 ### 1.1 相关链接
 
-- 学习链接：https://www.bilibili.com/video/BV1834y1676P?spm_id_from=333.337.search-card.all.click&vd_source=52ed5c88dcd416be49cb6d916d2ad164
-- 微信公众平台：https://mp.weixin.qq.com/
-- 微信开发者工具：https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html
-- 开发者文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
+-   学习链接：https://www.bilibili.com/video/BV1834y1676P?spm_id_from=333.337.search-card.all.click&vd_source=52ed5c88dcd416be49cb6d916d2ad164
+-   微信公众平台：https://mp.weixin.qq.com/
+-   微信开发者工具：https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html
+-   开发者文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
 
 ### 1.2 目录介绍
 
@@ -48,10 +48,10 @@ tags:
 
 **app.json：**
 
-- pages: 记录小程序所有页面的路径（第一项为首页）
-- window: 定义小程序所有页面的背景色、文字颜色等
-- style: 定义小程序组件所使用的样式版本
-- sitemapLocation: 指明 sitemap.json 的位置
+-   pages: 记录小程序所有页面的路径（第一项为首页）
+-   window: 定义小程序所有页面的背景色、文字颜色等
+-   style: 定义小程序组件所使用的样式版本
+-   sitemapLocation: 指明 sitemap.json 的位置
 
 ### 1.3 小程序开发与网页开发的区别
 
@@ -65,19 +65,19 @@ WXML 和 HTML 的区别：
 
 1. 标签名称不同
 
-- HTML（div, span, img, a)
-- WXML（view, text, image, navigator)
+-   HTML（div, span, img, a)
+-   WXML（view, text, image, navigator)
 
 2. 属性节点不同
 
-- `<a href="#">超链接</a>`
-- `<navigator url="/pages/home/home">超链接</navigator>`
+-   `<a href="#">超链接</a>`
+-   `<navigator url="/pages/home/home">超链接</navigator>`
 
 3. 提供了类似于 Vue 中的模板语法
 
-- 数据绑定
-- 列表渲染
-- 条件渲染
+-   数据绑定
+-   列表渲染
+-   条件渲染
 
 #### WXSS 样式
 
@@ -87,20 +87,20 @@ WXSS 和 CSS 的区别：
 
 1. 新增了 rpx 尺寸单位
 
-- CSS 中需要手动进行像素单位换算，例如 rem
-- WXSS 在底层支持新的尺寸单位 rpx，在不同大小的屏幕上小程序会自动进行换算
+-   CSS 中需要手动进行像素单位换算，例如 rem
+-   WXSS 在底层支持新的尺寸单位 rpx，在不同大小的屏幕上小程序会自动进行换算
 
 2. 提供了全局样式和局部样式
 
-- 项目根目录中的 app.wxss 会作用于所有小程序页面
-- 局部页面的.wxss 样式仅对当前页面生效
+-   项目根目录中的 app.wxss 会作用于所有小程序页面
+-   局部页面的.wxss 样式仅对当前页面生效
 
 3. WXSS 仅支持部分 CSS 选择器
 
-- .class 和#id
-- element
-- 并集选择器、后代选择器
-- ::after 和::before 等伪类选择器
+-   .class 和#id
+-   element
+-   并集选择器、后代选择器
+-   ::after 和::before 等伪类选择器
 
 #### 小程序中的 JS 文件
 
@@ -144,20 +144,20 @@ WXSS 和 CSS 的区别：
 
 ### 2.1 常用的视图容器类组件
 
-- view：普通视图区域，类似于 div
-- scroll-view：可滚动的视图区域
-- swiper 和 swiper-item：轮播图容器组件和轮播图 item 组件
+-   view：普通视图区域，类似于 div
+-   scroll-view：可滚动的视图区域
+-   swiper 和 swiper-item：轮播图容器组件和轮播图 item 组件
 
 ### 2.2 常用的基础内容组件
 
-- text：文本组件，类似于 span（selectable 属性->支持长按选中效果）
-- rich-text：富文本组件，支持吧 HTML 字符串渲染为 WXML 结构
+-   text：文本组件，类似于 span（selectable 属性->支持长按选中效果）
+-   rich-text：富文本组件，支持吧 HTML 字符串渲染为 WXML 结构
 
 ### 2.3 其它常用组件
 
-- button：按钮组件，比 HTML 中 button 更丰富，通过`open-type`属性可以调用微信提供的各种功能（客服、转发、获取用户授权，获取客户信息等）
-- image：图片组件，默认宽度约为 300px、高度约为 200px
-- navigator：页面导航组件，类似于 a
+-   button：按钮组件，比 HTML 中 button 更丰富，通过`open-type`属性可以调用微信提供的各种功能（客服、转发、获取用户授权，获取客户信息等）
+-   image：图片组件，默认宽度约为 300px、高度约为 200px
+-   navigator：页面导航组件，类似于 a
 
 ### 2.4 小程序中的 API
 
@@ -166,15 +166,15 @@ WXSS 和 CSS 的区别：
 小程序官方把 API 分为了如下 3 大类：
 
 1. 事件监听 API
-   - 特点：以 on 开头，用来监听某些事件的触发
-   - 举例：`wx.onWindowResize(function callback)`监听窗口尺寸的事件
+    - 特点：以 on 开头，用来监听某些事件的触发
+    - 举例：`wx.onWindowResize(function callback)`监听窗口尺寸的事件
 2. 同步 API
-   - 特点 1：以 Sync 结尾的 API 都是同步 API
-   - 特点 2：同步 API 的执行结果，可以通过函数返回值直接获取，如果执行出错会抛出异常
-   - 举例：`wx.setStorageSync(key, value)`向本地存储中写入内容
+    - 特点 1：以 Sync 结尾的 API 都是同步 API
+    - 特点 2：同步 API 的执行结果，可以通过函数返回值直接获取，如果执行出错会抛出异常
+    - 举例：`wx.setStorageSync(key, value)`向本地存储中写入内容
 3. 异步 API
-   - 特点：类似于 jQuery 中的`$.ajax(options)`函数，需要通过 success、fail、complete 接收调用的结果
-   - 举例：`wx.request()`发起网络请求，通过 success 回调函数接收数据
+    - 特点：类似于 jQuery 中的`$.ajax(options)`函数，需要通过 success、fail、complete 接收调用的结果
+    - 举例：`wx.request()`发起网络请求，通过 success 回调函数接收数据
 
 ### 2.5 小程序管理
 
@@ -192,21 +192,21 @@ WXSS 和 CSS 的区别：
 
 常用事件：
 
-- tap：手指触摸后马上离开，类似于 HTML 中的 click 事件
-- input：文本框的输入事件
-- change：状态改变时触发
+-   tap：手指触摸后马上离开，类似于 HTML 中的 click 事件
+-   input：文本框的输入事件
+-   change：状态改变时触发
 
 > 绑定方式：`bindtap`或`bind:tap`
 
 当事件回调触发的时候，会收到一个事件对象，它的详细属性如下：
 
-- type==string==：事件类型
-- timeStamp==number==：页面打开到触发事件所经过的毫秒数
-- target==object==：触发事件组件的一些属性值集合
-- currentTarget==object==：当前组件的一些属性值集合
-- detail==object==：额外的信息
-- touches==array==：触摸事件，当前停留在屏幕中的触摸点信息数组
-- changedTouches==array==：触摸事件，当前变化的触摸点信息数组
+-   type==string==：事件类型
+-   timeStamp==number==：页面打开到触发事件所经过的毫秒数
+-   target==object==：触发事件组件的一些属性值集合
+-   currentTarget==object==：当前组件的一些属性值集合
+-   detail==object==：额外的信息
+-   touches==array==：触摸事件，当前停留在屏幕中的触摸点信息数组
+-   changedTouches==array==：触摸事件，当前变化的触摸点信息数组
 
 ### 2.8 事件与数据同步
 
@@ -214,7 +214,7 @@ WXSS 和 CSS 的区别：
 
 ```js
 this.setData({
-  count: this.data.count + 1,
+    count: this.data.count + 1
 });
 ```
 
@@ -223,11 +223,11 @@ this.setData({
 ```js
 // 传递数据
 <button type="primary" bind:tap="add2" data-num="{{2}}">
-  加二
+    加二
 </button>;
 // 获取数据
 this.setData({
-  count: this.data.count + e.target.dataset.num,
+    count: this.data.count + e.target.dataset.num
 });
 ```
 
@@ -247,13 +247,13 @@ inputHandler(e) {
 <input value="{{msg}}" bind:input="inputHandler" />;
 
 Page({
-  data: {
-    msg: 'Hello',
-  },
-  inputHandler(e) {
-    this.setData({
-      msg: e.detail.value,
-    });
-  },
+    data: {
+        msg: 'Hello'
+    },
+    inputHandler(e) {
+        this.setData({
+            msg: e.detail.value
+        });
+    }
 });
 ```

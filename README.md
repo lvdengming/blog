@@ -26,5 +26,5 @@ npm run format
 
 ## Contact me
 
-- Email: lvdengming@foxmail.com
-- Wechat: lvdengming0104
+-   Email: lvdengming@foxmail.com
+-   Wechat: lvdengming0104

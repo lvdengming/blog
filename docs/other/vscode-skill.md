@@ -3,9 +3,9 @@ title: VSCode 使用技巧
 date: 2023-03-11
 sidebar: auto
 categories:
-  - 其它
+    - 其它
 tags:
-  - 使用技巧
+    - 使用技巧
 ---
 
 ## 快速生成 html 元素
@@ -93,6 +93,6 @@ VSCode 可通过输入类似 CSS 选择器的文本 + `Tab` 键快速生成 html
 
 ```html
 <div class="a">
-  <div class="b"></div>
+    <div class="b"></div>
 </div>
 ```

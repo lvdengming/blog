@@ -3,19 +3,19 @@ title: 使用Chrome浏览器进行Debug调试
 date: 2024-01-02
 sidebar: auto
 categories:
-  - 前端
+    - 前端
 ---
 
 阅读本文，你将了解到：
 
-- 如何使用Chrome浏览器（或 Microsoft Edge）在本地或现网环境进行Debug调试
-- 使用浏览器调试过程中可能用到的快捷键
+-   如何使用 Chrome 浏览器（或 Microsoft Edge）在本地或现网环境进行 Debug 调试
+-   使用浏览器调试过程中可能用到的快捷键
 
 ## 调试
 
 基本流程：
 
-1. 通过各种方式定位到代码块（console打印、快捷键搜索等）
+1. 通过各种方式定位到代码块（console 打印、快捷键搜索等）
 2. 在合适的位置打断点
 3. 查看代码运行情况，排查原因
 4. 完成调试
@@ -57,8 +57,9 @@ categories:
 前置步骤：打开 Chrome 浏览器（或 Microsoft Edge），F12 -> Source
 
 说明：
-- 本地调试时，搜索内容无限制
-- 在现网调试时，代码基本上已被压缩，难以阅读，例外情况：字符串、方法名（欢迎补充）
+
+-   本地调试时，搜索内容无限制
+-   在现网调试时，代码基本上已被压缩，难以阅读，例外情况：字符串、方法名（欢迎补充）
 
 快捷键：`Ctrl` + `Shift` + `F`
 
@@ -66,7 +67,7 @@ categories:
 
 ![image.png](https://s2.loli.net/2024/01/02/QMowc6ZzBdt9O5g.png)
 
-### 执行Chrome命令
+### 执行 Chrome 命令
 
 前置步骤：F12
 

@@ -3,10 +3,10 @@ title: 搭建服务器环境
 date: 2023-03-04
 sidebar: auto
 categories:
-  - 操作系统
-  - 服务搭建
+    - 操作系统
+    - 服务搭建
 tags:
-  - 配置
+    - 配置
 ---
 
 ## 概述
@@ -167,8 +167,8 @@ sudo yum-config-manager \
 
 国内镜像：
 
-- 阿里云：http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-- 清华大学：https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
+-   阿里云：http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+-   清华大学：https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo
 
 > 代码仓配置文件存放位置：`/etc/yum.repos.d/docker-ce.repo`
 
