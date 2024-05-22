@@ -1,6 +1,6 @@
 # Blog
 
-A personal blog project built with [VitePress](https://vitepress.dev/)
+A personal blog project built with [VitePress](https://vitepress.dev/).
 
 ## Running command
 
@@ -9,16 +9,16 @@ A personal blog project built with [VitePress](https://vitepress.dev/)
 pnpm install
 
 ## running
-npm run dev
+pnpm run dev
 
 # build
-npm run build
+pnpm run build
 
 # eslint files
-npm run lint
+pnpm run lint
 
 # format files
-npm run format
+pnpm run format
 ```
 
 ## Contact me

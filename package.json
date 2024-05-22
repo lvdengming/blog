@@ -1,7 +1,7 @@
 {
     "name": "blog",
     "version": "0.0.1",
-    "description": "Personal blog site.",
+    "description": "A personal blog project built with VitePress",
     "main": "index.js",
     "scripts": {
         "prepare": "husky install",

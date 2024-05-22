@@ -2,9 +2,10 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: 'My Awesome Project',
-    description: 'A VitePress Site',
+    title: "Dengming's Blog",
+    description: 'A personal blog project built with VitePress',
     srcDir: './src',
+    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
@@ -22,6 +23,6 @@ export default defineConfig({
             }
         ],
 
-        socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
+        socialLinks: [{ icon: 'github', link: 'https://github.com/lvdengming/blog' }]
     }
 });
