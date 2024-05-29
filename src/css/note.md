@@ -1,13 +1,4 @@
----
-title: CSS 笔记
-date: 2023-02-25
-sidebar: auto
-categories:
-    - 前端
-    - css
-tags:
-    - 学习笔记
----
+# CSS 学习笔记
 
 ## 概要
 

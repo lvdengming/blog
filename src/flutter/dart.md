@@ -1,11 +1,4 @@
----
-title: Dart
-date: 2023-08-12
-sidebar: auto
-categories:
-    - 前端
-    - flutter
----
+# Dart 学习笔记
 
 ## 初始化
 

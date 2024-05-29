@@ -1,12 +1,4 @@
----
-title: VSCode 使用技巧
-date: 2023-03-11
-sidebar: auto
-categories:
-    - 其它
-tags:
-    - 使用技巧
----
+# VSCode 使用技巧
 
 ## 快速生成 html 元素
 

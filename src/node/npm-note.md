@@ -1,12 +1,4 @@
----
-title: npm
-date: 2023-02-17
-sidebar: auto
-categories:
-    - node
-tags:
-    - 配置
----
+# npm 学习笔记
 
 ## npm 命令
 

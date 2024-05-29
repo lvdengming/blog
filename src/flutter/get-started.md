@@ -1,13 +1,4 @@
----
-title: Flutter 环境搭建
-date: 2022-12-15
-sidebar: auto
-categories:
-    - 前端
-    - flutter
-tags:
-    - 环境搭建
----
+# Flutter 环境搭建
 
 ## 1. 相关链接
 

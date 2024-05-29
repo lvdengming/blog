@@ -1,10 +1,4 @@
----
-title: 使用Chrome浏览器进行Debug调试
-date: 2024-01-02
-sidebar: auto
-categories:
-    - 前端
----
+# Chrome 调试指南
 
 阅读本文，你将了解到：
 

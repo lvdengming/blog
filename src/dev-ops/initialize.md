@@ -1,13 +1,4 @@
----
-title: 搭建服务器环境
-date: 2023-03-04
-sidebar: auto
-categories:
-    - 操作系统
-    - 服务搭建
-tags:
-    - 配置
----
+# 服务器初始化
 
 ## 概述
 

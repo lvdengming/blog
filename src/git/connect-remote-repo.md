@@ -1,12 +1,4 @@
----
-title: 连接远程仓库
-date: 2023-03-05
-sidebar: auto
-categories:
-    - git
-tags:
-    - 项目配置
----
+# 连接远程仓库
 
 ## 概述
 

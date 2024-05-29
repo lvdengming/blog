@@ -1,11 +1,4 @@
----
-title: Canvas 手册
-date: 2023-08-12
-sidebar: auto
-categories:
-    - 前端
-    - js
----
+# Canvas 手册
 
 教程：[https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
 

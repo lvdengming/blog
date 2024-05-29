@@ -1,12 +1,4 @@
----
-title: 设计收藏
-date: 2023-02-13
-sidebar: auto
-categories:
-    - 设计
-tags:
-    - 收藏
----
+# 设计收藏
 
 ## 颜色
 

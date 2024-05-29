@@ -1,11 +1,4 @@
----
-title: 前端埋点方案
-date: 2023-07-26
-sidebar: auto
-categories:
-    - 前端
-    - js
----
+# 前端埋点方案
 
 ## 概要
 

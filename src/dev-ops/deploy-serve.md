@@ -1,13 +1,4 @@
----
-title: 服务部署
-date: 2023-03-05
-sidebar: auto
-categories:
-    - 操作系统
-    - 服务搭建
-tags:
-    - 配置
----
+# 部署服务
 
 ## 概述
 
@@ -39,7 +30,7 @@ tags:
 
 在 `http` 中添加如下内容：
 
-```conf
+```txt
 server {
   # 端口号
   listen      80;
