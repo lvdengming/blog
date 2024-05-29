@@ -268,7 +268,7 @@ nginx -v
 
 > `npm -> ../lib/node_modules/npm/bin/npm-cli.js` 表示文件重定向（JS 只要有 Node.js 环境也可以像 `/bin/bash` 一样作为一种终端类型）
 
-在[连接远程服务器](/operation-system/connect.html#设置命令别名)章节提到的 `alias` 方式可以进一步升级，将连接脚本的目录在配置文件（`.bashrc`、`.zshrc` 等）中添加到环境变量中：
+在[连接远程服务器](/dev-ops/create-connect-script#设置命令别名)章节提到的 `alias` 方式可以进一步升级，将连接脚本的目录在配置文件（`.bashrc`、`.zshrc` 等）中添加到环境变量中：
 
 ```sh
 PATH=directory_path:$PATH

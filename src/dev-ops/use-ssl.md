@@ -28,7 +28,7 @@
 
 官方配置文档：[http://nginx.org/en/docs/http/configuring_https_servers.html](http://nginx.org/en/docs/http/configuring_https_servers.html)
 
-1、在 nginx 安装目录下新建一个 cert 目录，通过[搭建服务器环境](/blog/operation-system/initialize.html)安装的 nginx 目录位于 `/etc/nginx/` 目录
+1、在 nginx 安装目录下新建一个 cert 目录，通过[搭建服务器环境](/dev-ops/initialize)安装的 nginx 目录位于 `/etc/nginx/` 目录
 
 ```sh
 # 进入安装目录

@@ -2,7 +2,7 @@
 
 ## 概述
 
-本文紧接上文 [Flutter 环境搭建](/blog/flutter/start.html)，主要介绍了 Flutter 学习过程中的常用链接、命令
+本文紧接上文 [Flutter 环境搭建](/flutter/get-started)，主要介绍了 Flutter 学习过程中的常用链接、命令
 
 ## 常用链接
 

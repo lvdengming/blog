@@ -6,7 +6,7 @@
 
 ## 安装
 
-请参考：[搭建服务器环境 - 安装 Docker](/operation-system/initialize.html#安装-docker)
+请参考：[搭建服务器环境 - 安装 Docker](/dev-ops/initialize#安装-docker)
 
 ## 常用命令
 
