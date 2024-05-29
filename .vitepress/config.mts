@@ -13,6 +13,7 @@ export default defineConfig({
     title: "Dengming's Blog",
     description: pkg.description,
     srcDir: './src',
+    base: '/blog/',
     cleanUrls: true,
     lastUpdated: true,
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
