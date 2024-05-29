@@ -3,22 +3,22 @@
 layout: home
 
 hero:
-    name: 'My Awesome Project'
-    text: 'A VitePress Site'
-    tagline: My great project tagline
+    name: "Dengming's Blog"
+    text: 'My Learning Notes'
+    tagline: 'A Personal Blog Project Built With VitePress'
     actions:
         - theme: brand
-          text: Markdown Examples
-          link: /markdown-examples
+          text: Dev
+          link: /css/note
         - theme: alt
-          text: API Examples
-          link: /api-examples
+          text: Non-Dev
+          link: /design/collect
 
 features:
-    - title: Feature A
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    - title: Feature B
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    - title: Feature C
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - title: Dev Blog
+      details: Including CSS, Javascript, Node, Flutter eg. docs
+    - title: Non-Dev Blog
+      details: Including Git, DevOps, Design eg. docs
+    - title: Collection
+      details: Personal Knowledge Collection
 ---

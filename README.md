@@ -28,6 +28,7 @@ pnpm run format
 ## Todo List
 
 1. Add Algonia Search
+2. Add Site Meta Data Config
 
 ## License
 

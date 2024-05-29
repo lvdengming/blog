@@ -22,10 +22,26 @@ export default defineConfig({
             provider: 'local'
         },
         nav: nav(),
-        sidebar: sidebar(),
         socialLinks: [{ icon: 'github', link: 'https://github.com/lvdengming/blog' }],
+        sidebar: sidebar(),
+        editLink: {
+            text: '在 GitHub 上编辑此页面',
+            pattern: 'https://github.com/lvdengming/blog/edit/master/src/:path'
+        },
         lastUpdated: {
-            text: '最后更新于'
+            text: '最后更新于',
+            formatOptions: {
+                dateStyle: 'short',
+                timeStyle: 'medium'
+            }
+        },
+        docFooter: {
+            prev: '上一页',
+            next: '下一页'
+        },
+        footer: {
+            message: '基于 MIT 许可发布',
+            copyright: `版权所有 © 2017-${new Date().getFullYear()} 吕登名`
         }
     }
 });
@@ -42,12 +58,12 @@ function nav(): DefaultTheme.NavItem[] {
             link: '/'
         },
         {
-            text: '开发',
+            text: 'Dev',
             link: '/css/note',
             activeMatch: getRegStr(devDirs)
         },
         {
-            text: '非开发',
+            text: 'Non-Dev',
             link: '/design/collect',
             activeMatch: getRegStr(nonDevDirs)
         },
