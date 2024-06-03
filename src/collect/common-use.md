@@ -25,12 +25,11 @@
 -   大部分中文技术网站：[https://nodejs.cn/](https://nodejs.cn/)
 -   javascript 学习网站（javascript.info）：[https://javascript.info/](https://javascript.info/)
 -   前端面经：[https://github.com/paddingme/Front-end-Web-Development-Interview-Question](https://github.com/paddingme/Front-end-Web-Development-Interview-Question)
-
-*   前端知识文档：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
-*   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
-*   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
-*   前端知识笔记：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
-*   Flutter 中文网：[https://docs.flutter.cn/get-started/install](https://docs.flutter.cn/get-started/install)
+-   前端知识文档：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
+-   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
+-   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
+-   前端知识笔记：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
+-   Flutter 中文网：[https://docs.flutter.cn/get-started/install](https://docs.flutter.cn/get-started/install)
 
 ## 工具
 
