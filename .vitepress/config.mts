@@ -26,6 +26,9 @@ export default defineConfig({
         nav: nav(),
         socialLinks: [{ icon: 'github', link: 'https://github.com/lvdengming/blog' }],
         sidebar: sidebar(),
+        outline: {
+            label: '页面导航'
+        },
         editLink: {
             text: '在 GitHub 上编辑此页面',
             pattern: 'https://github.com/lvdengming/blog/edit/master/src/:path'
