@@ -16,6 +16,7 @@ export default defineConfig({
     base: '/blog/',
     cleanUrls: true,
     lastUpdated: true,
+    ignoreDeadLinks: true,
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
