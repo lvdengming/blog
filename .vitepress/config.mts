@@ -289,6 +289,18 @@ function sidebarCollect(): DefaultTheme.SidebarItem[] {
                 {
                     text: 'VSCode 使用技巧',
                     link: 'vscode-skill'
+                },
+                {
+                    text: 'Mac & Linux 学习笔记',
+                    link: 'mac-linux-note'
+                },
+                {
+                    text: '知识点',
+                    link: 'knowledge-section'
+                },
+                {
+                    text: '算法题',
+                    link: 'leet-code'
                 }
             ]
         }
