@@ -30,6 +30,7 @@
 *   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
 *   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
 *   前端知识笔记：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
+*   Flutter 中文网：[https://docs.flutter.cn/get-started/install](https://docs.flutter.cn/get-started/install)
 
 ## 工具
 
