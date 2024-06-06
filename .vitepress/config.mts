@@ -17,7 +17,28 @@ export default defineConfig({
     cleanUrls: true,
     lastUpdated: true,
     ignoreDeadLinks: true,
-    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
+        // 框架已添加 description
+        // ['meta', { name: 'description', content: pkg.description }],
+        [
+            'meta',
+            {
+                name: 'keywords',
+                content:
+                    '吕登名,lvdengming,前端,Vue,React,Angular,JS,JavaScript,开发,编程,编程知识,CSS,Nginx,Docker,Shell,Nest,Flutter'
+            }
+        ],
+        [
+            'script',
+            { id: 'print-info' },
+            `
+                console.log('欢迎来到我的博客');
+                console.log('Welcome to my blog.')
+                console.log('Email: lvdengming@foxmail.com');
+            `
+        ]
+    ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         search: {
