@@ -165,3 +165,30 @@ HTML `<meta>` 元素表示那些不能由其他 HTML 元相关（meta-related）
 > 此处仅作概述，建议去 MDN 文档查看更多详细信息
 
 参考：[https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta)
+
+## ?. 和 ??
+
+MDN 链接：
+
+-   [可选链运算符（?.）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+-   [空值合并运算符（??）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+
+可选链运算符（?.）：在**读取对象属性**时，当引用为 `null` 或 `undefined` 时不会引起错误，返回 `undefined`；与**函数调用**一起使用时，若给定的函数不存在不会引起错误，返回 `undefined`
+
+```js
+const foo = {};
+
+// 报错
+console.log(foo.a.b);
+// 返回 undefined
+console.log(foo.a?.b);
+
+// 报错
+console.log(foo?.a());
+// 返回 undefined
+console.log(foo?.a?.());
+```
+
+空值合并运算符（??）：当左侧的操作数为 `null` 或者 `undefined` 时，返回其右侧操作数，否则返回左侧操作数
+
+> 注意与 `||` 运算符区别，`||` 当左边的操作数“值”为 `false` 时返回右侧操作数
