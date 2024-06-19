@@ -71,6 +71,9 @@
 -   配置文件工具（dotenv）：[https://github.com/motdotla/dotenv#readme](https://github.com/motdotla/dotenv#readme)
 -   node 执行 typescript（ts-node）：[https://github.com/TypeStrong/ts-node](https://github.com/TypeStrong/ts-node)
 -   socket 通信：[https://socket.io/](https://socket.io/)
+-   视频播放器（video.js）：[https://github.com/videojs/video.js](https://github.com/videojs/video.js)
+-   全屏操作（MDN, fullscreen）：[https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API)
+-   全屏操作第三方库（screenfull）：[https://github.com/sindresorhus/screenfull](https://github.com/sindresorhus/screenfull)
 
 ## 技术概念
 
