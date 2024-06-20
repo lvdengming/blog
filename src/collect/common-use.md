@@ -50,9 +50,11 @@
     -   pm2：[https://github.com/Unitech/pm2](https://github.com/Unitech/pm2)
 
 -   网页模板（htmlrev）：[https://htmlrev.com/](https://htmlrev.com/)
-
-*   AI 聊天：[https://openai.com/blog/chatgpt/](https://openai.com/blog/chatgpt/)
-*   内网穿透工具：[花生壳](https://hsk.oray.com/)
+-   AI 聊天：[https://openai.com/blog/chatgpt/](https://openai.com/blog/chatgpt/)
+-   内网穿透工具：[花生壳](https://hsk.oray.com/)
+-   原型、设计工具（与 Sketch、Figma 类似）
+    -   Pixso: [https://pixso.cn/](https://pixso.cn/)
+    -   即时设计: [https://js.design/](https://js.design/)
 
 ## NPM
 
@@ -74,6 +76,8 @@
 -   视频播放器（video.js）：[https://github.com/videojs/video.js](https://github.com/videojs/video.js)
 -   全屏操作（MDN, fullscreen）：[https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API)
 -   全屏操作第三方库（screenfull）：[https://github.com/sindresorhus/screenfull](https://github.com/sindresorhus/screenfull)
+-   移动端网页调试 VConsole：[https://github.com/Tencent/vConsole](https://github.com/Tencent/vConsole)
+-   更方便的方式使用不可变状态 immer：[https://github.com/immerjs/immer](https://github.com/immerjs/immer)
 
 ## 技术概念
 
