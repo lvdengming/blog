@@ -78,6 +78,8 @@
 -   全屏操作第三方库（screenfull）：[https://github.com/sindresorhus/screenfull](https://github.com/sindresorhus/screenfull)
 -   移动端网页调试 VConsole：[https://github.com/Tencent/vConsole](https://github.com/Tencent/vConsole)
 -   更方便的方式使用不可变状态 immer：[https://github.com/immerjs/immer](https://github.com/immerjs/immer)
+-   消除命令行运行差异（cross-env）：[https://github.com/kentcdodds/cross-env](https://github.com/kentcdodds/cross-env)
+-   更优雅地获取命令行传入的参数（minimist）：[https://github.com/minimistjs/minimist](https://github.com/minimistjs/minimist)
 
 ## 技术概念
 
