@@ -2,7 +2,7 @@
 
 A personal blog project built with [VitePress](https://vitepress.dev/).
 
-## Running command
+## Running Command
 
 ```sh
 # init
@@ -21,14 +21,14 @@ pnpm run lint
 pnpm run format
 ```
 
-## Contact me
-
-[lvdengming@foxmail.com](lvdengming@foxmail.com)
-
 ## Todo List
 
-1. Add Algonia Search
-2. Add Site Meta Data Config
+1. Add algonia search
+2. Add pwa feature
+
+## Contact Me
+
+[lvdengming@foxmail.com](lvdengming@foxmail.com)
 
 ## License
 
