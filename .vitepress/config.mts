@@ -7,6 +7,7 @@ const pkg = require('../package.json');
 const devDirs: string[] = ['css', 'flutter', 'javascript', 'mini-program', 'nest', 'node'];
 const nonDevDirs: string[] = ['design', 'example', 'git', 'dev-ops'];
 const collectDirs: string[] = ['collect'];
+const interviewDirs: string[] = ['handwrite'];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -97,6 +98,11 @@ function nav(): DefaultTheme.NavItem[] {
             text: '收藏',
             link: '/collect/common-use',
             activeMatch: getRegStr(collectDirs)
+        },
+        {
+            text: '面试',
+            link: '/handwrite/concurrent-request',
+            activeMatch: getRegStr(interviewDirs)
         }
     ];
 }
@@ -116,7 +122,8 @@ function sidebar(): DefaultTheme.SidebarMulti {
     return {
         ...getSidebar(devDirs, sidebarDev),
         ...getSidebar(nonDevDirs, sidebarNonDev),
-        ...getSidebar(collectDirs, sidebarCollect)
+        ...getSidebar(collectDirs, sidebarCollect),
+        ...getSidebar(interviewDirs, sidebarInterview)
     };
 }
 
@@ -326,6 +333,22 @@ function sidebarCollect(): DefaultTheme.SidebarItem[] {
                 {
                     text: '算法题',
                     link: 'leet-code'
+                }
+            ]
+        }
+    ];
+}
+
+function sidebarInterview(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: 'Handwrite',
+            base: '/handwrite/',
+            collapsed: false,
+            items: [
+                {
+                    text: '控制并发请求',
+                    link: 'concurrent-request'
                 }
             ]
         }
