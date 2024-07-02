@@ -205,8 +205,9 @@ requestList.forEach(async (item) => {
 
 > 记一个遗留问题：在 MacOS node v16.15.0 环境下会被中断
 > ![image.png](https://s2.loli.net/2024/07/02/NUeYAXKgly3tSkP.png)
+> 可见“遗留问题”章节介绍原因
 
-完整代码：
+## 完整代码
 
 ```js
 const requestList = [];
@@ -278,3 +279,111 @@ requestList.forEach(async (item) => {
     console.log(res);
 });
 ```
+
+## 第三方库
+
+`p-limit`: [https://github.com/sindresorhus/p-limit](https://github.com/sindresorhus/p-limit)
+
+安装：
+
+```sh
+npm i p-limit -S
+```
+
+使用（效果等同）：
+
+```js
+import plimit from 'p-limit';
+
+const requestList = [];
+
+for (let i = 1; i <= 100; i++) {
+    requestList.push(
+        () =>
+            new Promise((resolve, reject) => {
+                const waitTime = i % 10 === 6 ? 2_000 : Math.random() * 1000;
+
+                setTimeout(() => {
+                    if (i === 92) {
+                        reject(new Error(`出错了，出错请求：${i}`));
+                    } else {
+                        console.log('done', i);
+                        resolve(i);
+                    }
+                }, waitTime);
+            })
+    );
+}
+
+const limit = plimit(10);
+
+// 数组的 forEach 方法会同步执行每个回调函数，不管回调函数是否是异步
+requestList.forEach(async (item) => {
+    const res = await limit(item);
+    console.log(res);
+});
+```
+
+## 遗留问题
+
+复现环境：MacOS node v16.15.0
+问题：执行过程会被中断
+
+![image.png](https://s2.loli.net/2024/07/02/NUeYAXKgly3tSkP.png)
+
+结论：
+
+-   `Array.prototype.forEach()` 方法不会被 `break` 中断
+-   当回调是同步函数时，无论是 Node 还是浏览器环境，执行都会被异常中断
+-   当回调是异步函数时，Node 环境执行会被异常中断，浏览器环境则不会
+
+### 同步验证过程
+
+```js
+const nums = [1, 2, 3];
+
+nums.forEach((n) => {
+    if (n === 2) {
+        throw new Error(n);
+    }
+
+    console.log(n);
+});
+```
+
+Node 环境：
+
+![image.png](https://s2.loli.net/2024/07/03/1Jq3oQGEPxRV7ui.png)
+
+浏览器环境：
+
+![image.png](https://s2.loli.net/2024/07/03/m14edPYotADb9NH.png)
+
+### 异步验证过程
+
+```js
+const nums = [1, 2, 3];
+const getPromise = (n) => {
+    return new Promise((resolve, reject) => {
+        if (n === 2) {
+            reject(new Error(1));
+        } else {
+            // 用 setTimeout 是确保错误情况先出现
+            setTimeout(() => resolve(n), 500);
+        }
+    });
+};
+
+nums.forEach(async (n) => {
+    const res = await getPromise(n);
+    console.log(res);
+});
+```
+
+Node 环境：
+
+![image.png](https://s2.loli.net/2024/07/03/Oz1PJUBn2cHw8pS.png)
+
+浏览器环境：
+
+![image.png](https://s2.loli.net/2024/07/03/Azpwn5v1Htk6VL7.png)

@@ -80,6 +80,7 @@
 -   更方便的方式使用不可变状态 immer：[https://github.com/immerjs/immer](https://github.com/immerjs/immer)
 -   消除命令行运行差异（cross-env）：[https://github.com/kentcdodds/cross-env](https://github.com/kentcdodds/cross-env)
 -   更优雅地获取命令行传入的参数（minimist）：[https://github.com/minimistjs/minimist](https://github.com/minimistjs/minimist)
+-   Promise 列表并发控制（p-limit）：[https://github.com/sindresorhus/p-limit](https://github.com/sindresorhus/p-limit)
 
 ## 技术概念
 
