@@ -192,3 +192,51 @@ console.log(foo?.a?.());
 空值合并运算符（??）：当左侧的操作数为 `null` 或者 `undefined` 时，返回其右侧操作数，否则返回左侧操作数
 
 > 注意与 `||` 运算符区别，`||` 当左边的操作数“值”为 `false` 时返回右侧操作数
+
+## 自定义事件 & 手动派发事件
+
+MDN：[https://developer.mozilla.org/zh-CN/docs/Web/Events/Creating_and_triggering_events](https://developer.mozilla.org/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+
+手动派发事件核心：[EventTarget.dispatchEvent()](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/dispatchEvent)
+
+问题来源：某些项目通过自定义事件派发数据
+
+```js
+const eventName = 'WorkspaceChange';
+const event = new Event(eventName);
+
+// 监听事件
+window.addEventListener(eventName, (e) => {
+    console.log('触发了自定义事件：', eventName);
+});
+
+// 派发事件
+window.dispatchEvent(event);
+```
+
+**注意 `EventTarget.dispatchEvent()` 除了能派发自定义事件，还能派发内置事件**
+
+例如：模拟鼠标点击事件
+
+```js
+const event = new MouseEvent('click', {
+    view: window,
+    bubbles: true,
+    cancelable: true
+});
+
+window.dispatchEvent(event);
+```
+
+自定义事件携带参数的情况：
+
+```js
+const eventName = 'WorkspaceChange';
+const event = new CustomEvent(eventName, { detail: 'David' });
+window.addEventListener(eventName, (e) => {
+    console.log('触发了自定义事件：', eventName);
+    console.log('携带参数：', e.detail);
+});
+
+window.dispatchEvent(event);
+```
