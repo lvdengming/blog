@@ -81,6 +81,7 @@
 -   消除命令行运行差异（cross-env）：[https://github.com/kentcdodds/cross-env](https://github.com/kentcdodds/cross-env)
 -   更优雅地获取命令行传入的参数（minimist）：[https://github.com/minimistjs/minimist](https://github.com/minimistjs/minimist)
 -   Promise 列表并发控制（p-limit）：[https://github.com/sindresorhus/p-limit](https://github.com/sindresorhus/p-limit)
+-   mock 数据（mockjs）：[https://github.com/nuysoft/Mock](https://github.com/nuysoft/Mock)
 
 ## 技术概念
 
