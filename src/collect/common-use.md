@@ -50,11 +50,16 @@
     -   pm2：[https://github.com/Unitech/pm2](https://github.com/Unitech/pm2)
 
 -   网页模板（htmlrev）：[https://htmlrev.com/](https://htmlrev.com/)
--   AI 聊天：[https://openai.com/blog/chatgpt/](https://openai.com/blog/chatgpt/)
+-   AI 聊天：
+    -   [https://openai.com/blog/chatgpt/](https://openai.com/blog/chatgpt/)
+    -   [https://ai.hohoo.fun/](https://ai.hohoo.fun/)
 -   内网穿透工具：[花生壳](https://hsk.oray.com/)
 -   原型、设计工具（与 Sketch、Figma 类似）
     -   Pixso: [https://pixso.cn/](https://pixso.cn/)
     -   即时设计: [https://js.design/](https://js.design/)
+-   连接远程服务器：
+    -   SSH 连接：[https://www.netsarang.com/en/xshell/](https://www.netsarang.com/en/xshell/)
+    -   VNC 连接：[https://www.realvnc.com/en/connect/download/viewer/](https://www.realvnc.com/en/connect/download/viewer/)
 
 ## NPM
 
@@ -82,9 +87,15 @@
 -   更优雅地获取命令行传入的参数（minimist）：[https://github.com/minimistjs/minimist](https://github.com/minimistjs/minimist)
 -   Promise 列表并发控制（p-limit）：[https://github.com/sindresorhus/p-limit](https://github.com/sindresorhus/p-limit)
 -   mock 数据（mockjs）：[https://github.com/nuysoft/Mock](https://github.com/nuysoft/Mock)
+-   highlight.js 代码高亮：[https://github.com/highlightjs/highlight.js](https://github.com/highlightjs/highlight.js)
+-   marked markdown 编译转换：[https://github.com/markedjs/marked](https://github.com/markedjs/marked)
 
 ## 技术概念
 
 -   SOLID 原则：[https://zh.wikipedia.org/wiki/SOLID\_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1)](<https://zh.wikipedia.org/wiki/SOLID_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1)>)
 -   uuid：[通用唯一识别码（英语：Universally Unique Identifier，缩写：UUID）是用于计算机体系中以识别信息的一个 128 位标识符](https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%94%AF%E4%B8%80%E8%AF%86%E5%88%AB%E7%A0%81)
 -   雪花 id：nowflake 是 Twitter 开源的分布式 ID 生成算法，结果是 64 bit 的 Long 类型的 ID，有着全局唯一和有序递增的特点
+
+## 扩展程序
+
+-   Code Spell Checker：代码拼写检查
