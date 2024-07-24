@@ -30,6 +30,7 @@
 -   前端练手项目：[https://github.com/fengxianqi/front_end-demos](https://github.com/fengxianqi/front_end-demos)
 -   前端知识笔记：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
 -   Flutter 中文网：[https://docs.flutter.cn/get-started/install](https://docs.flutter.cn/get-started/install)
+-   华为山海社区开源地址：[https://github.com/originjs](https://github.com/originjs)
 
 ## 工具
 
@@ -53,6 +54,7 @@
 -   AI 聊天：
     -   [https://openai.com/blog/chatgpt/](https://openai.com/blog/chatgpt/)
     -   [https://ai.hohoo.fun/](https://ai.hohoo.fun/)
+    -   [https://www.coze.com/](https://www.coze.com/)
 -   内网穿透工具：[花生壳](https://hsk.oray.com/)
 -   原型、设计工具（与 Sketch、Figma 类似）
     -   Pixso: [https://pixso.cn/](https://pixso.cn/)
@@ -60,6 +62,9 @@
 -   连接远程服务器：
     -   SSH 连接：[https://www.netsarang.com/en/xshell/](https://www.netsarang.com/en/xshell/)
     -   VNC 连接：[https://www.realvnc.com/en/connect/download/viewer/](https://www.realvnc.com/en/connect/download/viewer/)
+-   Vercel 网站托管平台：[https://vercel.com/](https://vercel.com/)
+-   Tooling.Report 谷歌打包工具比较：[https://bundlers.tooling.report/](https://bundlers.tooling.report/)
+-   面试鸭，面试刷题网站：[https://github.com/liyupi/mianshiya](https://github.com/liyupi/mianshiya)
 
 ## NPM
 
@@ -89,6 +94,38 @@
 -   mock 数据（mockjs）：[https://github.com/nuysoft/Mock](https://github.com/nuysoft/Mock)
 -   highlight.js 代码高亮：[https://github.com/highlightjs/highlight.js](https://github.com/highlightjs/highlight.js)
 -   marked markdown 编译转换：[https://github.com/markedjs/marked](https://github.com/markedjs/marked)
+-   AntV 蚂蚁数据可视化方案：[https://antv.antgroup.com/](https://antv.antgroup.com/)
+    -   G6（关系图）：[https://g6.antv.antgroup.com/](https://g6.antv.antgroup.com/)
+    -   X6（流程图）：[https://x6.antv.antgroup.com/](https://x6.antv.antgroup.com/)
+    -   还有 G2（统计图表）、S2（多维表格）、L7（地图）、F2（移动统计图）、F6（移动关系图）、F7（移动地图）
+-   monaco-editor 浏览器代码编辑器：[https://github.com/microsoft/monaco-editor](https://github.com/microsoft/monaco-editor)
+-   cherryio 高效操作 HTML、XML：[https://github.com/cheeriojs/cheerio](https://github.com/cheeriojs/cheerio)
+-   libphonenumber 转换、格式化、验证国际手机号码：[https://github.com/google/libphonenumber](https://github.com/google/libphonenumber)
+-   clipboard 复制到剪切板：[https://github.com/zenorocha/clipboard.js](https://github.com/zenorocha/clipboard.js)
+-   resize-observer 高效监听 DOM 元素变化：[https://github.com/juggle/resize-observer](https://github.com/juggle/resize-observer)
+-   xlsx 前端处理表格工具：[https://github.com/SheetJS/sheetjs](https://github.com/SheetJS/sheetjs)
+-   uuid uuid 生成工具：[https://github.com/uuidjs/uuid](https://github.com/uuidjs/uuid)
+-   [tslib](https://github.com/microsoft/tslib) 降低编译体积，可参考：[https://juejin.cn/post/7136104350912348174](https://juejin.cn/post/7136104350912348174)
+-   sortable 页面拖拽处理工具：[https://github.com/SortableJS/Sortable](https://github.com/SortableJS/Sortable)
+-   single-spa 微前端路由处理：[https://github.com/single-spa/single-spa](https://github.com/single-spa/single-spa)
+-   single-spa-angular 使用 Angular 构建 single-spa 应用：[https://github.com/single-spa/single-spa-angular](https://github.com/single-spa/single-spa-angular)
+-   css 初始化标准库，和 normalize.css 类似：[https://github.com/csstools/sanitize.css](https://github.com/csstools/sanitize.css)
+-   qs URL query 转换工具：[https://github.com/ljharb/qs](https://github.com/ljharb/qs)
+-   qiankun 微前端构建工具：[https://github.com/umijs/qiankun](https://github.com/umijs/qiankun)
+-   moment 日期处理工具：[https://github.com/moment/moment](https://github.com/moment/moment)
+-   luxon 日期处理工具：[https://github.com/moment/luxon](https://github.com/moment/luxon)
+-   lodash JS 工具函数：[https://github.com/lodash/lodash](https://github.com/lodash/lodash)
+-   ky 基于 fetch 的网络请求：[https://github.com/sindresorhus/ky](https://github.com/sindresorhus/ky)
+-   json5 json 扩展处理：[https://github.com/json5/json5](https://github.com/json5/json5)
+-   js-cookie 处理浏览器 cookie：[https://github.com/js-cookie/js-cookie](https://github.com/js-cookie/js-cookie)
+-   js-base64 处理 base64：[https://github.com/dankogai/js-base64](https://github.com/dankogai/js-base64)
+-   immer 创建不可变状态：[https://github.com/immerjs/immer](https://github.com/immerjs/immer)
+-   jsdiff 文本对比工具：[https://github.com/kpdecker/jsdiff](https://github.com/kpdecker/jsdiff)
+-   d3 可基于 Canvas、SVG、HTML 可视化展示数据：[https://github.com/d3/d3](https://github.com/d3/d3)
+-   core-js JS 标准库：[https://github.com/zloirock/core-js](https://github.com/zloirock/core-js)
+-   clsx 动态拼接 CSS 类名：[https://github.com/lukeed/clsx](https://github.com/lukeed/clsx)
+-   CodeMirror 代码编译器：[https://github.com/codemirror/dev](https://github.com/codemirror/dev)
+-   ajv JSON schema 校验工具：[https://github.com/ajv-validator/ajv](https://github.com/ajv-validator/ajv)
 
 ## 技术概念
 
