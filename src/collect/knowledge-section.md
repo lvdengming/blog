@@ -240,3 +240,47 @@ window.addEventListener(eventName, (e) => {
 
 window.dispatchEvent(event);
 ```
+
+## 模板字符串（标签函数）
+
+模板字符串支持使用函数解析字面量，该函数称作标签函数
+
+MDN: [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_literals#%E5%B8%A6%E6%A0%87%E7%AD%BE%E7%9A%84%E6%A8%A1%E6%9D%BF](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Template_literals#%E5%B8%A6%E6%A0%87%E7%AD%BE%E7%9A%84%E6%A8%A1%E6%9D%BF)
+
+使用示例：
+
+```js
+function tag(strings, values) {
+    console.log(strings, values); // ['name: ', ', age: ', '', raw: Array(3)] 'David'
+    return 'tag result';
+}
+
+const name = 'David';
+const age = 24;
+const message = tag`name: ${name}, age: ${age}`;
+console.log(message); // tag result
+```
+
+案例：设置元素样式
+
+```js
+// 原有方式
+const el = document.querySelector('#app');
+el.style['width'] = '200px';
+el.style['height'] = '200px';
+el.style['background-color'] = 'skyblue';
+el.style['font-size'] = '20px';
+el.style['color'] = 'red';
+
+// 使用标签函数（封装方式多样化，此处是示例）
+const el = document.querySelector('#app');
+el.setStyle = function (strings) {};
+
+el.setStyle`
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    font-size: 20px;
+    color: red;
+`;
+```
