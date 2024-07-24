@@ -263,24 +263,55 @@ console.log(message); // tag result
 
 案例：设置元素样式
 
-```js
-// 原有方式
-const el = document.querySelector('#app');
-el.style['width'] = '200px';
-el.style['height'] = '200px';
-el.style['background-color'] = 'skyblue';
-el.style['font-size'] = '20px';
-el.style['color'] = 'red';
+现有方式：
 
-// 使用标签函数（封装方式多样化，此处是示例）
+```js
 const el = document.querySelector('#app');
-el.setStyle = function (strings) {};
+
+const width = '200px';
+const height = '200px';
+const bgColor = 'skyblue';
+const fontSize = '20px';
+const color = 'red';
+
+el.style['width'] = width;
+el.style['height'] = height;
+el.style['background-color'] = bgColor;
+el.style['font-size'] = fontSize;
+el.style['color'] = color;
+
+el.style['font-weight'] = 'bold';
+```
+
+使用标签函数，将命令式写法改为声明式：
+
+```js
+const el = document.querySelector('#app');
+el.setStyle = function (strings, ...values) {
+    let cssText = strings[0];
+    for (let i = 0; i < values.length; i++) {
+        cssText += values[i];
+        cssText += strings[i + 1];
+    }
+
+    this.style.cssText += cssText;
+};
+
+const width = '200px';
+const height = '200px';
+const bgColor = 'skyblue';
+const fontSize = '20px';
+const color = 'red';
 
 el.setStyle`
-    width: 200px;
-    height: 200px;
-    background-color: skyblue;
-    font-size: 20px;
-    color: red;
+    width: ${width};
+    height: ${height};
+    background-color: ${bgColor};
+    font-size: ${fontSize};
+    color: ${color};
+`;
+
+el.setStyle`
+    font-weight: bold;
 `;
 ```
