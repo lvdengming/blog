@@ -349,6 +349,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '控制并发请求',
                     link: 'concurrent-request'
+                },
+                {
+                    text: '防抖和节流',
+                    link: 'debounce-throttle'
                 }
             ]
         }
