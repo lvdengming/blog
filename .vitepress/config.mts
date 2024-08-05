@@ -36,7 +36,7 @@ export default defineConfig({
             `
                 console.log('欢迎来到我的博客');
                 console.log('Welcome to my blog.')
-                console.log('Email: lvdengming@foxmail.com');
+                console.log('Contact me: lvdengming@foxmail.com');
             `
         ]
     ],
@@ -271,7 +271,7 @@ function sidebarNonDev(): DefaultTheme.SidebarItem[] {
                     link: 'hosts'
                 },
                 {
-                    text: '在 VSCode 中使用 Shell 终端（Git-Bash）',
+                    text: '在 VSCode 中使节流（throttle）用 Shell 终端（Git-Bash）',
                     link: 'use-shell'
                 },
                 {
@@ -353,6 +353,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '防抖和节流',
                     link: 'debounce-throttle'
+                },
+                {
+                    text: '函数方法',
+                    link: 'function-method'
                 }
             ]
         }
