@@ -31,6 +31,7 @@
 -   前端知识笔记：[https://github.com/tsejx/tsejx](https://github.com/tsejx/tsejx)
 -   Flutter 中文网：[https://docs.flutter.cn/get-started/install](https://docs.flutter.cn/get-started/install)
 -   华为山海社区开源地址：[https://github.com/originjs](https://github.com/originjs)
+-   nodejs 用 Chrome 开发者工具进行调试（核心：`node --inspect xxx.js`）：[https://nodejs.org/en/learn/getting-started/debugging](https://nodejs.org/en/learn/getting-started/debugging)
 
 ## 工具
 
@@ -65,6 +66,7 @@
 -   Vercel 网站托管平台：[https://vercel.com/](https://vercel.com/)
 -   Tooling.Report 谷歌打包工具比较：[https://bundlers.tooling.report/](https://bundlers.tooling.report/)
 -   面试鸭，面试刷题网站：[https://github.com/liyupi/mianshiya](https://github.com/liyupi/mianshiya)
+-   篡改猴，修改网页的扩展程序：[https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN)
 
 ## NPM
 
