@@ -315,3 +315,39 @@ el.setStyle`
     font-weight: bold;
 `;
 ```
+
+## 监听 DOM 更改（MutationObserver）
+
+参考链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver/MutationObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver/MutationObserver)
+
+```js
+// 监听变化时执行的回调函数
+const callback = (mutationList, observer) => {
+    for (const mutation of mutationList) {
+        console.log(mutation);
+
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        } else if (mutation.type === 'attributes') {
+            console.log(`The ${mutation.attributeName} attribute was modified.`);
+        }
+    }
+};
+
+const observer = new MutationObserver(callback);
+
+const targetNode = document.getElementById('app');
+const config = {
+    // 观测属性变动
+    attributes: true,
+    // 观测子节点变动，是否有增加或者删除
+    childList: true,
+    // 观察后代节点
+    subtree: true
+};
+observer.observe(targetNode, config);
+```
+
+逆向找到修改元素属性的代码：
+
+![Chrome F12 -> Elements -> target Node 右键 -> Break on -> attribute modifications](https://s2.loli.net/2024/08/06/1qMpKJ6DCkeS4PR.png)

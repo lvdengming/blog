@@ -32,6 +32,7 @@
 -   Flutter 中文网：[https://docs.flutter.cn/get-started/install](https://docs.flutter.cn/get-started/install)
 -   华为山海社区开源地址：[https://github.com/originjs](https://github.com/originjs)
 -   nodejs 用 Chrome 开发者工具进行调试（核心：`node --inspect xxx.js`）：[https://nodejs.org/en/learn/getting-started/debugging](https://nodejs.org/en/learn/getting-started/debugging)
+-   umi，react 社区框架：[https://github.com/umijs/umi](https://github.com/umijs/umi)
 
 ## 工具
 
