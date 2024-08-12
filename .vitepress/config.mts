@@ -7,7 +7,7 @@ const pkg = require('../package.json');
 const devDirs: string[] = ['css', 'flutter', 'javascript', 'mini-program', 'nest', 'node'];
 const nonDevDirs: string[] = ['design', 'example', 'git', 'dev-ops'];
 const collectDirs: string[] = ['collect'];
-const interviewDirs: string[] = ['handwrite'];
+const interviewDirs: string[] = ['interview', 'handwrite'];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -101,7 +101,7 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
             text: '面试',
-            link: '/handwrite/concurrent-request',
+            link: '/interview/question',
             activeMatch: getRegStr(interviewDirs)
         }
     ];
@@ -341,6 +341,25 @@ function sidebarCollect(): DefaultTheme.SidebarItem[] {
 
 function sidebarInterview(): DefaultTheme.SidebarItem[] {
     return [
+        {
+            text: '面试实战',
+            base: '/interview/',
+            collapsed: false,
+            items: [
+                {
+                    text: '面试知识点（一）',
+                    link: 'question'
+                },
+                {
+                    text: '面试知识点（二）',
+                    link: 'question-2'
+                },
+                {
+                    text: '面试记录（面经）',
+                    link: 'record'
+                }
+            ]
+        },
         {
             text: 'Handwrite',
             base: '/handwrite/',

@@ -68,6 +68,9 @@
 -   Tooling.Report 谷歌打包工具比较：[https://bundlers.tooling.report/](https://bundlers.tooling.report/)
 -   面试鸭，面试刷题网站：[https://github.com/liyupi/mianshiya](https://github.com/liyupi/mianshiya)
 -   篡改猴，修改网页的扩展程序：[https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN)
+-   沉浸式翻译 Chrome 扩展程序：[https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh?utm_source=ext_app_menu](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh?utm_source=ext_app_menu)
+-   查看 Chrome 中的 ServiceWorker、SharedWorker、扩展等：[chrome://inspect/#devices](chrome://inspect/#devices)
+-
 
 ## NPM
 
