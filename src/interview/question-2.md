@@ -20,3 +20,9 @@
 ## https 如何保证可靠性传输
 
 参考：[https://cloud.tencent.com/developer/article/1854086](https://cloud.tencent.com/developer/article/1854086)
+
+## DOM 事件的冒泡和捕获
+
+过程：`捕获 -> 目标 -> 冒泡`
+
+参考：[https://zh.javascript.info/bubbling-and-capturing](https://zh.javascript.info/bubbling-and-capturing)
