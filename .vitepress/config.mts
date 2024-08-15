@@ -376,6 +376,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '函数方法',
                     link: 'function-method'
+                },
+                {
+                    text: 'LazyMan',
+                    link: 'lazy-man'
                 }
             ]
         }
