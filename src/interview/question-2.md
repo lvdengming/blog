@@ -1,10 +1,8 @@
 # 面试知识点（二）
 
-## 网页渲染过程
+## JS
 
-参考：[https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work](https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work)
-
-## 浏览器跨标签页通信
+### 浏览器跨标签页通信
 
 1. `localStorage` 和 `storage` 事件，同源情况下（`sessionStorage` 在不同标签页是独立的）
 2. 广播 `BroadcastChannel`，通过相同的通道名称
@@ -17,12 +15,20 @@
 
 参考：[https://cloud.tencent.com/developer/article/2332521](https://cloud.tencent.com/developer/article/2332521)
 
-## https 如何保证可靠性传输
-
-参考：[https://cloud.tencent.com/developer/article/1854086](https://cloud.tencent.com/developer/article/1854086)
-
-## DOM 事件的冒泡和捕获
+### DOM 事件的冒泡和捕获
 
 过程：`捕获 -> 目标 -> 冒泡`
 
 参考：[https://zh.javascript.info/bubbling-and-capturing](https://zh.javascript.info/bubbling-and-capturing)
+
+## 计算机网络
+
+### 网页渲染过程
+
+参考：[https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work](https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work)
+
+### https 如何保证可靠性传输
+
+参考：[https://cloud.tencent.com/developer/article/1854086](https://cloud.tencent.com/developer/article/1854086)
+
+## 操作系统
