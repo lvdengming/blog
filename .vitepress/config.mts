@@ -355,8 +355,12 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'question-2'
                 },
                 {
-                    text: '面试记录（面经）',
-                    link: 'record'
+                    text: '2024-面试记录',
+                    link: '2024'
+                },
+                {
+                    text: 'JS 知识点',
+                    link: 'js'
                 }
             ]
         },
