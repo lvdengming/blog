@@ -101,7 +101,7 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
             text: '面试',
-            link: '/interview/question',
+            link: '/interview/2024',
             activeMatch: getRegStr(interviewDirs)
         }
     ];
@@ -347,16 +347,16 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 {
+                    text: '2024-面试记录',
+                    link: '2024'
+                },
+                {
                     text: '面试知识点（一）',
                     link: 'question'
                 },
                 {
                     text: '面试知识点（二）',
                     link: 'question-2'
-                },
-                {
-                    text: '2024-面试记录',
-                    link: '2024'
                 },
                 {
                     text: 'JS 知识点',
