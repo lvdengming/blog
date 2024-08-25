@@ -365,6 +365,14 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: 'Node 知识点',
                     link: 'node'
+                },
+                {
+                    text: '框架知识点',
+                    link: 'framework'
+                },
+                {
+                    text: '工程化知识点',
+                    link: 'engineering'
                 }
             ]
         },
