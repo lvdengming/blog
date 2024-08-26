@@ -123,3 +123,19 @@ VSCode 可通过输入类似 CSS 选择器的文本 + `Tab` 键快速生成 html
     "prettier.trailingComma": "none"
 }
 ```
+
+## 保存文件时自动优化依赖引入顺序
+
+在 `settings.json` 文件中添加以下配置：
+
+```json
+{
+    "editor.codeActionsOnSave": {
+        "source.sortImports": "always"
+    }
+}
+```
+
+除此之外还有其它配置，如下：
+
+![image.png](https://s2.loli.net/2024/08/26/3dqGgT4pxDLK1kF.jpg)

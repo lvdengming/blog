@@ -134,6 +134,7 @@
 -   CodeMirror 代码编译器：[https://github.com/codemirror/dev](https://github.com/codemirror/dev)
 -   ajv JSON schema 校验工具：[https://github.com/ajv-validator/ajv](https://github.com/ajv-validator/ajv)
 -   amimate.css css 动画汇总：[https://github.com/animate-css/animate.css](https://github.com/animate-css/animate.css)
+-   前端展示数据公式 MathML：[https://developer.mozilla.org/zh-CN/docs/Web/MathML](https://developer.mozilla.org/zh-CN/docs/Web/MathML)
 
 ## 技术概念
 
