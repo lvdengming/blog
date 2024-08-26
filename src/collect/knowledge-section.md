@@ -365,3 +365,14 @@ observer.observe(targetNode, config);
 当背景图片尺寸大于容器尺寸时，设置百分比实际上是**反方向**移动
 
 :::
+
+## 多列布局
+
+-   column-count：指定列的数量
+-   column-fill：元素分成列时的平衡方式
+-   column-gap：列的间距
+-   column-rule：列分割线的宽度、样式、颜色（是一个简写属性）
+-   column-span：在子元素中使用，可以让元素跨越所有的列
+-   column-width：列宽
+
+详细信息请参考 MDN：[https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-count](https://developer.mozilla.org/zh-CN/docs/Web/CSS/column-count)
