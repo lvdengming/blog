@@ -348,6 +348,20 @@ const config = {
 observer.observe(targetNode, config);
 ```
 
-逆向找到修改元素属性的代码：
+## 逆向找到修改元素属性的代码
 
 ![Chrome F12 -> Elements -> target Node 右键 -> Break on -> attribute modifications](https://s2.loli.net/2024/08/06/1qMpKJ6DCkeS4PR.png)
+
+## 骨架屏原理
+
+展示效果：[https://lvdengming.github.io/demo/#/skeleton](https://lvdengming.github.io/demo/#/skeleton)
+
+原理：`background-image` + `linear-gradient` + `background-position` 组合使用，通过不断移动背景图片位置形成动画效果
+
+`background-position` 百分比对应的计算方式为：`(容器尺寸 - 背景图片尺寸) * 百分比`
+
+::: warning
+
+当背景图片尺寸大于容器尺寸时，设置百分比实际上是**反方向**移动
+
+:::
