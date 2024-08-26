@@ -33,6 +33,7 @@
 -   华为山海社区开源地址：[https://github.com/originjs](https://github.com/originjs)
 -   nodejs 用 Chrome 开发者工具进行调试（核心：`node --inspect xxx.js`）：[https://nodejs.org/en/learn/getting-started/debugging](https://nodejs.org/en/learn/getting-started/debugging)
 -   umi，react 社区框架：[https://github.com/umijs/umi](https://github.com/umijs/umi)
+-   大佬网站（张鑫旭）：[https://www.zhangxinxu.com/](https://www.zhangxinxu.com/)
 
 ## 工具
 
@@ -70,7 +71,7 @@
 -   篡改猴，修改网页的扩展程序：[https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN)
 -   沉浸式翻译 Chrome 扩展程序：[https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh?utm_source=ext_app_menu](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh?utm_source=ext_app_menu)
 -   查看 Chrome 中的 ServiceWorker、SharedWorker、扩展等：[chrome://inspect/#devices](chrome://inspect/#devices)
--
+-   拦截网页广告 AdBlock 扩展程序：[https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom](https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom)
 
 ## NPM
 
@@ -132,6 +133,7 @@
 -   clsx 动态拼接 CSS 类名：[https://github.com/lukeed/clsx](https://github.com/lukeed/clsx)
 -   CodeMirror 代码编译器：[https://github.com/codemirror/dev](https://github.com/codemirror/dev)
 -   ajv JSON schema 校验工具：[https://github.com/ajv-validator/ajv](https://github.com/ajv-validator/ajv)
+-   amimate.css css 动画汇总：[https://github.com/animate-css/animate.css](https://github.com/animate-css/animate.css)
 
 ## 技术概念
 
@@ -139,6 +141,6 @@
 -   uuid：[通用唯一识别码（英语：Universally Unique Identifier，缩写：UUID）是用于计算机体系中以识别信息的一个 128 位标识符](https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E5%94%AF%E4%B8%80%E8%AF%86%E5%88%AB%E7%A0%81)
 -   雪花 id：nowflake 是 Twitter 开源的分布式 ID 生成算法，结果是 64 bit 的 Long 类型的 ID，有着全局唯一和有序递增的特点
 
-## 扩展程序
+## VSCode 扩展程序
 
 -   Code Spell Checker：代码拼写检查

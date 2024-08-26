@@ -363,6 +363,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'js'
                 },
                 {
+                    text: 'CSS 知识点',
+                    link: 'css'
+                },
+                {
                     text: 'Node 知识点',
                     link: 'node'
                 },
