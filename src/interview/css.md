@@ -89,3 +89,17 @@ p {
 
 通过理解这些规则，开发者可以更好地控制 CSS 样式的应用顺序和效果。
 :::
+
+## 布局方式
+
+MDN 介绍：[https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+
+css 布局方式有：
+
+1. 常规流布局
+2. 浮动（float）
+3. 定位（position）
+4. flex 布局
+5. grid 布局
+6. 表格布局（传统的通过 `table` 元素来进行的布局）
+7. 多列布局（column-count）
