@@ -2,15 +2,6 @@
 
 ## 1. JS
 
-### 1.1 数据类型
-
-number、string、boolean、null、undefined、symbol、bigint、object
-
-存放位置：
-
--   函数的**参数和局部变量**是放在**栈**中的
--   **对象**是放在**堆**中的
-
 ### 1.2 [Promise](https://es6.ruanyifeng.com/#docs/promise)
 
 1. 对象的状态不受外界影响。Promise 对象代表一个异步操作，有三种状态：pending（进行中）、fulfilled（已成功）和 rejected（已失败）
