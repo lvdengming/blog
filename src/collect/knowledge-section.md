@@ -381,5 +381,5 @@ observer.observe(targetNode, config);
 
 document.referrer 返回的是一个 URI，当前页面就是从这个 URI 所代表的页面跳转或打开的
 
-> 如果页面不是通过地址栏打开的，那么 document.referrer 为空字符串
+> 如果页面是通过地址栏打开的，那么 document.referrer 为空字符串
 > 在 iframe 中，document.referrer 会初始化为父窗口 Window.location 的 href

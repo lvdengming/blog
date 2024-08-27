@@ -131,7 +131,7 @@ VSCode 可通过输入类似 CSS 选择器的文本 + `Tab` 键快速生成 html
 ```json
 {
     "editor.codeActionsOnSave": {
-        "source.sortImports": "always"
+        "source.organizeImports": "explicit"
     }
 }
 ```
