@@ -391,3 +391,26 @@ document.referrer 返回的是一个 URI，当前页面就是从这个 URI 所�
 ![image.png](https://s2.loli.net/2024/08/31/19P8EW54VXRmvdz.png)
 
 MDN：[https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-outside](https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-outside)
+
+## 在 Chrome 上调试 node
+
+步骤如下：
+
+1. 执行 node 时添加`--inspect`选项，例如 `node --inspect index.js`
+
+![image.png](https://s2.loli.net/2024/09/03/kwFAXQbRsHEnpIg.png)
+
+2. 在 Chrome 中打开 `http://localhost:9229`
+
+3. 按下 `F12` 打开开发者工具，点击 Node 图标
+
+![image.png](https://s2.loli.net/2024/09/03/qIdQbj79nFNxsaE.png)
+
+4. 在弹出的调试窗口即可进行调试
+
+![image.png](https://s2.loli.net/2024/09/03/ma4PhdYjQ9yJrIB.png)
+
+更多请参考：
+
+-   [https://nodejs.org/zh-cn/learn/getting-started/debugging](https://nodejs.org/zh-cn/learn/getting-started/debugging)
+-   [https://nodejs.cn/en/learn/getting-started/debugging](https://nodejs.cn/en/learn/getting-started/debugging)

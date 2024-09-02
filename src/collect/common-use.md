@@ -34,6 +34,7 @@
 -   nodejs 用 Chrome 开发者工具进行调试（核心：`node --inspect xxx.js`）：[https://nodejs.org/en/learn/getting-started/debugging](https://nodejs.org/en/learn/getting-started/debugging)
 -   umi，react 社区框架：[https://github.com/umijs/umi](https://github.com/umijs/umi)
 -   大佬网站（张鑫旭）：[https://www.zhangxinxu.com/](https://www.zhangxinxu.com/)
+-   node 自定义命令行工具：[https://juejin.cn/post/7233391595306647609](https://juejin.cn/post/7233391595306647609)
 
 ## 工具
 
