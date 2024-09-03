@@ -377,6 +377,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '工程化知识点',
                     link: 'engineering'
+                },
+                {
+                    text: '数据结构知识点',
+                    link: 'data-structure'
                 }
             ]
         },
