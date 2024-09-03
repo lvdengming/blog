@@ -35,6 +35,8 @@
 -   umi，react 社区框架：[https://github.com/umijs/umi](https://github.com/umijs/umi)
 -   大佬网站（张鑫旭）：[https://www.zhangxinxu.com/](https://www.zhangxinxu.com/)
 -   node 自定义命令行工具：[https://juejin.cn/post/7233391595306647609](https://juejin.cn/post/7233391595306647609)
+-   node 部署（MDN 推荐，数字海洋）：[https://www.digitalocean.com/](https://www.digitalocean.com/)
+-   vue 后台管理模板：[https://github.com/vbenjs/vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
 
 ## 工具
 
