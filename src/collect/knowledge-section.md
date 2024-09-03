@@ -414,3 +414,12 @@ MDN：[https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-outside](https://d
 
 -   [https://nodejs.org/zh-cn/learn/getting-started/debugging](https://nodejs.org/zh-cn/learn/getting-started/debugging)
 -   [https://nodejs.cn/en/learn/getting-started/debugging](https://nodejs.cn/en/learn/getting-started/debugging)
+
+## github 查看最近一周 star 排名
+
+可以在 github 搜索框中输入这样的内容 `stars:>1 pushed:2024-08-28..2024-09-03`，再按照需求排序（参考）
+
+也可以参考网站（推荐）：
+
+-   Github Ranking: [https://github.com/EvanLi/Github-Ranking](https://github.com/EvanLi/Github-Ranking)
+-   Gitstar Ranking: [https://gitstar-ranking.com/](https://gitstar-ranking.com/)

@@ -37,6 +37,15 @@
 -   node 自定义命令行工具：[https://juejin.cn/post/7233391595306647609](https://juejin.cn/post/7233391595306647609)
 -   node 部署（MDN 推荐，数字海洋）：[https://www.digitalocean.com/](https://www.digitalocean.com/)
 -   vue 后台管理模板：[https://github.com/vbenjs/vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
+-   算法动画图解（Hello 算法）：[https://github.com/krahets/hello-algo](https://github.com/krahets/hello-algo)
+-   ts 中文手册：[https://github.com/zhongsp/TypeScript](https://github.com/zhongsp/TypeScript)
+-   免费的网络服务合集：[https://github.com/awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
+-   开发者学习路线：[https://github.com/kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
+-   软件工程师成长路线：[https://github.com/jwasham/coding-interview-university](https://github.com/jwasham/coding-interview-university)
+-   许多编程语言的免费学习资源：[https://github.com/EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)
+-   免费开源的代码学习课程：[https://github.com/freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
+-   算法刷题套路（fucking-algorithm）：[https://github.com/labuladong/fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
+-   JavaGuide 面试指南：[https://github.com/Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide)
 
 ## 工具
 
@@ -75,6 +84,7 @@
 -   沉浸式翻译 Chrome 扩展程序：[https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh?utm_source=ext_app_menu](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh?utm_source=ext_app_menu)
 -   查看 Chrome 中的 ServiceWorker、SharedWorker、扩展等：[chrome://inspect/#devices](chrome://inspect/#devices)
 -   拦截网页广告 AdBlock 扩展程序：[https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom](https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom)
+-   个人 GPT 搭建（AutoGPT）：[https://github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
 
 ## NPM
 
