@@ -46,6 +46,8 @@
 -   免费开源的代码学习课程：[https://github.com/freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
 -   算法刷题套路（fucking-algorithm）：[https://github.com/labuladong/fucking-algorithm](https://github.com/labuladong/fucking-algorithm)
 -   JavaGuide 面试指南：[https://github.com/Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide)
+-   前端安全认证（Web Authentication）：[https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Authentication_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Authentication_API)
+-   前端实时通信技术（直播）（Web RTC）：[https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API](https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API)
 
 ## 工具
 
