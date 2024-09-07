@@ -423,3 +423,13 @@ MDN：[https://developer.mozilla.org/zh-CN/docs/Web/CSS/shape-outside](https://d
 
 -   Github Ranking: [https://github.com/EvanLi/Github-Ranking](https://github.com/EvanLi/Github-Ranking)
 -   Gitstar Ranking: [https://gitstar-ranking.com/](https://gitstar-ranking.com/)
+
+## css 鼠标相关
+
+```css
+/* 屏蔽鼠标事件 */
+pointer-events: none;
+
+/* 禁止用户选择文本 */
+user-select: none;
+```
