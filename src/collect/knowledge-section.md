@@ -497,3 +497,23 @@ async function getFolder() {
 
 1. 无论是使用 `<input>` 还是 `File System Access API`，浏览器都无法在没有用户交互的情况下直接访问本地文件系统，这是为保护用户隐私和安全性所设计的
 2. `File System Access API` 存在兼容性问题，并不是广泛支持的
+
+## 重写 JS 默认特性
+
+通过 Symbol.xxx 符号对对象默认特性进行重写，现在支持的特性如下：
+
+-   `Symbol.asyncIterator` 符号指定了一个对象的默认异步迭代器。如果一个对象设置了这个属性，它就是异步可迭代对象，可用于 for await...of 循环
+-   `Symbol.hasInstance` 符号用于判断某对象是否为某构造器的实例。因此你可以用它自定义 `instanceof` 操作符在某个类上的行为
+-   `Symbol.isConcatSpreadable` 符号用于配置某对象作为 `Array.prototype.concat()` 方法的参数时是否展开其数组元素
+-   `Symbol.iterator` 符号为每一个对象定义了默认的迭代器。该迭代器可以被 `for...of` 循环使用
+-   `Symbol.match` 符号指定了匹配的是正则表达式而不是字符串。`String.prototype.match()` 方法会调用此函数
+-   `Symbol.matchAll` 内置通用（well-known）符号指定方法返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 `String.prototype.matchAll()` 方法调用
+-   `Symbol.replace` 符号指定了当一个字符串替换所匹配字符串时所调用的方法。`String.prototype.replace()` 方法会调用此方法
+-   `Symbol.search` 符号指定了一个搜索方法，这个方法接受用户输入的正则表达式，返回该正则表达式在字符串中匹配到的下标，这个方法由以下的方法来调用 `String.prototype.search()`
+-   `Symbol.species` 符号是个函数值属性，其被构造函数用以创建派生对象
+-   `Symbol.split` 符号指向一个正则表达式的索引处分割字符串的方法。这个方法通过 `String.prototype.split()` 调用
+-   `Symbol.toPrimitive` 符号指定了一种接受首选类型并返回对象原始值的表示的方法。它被所有的强类型转换制算法优先调用
+-   `Symbol.toStringTag` 符号用于创建对象的默认字符串描述。它由 Object.prototype.toString() 方法内部访问
+-   `Symbol.unscopables` 符号指用于指定对象值，其对象自身和继承的从关联对象的 with 环境绑定中排除的属性名称
+
+MDN: [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator)
