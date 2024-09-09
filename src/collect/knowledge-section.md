@@ -439,3 +439,61 @@ user-select: none;
 BFF 是一种 Web 架构，全名为 Backends For Frontends，即为服务于前端的后端。简单来说 Node BFF 就是用 Node 做的中间层服务。更多请参考以下文章：
 
 [https://juejin.cn/post/7240404579133128760](https://juejin.cn/post/7240404579133128760)
+
+## 浏览器如何获取文件、文件夹信息
+
+主要通过 `input` 文件控件和 `File System Access API`。详细信息如下：
+
+1. **通过 `<input type="file" />` 允许用户从本地选择文件，获取其文件名、大小、类型等**
+
+```html
+<input type="file" id="fileInput" multiple />
+<script>
+    document.getElementById('fileInput').addEventListener('change', function (event) {
+        const files = event.target.files; // 获取用户选择的文件列表
+        for (let i = 0; i < files.length; i++) {
+            console.log('文件名: ' + files[i].name);
+            console.log('文件大小: ' + files[i].size);
+            console.log('文件类型: ' + files[i].type);
+        }
+    });
+</script>
+```
+
+2. **`File System Access API`：一种较新的 API，它允许 Web 应用程序访问用户的本地文件和文件夹，但这需要用户的明确授权**
+
+```js
+// 获取文件
+async function getFile() {
+    try {
+        const [fileHandle] = await window.showOpenFilePicker();
+        const file = await fileHandle.getFile();
+        console.log('文件名: ' + file.name);
+        console.log('文件大小: ' + file.size);
+        console.log('文件类型: ' + file.type);
+    } catch (error) {
+        console.error('文件选择被取消或出现错误:', error);
+    }
+}
+
+// 获取文件夹
+async function getFolder() {
+    try {
+        const folderHandle = await window.showDirectoryPicker();
+        for await (const [name, handle] of folderHandle) {
+            if (handle.kind === 'file') {
+                console.log('文件名: ' + name);
+            } else if (handle.kind === 'directory') {
+                console.log('文件夹名: ' + name);
+            }
+        }
+    } catch (error) {
+        console.error('文件夹选择被取消或出现错误:', error);
+    }
+}
+```
+
+总结：
+
+1. 无论是使用 `<input>` 还是 `File System Access API`，浏览器都无法在没有用户交互的情况下直接访问本地文件系统，这是为保护用户隐私和安全性所设计的
+2. `File System Access API` 存在兼容性问题，并不是广泛支持的
