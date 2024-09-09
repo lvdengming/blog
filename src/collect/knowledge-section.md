@@ -433,3 +433,9 @@ pointer-events: none;
 /* 禁止用户选择文本 */
 user-select: none;
 ```
+
+## 什么是 Node BFF？
+
+BFF 是一种 Web 架构，全名为 Backends For Frontends，即为服务于前端的后端。简单来说 Node BFF 就是用 Node 做的中间层服务。更多请参考以下文章：
+
+[https://juejin.cn/post/7240404579133128760](https://juejin.cn/post/7240404579133128760)

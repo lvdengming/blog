@@ -236,3 +236,28 @@ foo();
 在同步执行情况下，函数会等待内部执行结束才会出栈，因为递归不断调用自身，则会导致栈溢出
 
 在异步执行情况下，函数不会等待异步执行结束而直接结束自身，此时栈中一直只有一个函数上下文，不会导致栈溢出
+
+## DocumentFragment
+
+文档片段接口，表示一个没有父对象的最小文档对象。本身就和 document 对象一样，不过它不是真实 DOM，它的变化不会触发 DOM 树的重新渲染，且不会对性能产生影响
+
+> 这是一个性能优化特性，可用来批量操作 DOM
+
+基本使用：
+
+```js
+const list = document.querySelector('#list');
+const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
+
+const fragment = new DocumentFragment();
+
+fruits.forEach((fruit) => {
+    const li = document.createElement('li');
+    li.textContent = fruit;
+    fragment.appendChild(li);
+});
+
+list.appendChild(fragment);
+```
+
+MDN: [https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment](https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment)
