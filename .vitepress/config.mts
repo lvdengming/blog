@@ -404,6 +404,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: 'LazyMan',
                     link: 'lazy-man'
+                },
+                {
+                    text: '实现 add 方法',
+                    link: 'add'
                 }
             ]
         }
