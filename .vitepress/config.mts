@@ -381,6 +381,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '数据结构知识点',
                     link: 'data-structure'
+                },
+                {
+                    text: '网络知识点',
+                    link: 'network'
                 }
             ]
         },
