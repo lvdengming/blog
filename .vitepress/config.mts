@@ -394,6 +394,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 {
+                    text: 'css 手写',
+                    link: 'css'
+                },
+                {
                     text: '控制并发请求',
                     link: 'concurrent-request'
                 },

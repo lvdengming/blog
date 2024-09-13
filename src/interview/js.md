@@ -109,6 +109,199 @@ Timeout
 
 :::
 
+## 事件循环机制-场景题
+
+场景题一：
+
+:::details
+
+```js
+for (var i = 1; i <= 5; i++) {
+    setTimeout(function () {
+        console.log(i);
+    });
+}
+setTimeout(() => console.log('a'));
+console.log(100);
+new Promise(() => {
+    console.log(200);
+    setTimeout(() => console.log('b'));
+    throw new Error();
+})
+    .then(() => {
+        console.log(300);
+    })
+    .catch(() => {
+        console.log(400);
+    })
+    .then(() => {
+        console.log(600);
+    });
+
+// 打印结果（按照事件循环机制进行分组）：
+// 100
+// 200
+// 400
+// 600
+
+// 6
+
+// 6
+
+// 6
+
+// 6
+
+// 6
+
+// a
+
+// b
+```
+
+> 需要注意的是`Promise.prototype.then()、Promise.prototype.catch()`返回的都是`Promise`对象，故在`catch()`后面还可以使用`then()`
+> promise 所有实例方法在同一个微任务队列中
+
+:::
+
+**async/await** 存在时：await 之前的部分可以看成 new Promise 中的主体部分，属于主线程，await 之后的部分可以看成 then 的部分，属于微任务
+
+场景题二：
+
+:::details
+
+```js{3}
+async function async1() {
+    console.log('async1 start');
+    await async2(); // 这里值得注意，async2 中 await 之前仍然是主线程
+    console.log('async1 end');
+}
+async function async2() {
+    console.log('async2');
+}
+console.log('script start');
+setTimeout(() => console.log('setTimeout'), 0);
+async1();
+new Promise((resolve) => {
+    console.log('promise1');
+    resolve();
+}).then(() => {
+    console.log('promise2');
+});
+console.log('script end');
+
+// 打印结果（按照事件循环机制进行分组）：
+// script start
+// async1 start
+// async2
+// promise1
+// script end
+// async1 end
+// promise2
+
+// setTimeout
+```
+
+:::
+
+场景题三：
+
+:::details
+
+```js
+async1();
+setTimeout(() => {
+    console.log('1');
+    new Promise((resolve) => {
+        console.log('2');
+        resolve();
+    }).then(() => {
+        console.log('3');
+    });
+});
+new Promise((resolve) => {
+    console.log('4');
+    resolve();
+}).then(() => {
+    console.log('5');
+});
+async function async1() {
+    console.log('6');
+    await async2();
+    console.log('7');
+}
+async function async2() {
+    console.log('8');
+}
+setTimeout(() => {
+    console.log('9');
+    new Promise((resolve) => {
+        console.log('10');
+        resolve();
+    }).then(() => {
+        console.log('11');
+    });
+});
+console.log('12');
+
+// 打印结果（按照事件循环机制进行分组）：
+// 6
+// 8
+// 4
+// 12
+// 7
+// 5
+
+// 1
+// 2
+// 3
+
+// 9
+// 10
+// 11
+```
+
+:::
+
+Promise 回调函数内部 `resolve(xxx)` 之后，还会继续执行后续代码并且是主线程执行的同步任务，除非使用 `return resolve(xxx)`。promise 的所有实例方法都是微任务，会按照顺序一次性放到微任务队列中
+
+场景题四：
+
+:::details
+
+```js
+setTimeout(() => {
+    console.log(1);
+});
+new Promise((resolve) => {
+    console.log(2);
+    resolve();
+    console.log(3);
+})
+    .then(() => {
+        console.log(4);
+    })
+    .then(() => {
+        console.log(5);
+    })
+    .then(() => {
+        console.log(6);
+    });
+console.log(7);
+
+// 打印结果（按照事件循环机制进行分组）：
+// 2
+// 3
+// 7
+// 4
+// 5
+// 6
+
+// 1
+```
+
+:::
+
 ## 闭包是什么？有什么用？
 
 红宝书：闭包是引用了另一个函数作用域中变量的函数
