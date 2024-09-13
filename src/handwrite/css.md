@@ -2,7 +2,7 @@
 
 ## 布局场景题-1
 
-实现如下布局：
+实现以下布局：
 
 ![image.png](https://s2.loli.net/2024/09/13/yuI9Dl2MJOg5HSt.png)
 
@@ -72,8 +72,8 @@ grid 布局：
 
 注意：
 
-grid 布局有**容器宽度**、**grid 布局宽度**两个概念，`column-gap` 中的百分比是基于 grid 布局宽度计算的
+1. grid 布局有**容器宽度**、**grid 布局宽度**两个概念，<u>`column-gap` 中的百分比是基于 grid 布局宽度计算的</u>
 
-此处 `grid-template-columns` 属性值单位必须设置为 `fr`，使 grid 布局宽度和容器可用空间宽度保持一致，这样`column-gap` 属性值中的百分比才符合常识
+2. 当前案例 `grid-template-columns` 属性值单位必须设置为 `fr`，使 grid 布局宽度和容器可用空间宽度保持一致，这样`column-gap` 属性值中的百分比才符合常识
 
-> 设置 grid 布局后，每个格子都有自己的宽度，而不是格子内容元素的宽度
+> grid 布局中，每个格子的宽度、高度是由父元素（`grid-template-columns`、`grid-template-rows`）设置的，而不是由格子内容元素的宽度、高度决定
