@@ -394,7 +394,7 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 {
-                    text: 'css 手写',
+                    text: 'CSS 手写',
                     link: 'css'
                 },
                 {
