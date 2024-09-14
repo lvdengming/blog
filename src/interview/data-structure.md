@@ -42,6 +42,8 @@ nodeA.right = nodeD;
 
 ### 前序遍历（Pre-order Traversal）
 
+递归实现：
+
 ```ts
 function preOrderTraversal(root?: TreeNode): void {
     if (!root) {
@@ -54,7 +56,36 @@ function preOrderTraversal(root?: TreeNode): void {
 }
 ```
 
+非递归实现：
+
+```ts
+function preOrderTraversal(root?: TreeNode): void {
+    if (!root) {
+        return;
+    }
+
+    const stack: Array<TreeNode> = [root];
+    while (stack.length) {
+        const node = stack.pop();
+        if (!node) {
+            continue;
+        }
+
+        console.log(node.value);
+        // 确保先遍历左节点
+        if (node.right) {
+            stack.push(node.right);
+        }
+        if (node.left) {
+            stack.push(node.left);
+        }
+    }
+}
+```
+
 ### 中序遍历（In-order Traversal）
+
+递归实现：
 
 ```ts
 function inOrderTraversal(root?: TreeNode): void {
@@ -68,7 +99,33 @@ function inOrderTraversal(root?: TreeNode): void {
 }
 ```
 
+非递归实现：
+
+```ts
+function inOrderTraversal(root?: TreeNode): void {
+    if (!root) {
+        return;
+    }
+
+    const stack: Array<TreeNode> = [];
+    let current: TreeNode | undefined = root;
+    while (current || stack.length) {
+        while (current) {
+            stack.push(current);
+            current = current.left;
+        }
+
+        // current 遍历到底部了
+        current = stack.pop();
+        console.log(current?.value);
+        current = current?.right;
+    }
+}
+```
+
 ### 后序遍历（Post-order Traversal）
+
+递归实现：
 
 ```ts
 function postOrderTraversal(root?: TreeNode): void {
@@ -82,7 +139,39 @@ function postOrderTraversal(root?: TreeNode): void {
 }
 ```
 
+非递归实现：
+
+```ts
+function postOrderTraversal(root?: TreeNode): void {
+    if (!root) {
+        return;
+    }
+
+    const stack1: Array<TreeNode> = [root];
+    const stack2: Array<TreeNode> = [];
+    while (stack1.length) {
+        const node = stack1.pop();
+        stack2.push(node as TreeNode);
+
+        // 先左后右，确保右子树先处理
+        if (node?.left) {
+            stack1.push(node.left);
+        }
+        if (node?.right) {
+            stack1.push(node.right);
+        }
+    }
+
+    while (stack2.length) {
+        const node = stack2.pop();
+        console.log(node?.value);
+    }
+}
+```
+
 ### 层序遍历（Level-order Traversal）
+
+非递归实现：
 
 ```ts
 function levelOrderTraversal(root?: TreeNode): void {
