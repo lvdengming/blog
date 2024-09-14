@@ -103,3 +103,68 @@ css 布局方式有：
 5. grid 布局
 6. 表格布局（传统的通过 `table` 元素来进行的布局）
 7. 多列布局（column-count）
+
+## 前端主题切换方案
+
+### CSS 变量做法
+
+最简单、最实用、问题最少的方法
+
+```css
+/* 定义几套主题颜色方案 */
+/* 默认主题 */
+:root {
+    --common-bg-color-1: #c7ffdd;
+    --common-bg-color-2: #fbd988;
+    --common-text-color: #333;
+}
+
+/* 暗色主题 */
+html[data-theme='dark'] {
+    --common-bg-color-1: #102128;
+    --common-bg-color-2: #2d5567;
+    --common-text-color: #fff;
+}
+
+/* 其它主题... */
+html[data-theme='xxx'] {
+}
+```
+
+```js
+// 在 html 上设置 data-theme 属性值为 'dark'，'xxx'
+// 设置元素的 dataset.xxx 属性等价于设置元素 data-xxx 属性值
+// document.documentElement 返回文档的根元素（`<html>`）
+document.documentElement.dataset.theme = 'dark';
+```
+
+切换主题的本质就是切换主题变量的值
+
+### 使用 CSS 文件切换
+
+另一种简单的方法是根据主题选择不同的 CSS 文件
+
+步骤：
+
+1. 创建多个 CSS 文件，每个文件代表一个主题
+2. 根据用户选择，动态加载不同的 CSS 文件
+
+示例：
+
+```html
+<!-- 默认主题 -->
+<link id="theme-style" rel="stylesheet" href="light-theme.css" />
+```
+
+JS 切换主题：
+
+```javascript
+function switchTheme(theme) {
+    const themeStyle = document.getElementById('theme-style');
+    if (theme === 'dark') {
+        themeStyle.href = 'dark-theme.css';
+    } else {
+        themeStyle.href = 'light-theme.css';
+    }
+}
+```

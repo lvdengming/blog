@@ -107,3 +107,9 @@ function levelOrderTraversal(root?: TreeNode): void {
     }
 }
 ```
+
+### 特别说明
+
+二叉树的深度优先遍历指：前序遍历、中序遍历、后序遍历
+
+二叉树的广度优先遍历指：层序遍历
