@@ -454,3 +454,26 @@ list.appendChild(fragment);
 ```
 
 MDN: [https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment](https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment)
+
+## Map 和 Object 的区别
+
+1. 键的类型不同：`Map` 的键可以是**任意**类型；`Object` 的键只能是字符串或 `Symbol` 类型，其它类型的键会被自动转换为字符串
+2. 键的顺序不同：`Map` 保留了元素的插入顺序；`Object` 没有明确的键顺序，自 ES6 开始按照<u>整数键（按照升序）、字符串键（按照插入顺序）、Symbol 键（按照插入顺序）</u>
+3. 内置属性和方法不同：`Map` 有更多 api 方便操作，例如 `size`、`set()`、`get()` 等
+4. 属性变更的性能不同：`Map` 频繁添加、删除属性时更加高效
+
+总的来说：`Object` 适用于结构化的数据，`Map` 适用于需要频繁增删键值对、保持键值对插入顺序的场景
+
+> JS Map 是一种专为键值对存储设计的数据结构，底层基于哈希表（hash table）实现，在频繁增删键值对时性能更高
+> Object 由于键自动转换（非字符串、Symbol）、键的自动排序等原因，在频繁增删键值对时性能更低
+
+### 箭头函数与普通函数的区别
+
+1. 箭头函数语法更加简洁、清晰
+2. 箭头函数不会创建自己的`this`，它只会从自己的作用域链的上一层继承`this`
+3. 箭头函数继承而来的`this`指向永远不变
+4. `call`/`apply`/`bind`无法改变箭头函数中`this`的指向
+5. 箭头函数不能作为构造函数使用
+6. 箭头函数没有自己的`arguments`
+7. 箭头函数没有原型
+8. 箭头函数不能用作`Generator`函数，不能使用`yield`关键字
