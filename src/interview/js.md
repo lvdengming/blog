@@ -477,3 +477,13 @@ MDN: [https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment](https:/
 6. 箭头函数没有自己的`arguments`
 7. 箭头函数没有原型
 8. 箭头函数不能用作`Generator`函数，不能使用`yield`关键字
+
+## `for` 和 `forEach` 的区别
+
+1. 用途：`for` 可以遍历数组、字符串、对象，`forEach` 只能遍历数组
+2. 灵活性：`for` 可使用 `break`、`continue`， 非常灵活，可以中途退出；`forEach` 更加简洁，无法中途退出，**但可以抛出异常退出**
+3. 性能：`for` 通常更快，`forEach` 因为**回调函数的调用形式**可能较慢，尤其在大型数组
+4. 上下文：`for` 不支持，`forEach` 可通过第二个参数传递上下文
+5. 返回值：`for` 没有返回值，`forEach` 总是返回 `undefined`
+
+**选择建议**: 若需更灵活的控制或在遍历中使用 `break`、`continue`，选 `for`；若想要简洁代码且**只遍历**数组，选 `forEach`
