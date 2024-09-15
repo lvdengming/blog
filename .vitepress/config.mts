@@ -416,6 +416,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '实现 add 方法',
                     link: 'add'
+                },
+                {
+                    text: '实现 firstUniqueChar 方法',
+                    link: 'first-unique-char'
                 }
             ]
         }
