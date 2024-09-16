@@ -517,3 +517,53 @@ async function getFolder() {
 -   `Symbol.unscopables` 符号指用于指定对象值，其对象自身和继承的从关联对象的 with 环境绑定中排除的属性名称
 
 MDN: [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator)
+
+## 惰性函数（Lazy Function）
+
+在第一次调用时进行初始化，然后将自身替换为另一个函数，以后所有调用都直接使用新函数，避免重复的初始化操作
+
+> 这是一种优化性能的编程技巧
+
+示例代码：
+
+```js
+let lazyFunction = () => {
+    console.log('初始化操作');
+
+    lazyFunction = () => {
+        console.log('执行实际操作');
+    };
+
+    return lazyFunction();
+};
+
+// 第一次调用会执行初始化操作
+lazyFunction();
+
+// 后续调用，直接执行实际操作
+lazyFunction();
+lazyFunction();
+```
+
+实战代码（拷贝内容到剪切板）：
+
+```js
+function copyText(text) {
+    if (navigator.clipboard) {
+        copyText = (text) => {
+            navigator.clipboard.writeText(text);
+        };
+    } else {
+        copyText = (text) => {
+            const input = document.createElement('input');
+            input.setAttribute('value', text);
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+        };
+    }
+
+    copyText(text);
+}
+```
