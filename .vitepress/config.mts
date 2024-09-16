@@ -359,31 +359,31 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'question-2'
                 },
                 {
-                    text: 'JS 知识点',
+                    text: 'JS',
                     link: 'js'
                 },
                 {
-                    text: 'CSS 知识点',
+                    text: 'CSS',
                     link: 'css'
                 },
                 {
-                    text: 'Node 知识点',
+                    text: 'NodeJS',
                     link: 'node'
                 },
                 {
-                    text: '框架知识点',
+                    text: '前端框架',
                     link: 'framework'
                 },
                 {
-                    text: '工程化知识点',
+                    text: '前端工程化',
                     link: 'engineering'
                 },
                 {
-                    text: '数据结构知识点',
+                    text: '数据结构',
                     link: 'data-structure'
                 },
                 {
-                    text: '网络知识点',
+                    text: '计算机网络',
                     link: 'network'
                 }
             ]
