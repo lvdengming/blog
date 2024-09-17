@@ -567,3 +567,7 @@ function copyText(text) {
     copyText(text);
 }
 ```
+
+## 系统级别的取色器（EyeDropper）
+
+MDN: [https://developer.mozilla.org/zh-CN/docs/Web/API/EyeDropper](https://developer.mozilla.org/zh-CN/docs/Web/API/EyeDropper)
