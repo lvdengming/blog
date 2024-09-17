@@ -571,3 +571,10 @@ function copyText(text) {
 ## 系统级别的取色器（EyeDropper）
 
 MDN: [https://developer.mozilla.org/zh-CN/docs/Web/API/EyeDropper](https://developer.mozilla.org/zh-CN/docs/Web/API/EyeDropper)
+
+## toB 和 toC 分别代表什么含义？
+
+ToB（To Business）和 ToC（To Consumer）是两种不同的商业模式，分别针对不同的客户群体
+
+-   ToB：面向企业，交易额大，定制化强，销售周期长
+-   ToC：面向个人消费者，交易额小，标准化强，销售周期短
