@@ -379,12 +379,16 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'engineering'
                 },
                 {
-                    text: '数据结构',
-                    link: 'data-structure'
+                    text: '数据结构与算法',
+                    link: 'data-structure-algorithm'
                 },
                 {
                     text: '计算机网络',
                     link: 'network'
+                },
+                {
+                    text: '代码执行结果',
+                    link: 'code-result'
                 }
             ]
         },
