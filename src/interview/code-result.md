@@ -39,3 +39,20 @@ function b() {
 
 console.log(b()); // 30
 ```
+
+## this 指向
+
+### 题目-1
+
+```js
+window.color = 'red';
+var o = { color: 'blue' };
+function sayColor() {
+    console.log(this.color);
+}
+
+sayColor(); // red
+sayColor.call(this); // red
+sayColor.apply(window); // red
+sayColor.call(o); // blue
+```
