@@ -51,6 +51,7 @@
 -   前端权限控制（Permission API）：[https://developer.mozilla.org/zh-CN/docs/Web/API/Permissions_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Permissions_API)
 -   AST 语法学习工具 ast explorer：[https://astexplorer.net/](https://astexplorer.net/)
 -   package.json 中 browserslist 如何书写？官方文档：[https://browsersl.ist/](https://browsersl.ist/)
+-   基于 Rust 的前端构建工具 swc：[https://github.com/swc-project/swc](https://github.com/swc-project/swc)
 
 ## 工具
 
