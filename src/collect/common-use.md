@@ -92,6 +92,8 @@
 -   拦截网页广告 AdBlock 扩展程序：[https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom](https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom)
 -   个人 GPT 搭建（AutoGPT）：[https://github.com/Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
 -   通过文字描述创建视频的 AI（Sora）：[https://openai.com/index/sora/](https://openai.com/index/sora/)
+-   前端“幻灯片”样式展示：[https://github.com/hakimel/reveal.js](https://github.com/hakimel/reveal.js)
+-   前端首页高级效果 gsap：[https://github.com/greensock/GSAP](https://github.com/greensock/GSAP)
 
 ## NPM
 
