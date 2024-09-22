@@ -49,6 +49,8 @@
 -   前端安全认证（Web Authentication）：[https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Authentication_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Authentication_API)
 -   前端实时通信技术（直播）（Web RTC）：[https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API](https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API)
 -   前端权限控制（Permission API）：[https://developer.mozilla.org/zh-CN/docs/Web/API/Permissions_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Permissions_API)
+-   AST 语法学习工具 ast explorer：[https://astexplorer.net/](https://astexplorer.net/)
+-   package.json 中 browserslist 如何书写？官方文档：[https://browsersl.ist/](https://browsersl.ist/)
 
 ## 工具
 
