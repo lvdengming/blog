@@ -25,6 +25,8 @@ console.log(o.c); // undefined
 
 ## 函数作用域链
 
+函数作用域链是在函数定义时确定的
+
 ### 题目-1
 
 ```js
@@ -55,4 +57,25 @@ sayColor(); // red
 sayColor.call(this); // red
 sayColor.apply(window); // red
 sayColor.call(o); // blue
+```
+
+## 赋值运算
+
+赋值运算操作步骤：
+
+1. 定位：定位等号左边的内存地址
+2. 运算：运算等号右边的表达式
+3. 赋值：将等号右边表达式的值赋值给等号左边变量
+
+### 题目-1
+
+```js
+var a = { n: 1 };
+var b = a;
+a.x = a = { n: 2 };
+console.log(a.x);
+console.log(b.x);
+
+// undefined
+// {n: 2}
 ```
