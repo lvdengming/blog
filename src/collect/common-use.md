@@ -95,6 +95,7 @@
 -   通过文字描述创建视频的 AI（Sora）：[https://openai.com/index/sora/](https://openai.com/index/sora/)
 -   前端“幻灯片”样式展示：[https://github.com/hakimel/reveal.js](https://github.com/hakimel/reveal.js)
 -   前端首页高级效果 gsap：[https://github.com/greensock/GSAP](https://github.com/greensock/GSAP)
+-   AI 代码编辑器：[https://www.cursor.com/](https://www.cursor.com/)
 
 ## NPM
 
@@ -158,6 +159,17 @@
 -   ajv JSON schema 校验工具：[https://github.com/ajv-validator/ajv](https://github.com/ajv-validator/ajv)
 -   amimate.css css 动画汇总：[https://github.com/animate-css/animate.css](https://github.com/animate-css/animate.css)
 -   前端展示数据公式 MathML：[https://developer.mozilla.org/zh-CN/docs/Web/MathML](https://developer.mozilla.org/zh-CN/docs/Web/MathML)
+-   国际化方案（i18n）：
+    -   vue-i18n：[https://github.com/kazupon/vue-i18n](https://github.com/kazupon/vue-i18n)
+    -   react-i18next：[https://github.com/i18next/react-i18next](https://github.com/i18next/react-i18next)
+    -   ngx-translate：[https://github.com/ngx-translate/core](https://github.com/ngx-translate/core)
+-   非 CSS 动画方案：
+    -   lottie：[https://github.com/airbnb/lottie-web](https://github.com/airbnb/lottie-web)
+    -   svga：[https://github.com/svga/SVGAPlayer-Web-Lite](https://github.com/svga/SVGAPlayer-Web-Lite)
+    -   视频
+-   后端管理系统：
+    -   vue-element-plus-admin：[https://github.com/zxwk1998/vue-admin-better](https://github.com/zxwk1998/vue-admin-better)
+-   Algolia 搜索：[https://github.com/algolia/instantsearch](https://github.com/algolia/instantsearch)
 
 ## 技术概念
 

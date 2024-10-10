@@ -101,7 +101,7 @@ function nav(): DefaultTheme.NavItem[] {
         },
         {
             text: '面试',
-            link: '/interview/2024',
+            link: '/interview/question',
             activeMatch: getRegStr(interviewDirs)
         }
     ];
