@@ -12,14 +12,14 @@ function printTime(n) {
     const h = Math.floor(n / 3600) % 24;
     const format = (a) => (a < 10 ? `0${a}` : String(a));
 
-    return `剩余：${format(h)}:${format(m)}:${format(s)}`;
+    console.log(`剩余：${format(h)}:${format(m)}:${format(s)}`);
 }
 
 function countDown(n) {
     let cur = n;
 
     const timer = setInterval(() => {
-        print(cur--);
+        printTime(cur--);
 
         if (cur < 0) {
             clearInterval(timer);
