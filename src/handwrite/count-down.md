@@ -6,7 +6,7 @@
 // 100 剩余：00:01:39
 // 100 剩余：00:01:38
 // ...
-function printInfo(n) {
+function printTime(n) {
     const s = n % 60;
     const m = Math.floor(n / 60) % 60;
     const h = Math.floor(n / 3600) % 24;
@@ -15,7 +15,7 @@ function printInfo(n) {
     return `剩余：${format(h)}:${format(m)}:${format(s)}`;
 }
 
-function test(n) {
+function countDown(n) {
     let cur = n;
 
     const timer = setInterval(() => {
