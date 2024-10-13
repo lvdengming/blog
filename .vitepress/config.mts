@@ -424,6 +424,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '实现 firstUniqueChar 方法',
                     link: 'first-unique-char'
+                },
+                {
+                    text: '倒计时',
+                    link: 'count-down'
                 }
             ]
         }

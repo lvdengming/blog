@@ -42,6 +42,26 @@ function b() {
 console.log(b()); // 30
 ```
 
+### 题目-2
+
+```js
+function foo() {
+    console.log(a);
+}
+
+function bar() {
+    var a = 3;
+    console.log(this.a);
+    foo();
+}
+
+var a = 2;
+bar();
+
+// 2
+// 2
+```
+
 ## this 指向
 
 ### 题目-1
@@ -78,4 +98,28 @@ console.log(b.x);
 
 // undefined
 // {n: 2}
+```
+
+## 事件循环
+
+### 题目-1
+
+```js
+var pro = new Promise((res, rej) => {
+    res(1);
+});
+pro.then((res) => {
+    console.log(res);
+});
+console.log(2);
+pro.then((res) => {
+    console.log(res);
+}).then((res) => {
+    console.log(res);
+});
+
+// 2
+// 1
+// 1
+// undefined
 ```
