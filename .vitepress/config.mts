@@ -7,7 +7,7 @@ const pkg = require('../package.json');
 const devDirs: string[] = ['css', 'flutter', 'javascript', 'mini-program', 'nest', 'node'];
 const nonDevDirs: string[] = ['design', 'example', 'git', 'dev-ops'];
 const collectDirs: string[] = ['collect'];
-const interviewDirs: string[] = ['interview', 'handwrite'];
+const interviewDirs: string[] = ['interview', 'handwrite', 'data-structure-algorithm'];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -379,10 +379,6 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'engineering'
                 },
                 {
-                    text: '数据结构与算法',
-                    link: 'data-structure-algorithm'
-                },
-                {
                     text: '计算机网络',
                     link: 'network'
                 },
@@ -395,7 +391,7 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
         {
             text: 'Handwrite',
             base: '/handwrite/',
-            collapsed: false,
+            collapsed: true,
             items: [
                 {
                     text: 'CSS 手写',
@@ -428,6 +424,21 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '倒计时',
                     link: 'count-down'
+                }
+            ]
+        },
+        {
+            text: '数据结构与算法',
+            base: '/data-structure-algorithm/',
+            collapsed: true,
+            items: [
+                {
+                    text: '二叉树',
+                    link: 'binary-tree'
+                },
+                {
+                    text: '二分查找',
+                    link: 'binary-search'
                 }
             ]
         }
