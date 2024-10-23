@@ -437,6 +437,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'binary-tree'
                 },
                 {
+                    text: '二叉搜索树',
+                    link: 'binary-search-tree'
+                },
+                {
                     text: '二分查找',
                     link: 'binary-search'
                 }
