@@ -441,6 +441,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'binary-search-tree'
                 },
                 {
+                    text: '红黑树',
+                    link: 'red-black-tree'
+                },
+                {
                     text: '二分查找',
                     link: 'binary-search'
                 }
