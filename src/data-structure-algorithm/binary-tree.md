@@ -2,6 +2,24 @@
 
 ## 简介
 
+二叉树是一种非线性数据结构，代表“祖先”与“后代”之间的派生关系，体现了“一分为二”的分治逻辑。与链表类似，二叉树的基本单元是节点，每个节点包含值、左子节点引用和右子节点引用
+
+常见二叉树：
+
+-   二叉搜索树：每个节点的值大于其左子树中所有节点的值，并且小于其右子树中所有节点的值
+
+> 树的构建过与输入值的过程有关，极端情况下会降级成单链表，树的插入、删除、查找操作时间降为 O(n)，所以才有 AVL 树、红黑树的先后出现，就是为了保证树的插入、删除、查找操作时间复杂度为 O(log n)
+
+-   AVL 树：平衡二叉搜索树，左右子树高度差（平衡因子）最多为 1，插入、删除、查找操作时间复杂度为 O(log n)
+-   红黑树：平衡二叉搜索树，根据红黑树特性，插入、删除、查找操作时间复杂度为 O(log n)
+
+> 红黑树也是一种常见的平衡二叉搜索树。相较于 AVL 树，红黑树的平衡条件更宽松，插入与删除节点所需的旋转操作更少，节点增删操作的平均效率更高，故而 AVL 树更适合查找密集型场景，红黑树更适合频繁插入和删除的场景
+
+-   堆：一种特殊的完全二叉树，分为最大堆和最小堆。插入和删除操作的时间复杂度为 O(log n)，查找最大值或最小值的时间复杂度为 O(1)，常用于实现优先队列，支持快速的最大值或最小值获取
+-   B 树：一种自平衡的多路搜索树，通常用于数据库和文件系统
+
+## 二叉树遍历
+
 遍历方式有：
 
 1. 前序遍历：根节点 -> 左子树 -> 右子树
@@ -40,7 +58,7 @@ nodeA.left = nodeC;
 nodeA.right = nodeD;
 ```
 
-## 前序遍历（Pre-order Traversal）
+### 前序遍历（Pre-order Traversal）
 
 递归实现：
 
@@ -83,7 +101,7 @@ function preOrderTraversal(root?: TreeNode): void {
 }
 ```
 
-## 中序遍历（In-order Traversal）
+### 中序遍历（In-order Traversal）
 
 递归实现：
 
@@ -123,7 +141,7 @@ function inOrderTraversal(root?: TreeNode): void {
 }
 ```
 
-## 后序遍历（Post-order Traversal）
+### 后序遍历（Post-order Traversal）
 
 递归实现：
 
@@ -169,7 +187,7 @@ function postOrderTraversal(root?: TreeNode): void {
 }
 ```
 
-## 层序遍历（Level-order Traversal）
+### 层序遍历（Level-order Traversal）
 
 非递归实现：
 
@@ -197,7 +215,7 @@ function levelOrderTraversal(root?: TreeNode): void {
 }
 ```
 
-## 特别说明
+### 特别说明
 
 二叉树的深度优先遍历指：前序遍历、中序遍历、后序遍历
 
