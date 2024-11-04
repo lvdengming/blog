@@ -445,6 +445,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                     link: 'red-black-tree'
                 },
                 {
+                    text: '堆',
+                    link: 'heap'
+                },
+                {
                     text: '二分查找',
                     link: 'binary-search'
                 }
