@@ -451,6 +451,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '二分查找',
                     link: 'binary-search'
+                },
+                {
+                    text: '堆排序',
+                    link: 'heap-sort'
                 }
             ]
         }
