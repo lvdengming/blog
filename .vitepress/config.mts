@@ -175,6 +175,10 @@ function sidebarDev(): DefaultTheme.SidebarItem[] {
                 {
                     text: '前端埋点方案',
                     link: 'tracing'
+                },
+                {
+                    text: 'JSONP',
+                    link: 'jsonp'
                 }
             ]
         },
