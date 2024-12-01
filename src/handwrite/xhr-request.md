@@ -1,4 +1,4 @@
-## 使用 XHR 进行网络请求
+# 使用 XHR 进行网络请求
 
 ```js
 const xhr = new XMLHttpRequest();
