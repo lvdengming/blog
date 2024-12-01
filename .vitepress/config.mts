@@ -425,6 +425,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '手写 Promise（同步版本）',
                     link: 'promise-sync'
+                },
+                {
+                    text: '手写 Promise（异步版本）',
+                    link: 'promise-async'
                 }
             ]
         },
