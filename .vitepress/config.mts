@@ -421,6 +421,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '双栈模拟队列',
                     link: 'dual-stack-analog-queue'
+                },
+                {
+                    text: '手写 Promise（同步版本）',
+                    link: 'promise-sync'
                 }
             ]
         },
