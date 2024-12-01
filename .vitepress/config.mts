@@ -417,6 +417,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '倒计时',
                     link: 'count-down'
+                },
+                {
+                    text: '双栈模拟队列',
+                    link: 'dual-stack-analog-queue'
                 }
             ]
         },
