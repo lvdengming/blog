@@ -7,7 +7,7 @@ const pkg = require('../package.json');
 const devDirs: string[] = ['css', 'flutter', 'javascript', 'mini-program', 'nest', 'node'];
 const nonDevDirs: string[] = ['design', 'example', 'git', 'dev-ops'];
 const collectDirs: string[] = ['collect'];
-const interviewDirs: string[] = ['interview', 'handwrite', 'data-structure-algorithm'];
+const interviewDirs: string[] = ['interview', 'handwrite', 'data-structure-algorithm', 'leet-code'];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -448,6 +448,29 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '堆排序',
                     link: 'heap-sort'
+                }
+            ]
+        },
+        {
+            text: '力扣',
+            base: '/leet-code/',
+            collapsed: true,
+            items: [
+                {
+                    text: '基础',
+                    link: 'base'
+                },
+                {
+                    text: '题目分类',
+                    link: 'classify'
+                },
+                {
+                    text: 'TOP 100',
+                    link: 'top-100'
+                },
+                {
+                    text: '题库',
+                    link: 'problem-list'
                 }
             ]
         }
