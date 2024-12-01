@@ -240,21 +240,6 @@ function sidebarNonDev(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
-            text: 'Example',
-            base: '/example/',
-            collapsed: false,
-            items: [
-                {
-                    text: 'Markdown Extension Examples',
-                    link: 'markdown-examples'
-                },
-                {
-                    text: 'Runtime API Examples',
-                    link: 'api-examples'
-                }
-            ]
-        },
-        {
             text: 'Git',
             base: '/git/',
             collapsed: false,
@@ -262,6 +247,10 @@ function sidebarNonDev(): DefaultTheme.SidebarItem[] {
                 {
                     text: '连接远程仓库',
                     link: 'connect-remote-repo'
+                },
+                {
+                    text: 'commit type 说明',
+                    link: 'commit-type'
                 }
             ]
         },
