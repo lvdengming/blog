@@ -22,6 +22,107 @@ function swapPairs(head: ListNode | null): ListNode | null {
 }
 ```
 
+## [121. 买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/)
+
+**暴力解法**
+
+-   时间复杂度：O(n^2)
+-   空间复杂度：O(1)
+-   循环次数：n(n - 1) / 2
+
+```ts
+function maxProfit(prices: number[]): number {
+    let max = 0;
+    for (let i = 0; i < prices.length - 1; i++) {
+        for (let j = i + 1; j < prices.length; j++) {
+            const profit = prices[j] - prices[i];
+            if (profit > max) {
+                max = profit;
+            }
+        }
+    }
+
+    return max;
+}
+```
+
+**一次遍历**
+
+调整思路，每天计算当前收益，一次遍历
+
+-   时间复杂度：O(n^2)
+-   空间复杂度：O(1)
+
+```ts
+function maxProfit(prices: number[]): number {
+    let minPrice = Number.MAX_SAFE_INTEGER;
+    let maxProfit = 0;
+    for (let i = 0; i < prices.length; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i];
+        } else if (prices[i] - minPrice > maxProfit) {
+            maxProfit = prices[i] - minPrice;
+        }
+    }
+
+    return maxProfit;
+}
+```
+
+## [122. 买卖股票的最佳时机 II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/description/)
+
+**动态规划**
+
+时间复杂度：O(n)
+
+空间复杂度：O(n)
+
+状态：`dp[i][0]`表示第 i 天不持有股票的收益，`dp[i][1]`表示第 i 天持有股票的收益
+状态转移方程：
+
+-   `dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i])`
+-   `dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i])`
+
+```ts
+function maxProfit(prices: number[]): number {
+    const n = prices.length;
+    const dp: number[][] = new Array(n).fill(0).map(() => new Array(2).fill(0));
+    dp[0][0] = 0;
+    dp[0][1] = -prices[0];
+
+    for (let i = 1; i < n; i++) {
+        dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
+        dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
+    }
+
+    return dp[n - 1][0];
+}
+```
+
+**动态规划-优化**
+
+时间复杂度：O(n)
+
+空间复杂度：O(1)
+
+观察发现：每一天的状态只与前一天的状态有关，而与更早的状态无关
+
+```ts
+function maxProfit(prices: number[]): number {
+    let dp0 = 0;
+    let dp1 = -prices[0];
+
+    for (let i = 1; i < prices.length; i++) {
+        const temp0 = Math.max(dp0, dp1 + prices[i]);
+        const temp1 = Math.max(dp1, dp0 - prices[i]);
+        dp0 = temp0;
+        dp1 = temp1;
+    }
+
+    return dp0;
+}
+```
+
 ## [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
 
 思路：通过变量，一遍过
