@@ -429,6 +429,14 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '手写 Promise（异步版本）',
                     link: 'promise-async'
+                },
+                {
+                    text: '手写 Promise（完整版）',
+                    link: 'promise'
+                },
+                {
+                    text: '使用 XHR 进行网络请求',
+                    link: 'xhr-request'
                 }
             ]
         },
