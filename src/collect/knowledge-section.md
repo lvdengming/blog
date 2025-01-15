@@ -603,3 +603,16 @@ p {
 ```
 
 :::
+
+## 元素进入全屏模式（`requestFullscreen()` 方法）
+
+要点：
+
+1. 使用 `el.requestFullscreen()` 方法发出**异步请求**使元素进入全屏模式
+2. 使用 `document.fullscreenElement` 属性来判断是否有元素已经进入全屏模式
+3. 使用 `document.exitFullscreen()` 方法禁用全屏模式
+4. 进入全屏模式必须通过用户行为，例如**点击**，直接使用代码不会生效
+
+> `requestFullscreen()` 返回 `Promise<void>`，如果进入全屏模式失败，可通过 Promise 实例的 catch 方法进行捕获
+
+参考：[https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullscreen](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullscreen)
