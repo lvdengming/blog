@@ -322,10 +322,6 @@ function sidebarCollect(): DefaultTheme.SidebarItem[] {
                 {
                     text: '知识点',
                     link: 'knowledge-section'
-                },
-                {
-                    text: '算法题',
-                    link: 'leet-code'
                 }
             ]
         }
