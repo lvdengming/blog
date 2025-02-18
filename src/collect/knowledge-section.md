@@ -616,3 +616,19 @@ p {
 > `requestFullscreen()` 返回 `Promise<void>`，如果进入全屏模式失败，可通过 Promise 实例的 catch 方法进行捕获
 
 参考：[https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullscreen](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullscreen)
+
+## Base64 编码
+
+Base64 是为了避免数据传输过程中乱码的情况，是基于**64**个可打印字符来表示二进制数据的一种方法
+
+> 64 个字符分别是：A-Z, a-z, 0-9, +, /
+>
+> 其中等号是空白占位符
+
+参考：
+
+-   [一篇文章彻底弄懂 Base64 编码原理](https://blog.csdn.net/wo541075754/article/details/81734770)
+-   [window.atob()](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/atob): 将 Base64 编码的字符串进行**解码**
+-   [window.btoa()](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/btoa): 将二进制字符串编码为 Base64 编码的 ASCII 字符串
+
+> atob 理解：ASCII to Binary，即将 ASCII 字符串还原成二进制字符串（解码），btoa 则相反
