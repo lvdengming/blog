@@ -632,3 +632,23 @@ Base64 是为了避免数据传输过程中乱码的情况，是基于**64**个�
 -   [window.btoa()](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/btoa): 将二进制字符串编码为 Base64 编码的 ASCII 字符串
 
 > atob 理解：ASCII to Binary，即将 ASCII 字符串还原成二进制字符串（解码），btoa 则相反
+
+## 正则命名捕获组
+
+使用 `(?<name>)` 这样的形式对组进行命名，在 `match` 方法返回结果通过 `res.groups.name` 拿到匹配结果。例如：
+
+```js
+// 通过命名捕获组获取年月日
+const groups = '2024-02-24'.match(/(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/).groups;
+console.log(groups); // {year: '2024', month: '02', day: '24'}
+```
+
+更多：[https://www.cnblogs.com/ziyunfei/p/6761413.html](https://www.cnblogs.com/ziyunfei/p/6761413.html)
+
+## 正则安全性（ReDoS）
+
+主要存在的问题是嵌套量词，例如 `(a+)+`。工具网站：
+
+-   [regex 101](https://regex101.com/)
+-   [正则可视化工具](<https://www.jyshare.com/front-end/7625/#!flags=&re=(a%2B)%2B>)
+-   [ReDoS Checker](https://devina.io/redos-checker)
