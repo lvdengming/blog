@@ -652,3 +652,37 @@ console.log(groups); // {year: '2024', month: '02', day: '24'}
 -   [regex 101](https://regex101.com/)
 -   [正则可视化工具](<https://www.jyshare.com/front-end/7625/#!flags=&re=(a%2B)%2B>)
 -   [ReDoS Checker](https://devina.io/redos-checker)
+
+## 记录代码运行时间（`console.time`, `console.timeEnd`）
+
+```js
+console.time('run');
+
+for (let i = 0; i < 1000_000; i++) {}
+
+console.timeEnd('run');
+
+// run: 1.464111328125 ms
+```
+
+> 注意 `console.time()`, `console.timeEnd()` 方法传递的 label 必须一致才能停止计时器
+
+相关链接：
+
+-   `console.time()`: [https://developer.mozilla.org/zh-CN/docs/Web/API/console/time_static](https://developer.mozilla.org/zh-CN/docs/Web/API/console/time_static)
+-   `console.timeEnd()`: [https://developer.mozilla.org/zh-CN/docs/Web/API/console/timeEnd_static](https://developer.mozilla.org/zh-CN/docs/Web/API/console/timeEnd_static)
+
+## 关闭标签页（页面信息未保存提示）
+
+通过 `window.beforeunload` 事件进行处理。
+
+目前绝大部分浏览器不支持设置提示信息内容（`returnValue`），为兼容性处理还是需要为其设置值
+
+```js
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault();
+    event.returnValue = '';
+});
+```
+
+更多：[https://developer.mozilla.org/zh-CN/docs/Web/API/Window/beforeunload_event](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/beforeunload_event)
