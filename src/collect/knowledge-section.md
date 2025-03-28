@@ -686,3 +686,23 @@ window.addEventListener('beforeunload', (event) => {
 ```
 
 更多：[https://developer.mozilla.org/zh-CN/docs/Web/API/Window/beforeunload_event](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/beforeunload_event)
+
+## 拦截用户点击链接跳转
+
+核心代码：
+
+```js
+document.addEventListener('click', function (e) {
+    const target = e.target.closest('a');
+    if (target && confirm('确认跳转？')) {
+        e.preventDefault();
+        // 手动处理跳转逻辑（如记录或异步操作）
+    }
+});
+```
+
+此处仅展示了用户点击链接跳转，页面链接跳转还有 `location`, `window.open()`, `history api` 等等，这些都需要额外进行处理
+
+参考：
+
+-   [Element.closest()](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/closest)
