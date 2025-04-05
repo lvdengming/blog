@@ -701,6 +701,8 @@ document.addEventListener('click', function (e) {
 });
 ```
 
+参考示例：[https://lvdengming.github.io/demo/#/link-interceptor](https://lvdengming.github.io/demo/#/link-interceptor)
+
 此处仅展示了用户点击链接跳转，页面链接跳转还有 `location`, `window.open()`, `history api` 等等，这些都需要额外进行处理
 
 参考：
