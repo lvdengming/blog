@@ -708,3 +708,13 @@ document.addEventListener('click', function (e) {
 参考：
 
 -   [Element.closest()](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/closest)
+
+## express 实现接口转发
+
+通常通过 `http-proxy-middleware` 三方库进行实现
+
+参考案例：[api-proxy](https://github.com/lvdengming/case-collection/tree/master/src/api-proxy)
+
+参考文档：
+
+-   [https://github.com/chimurai/http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
