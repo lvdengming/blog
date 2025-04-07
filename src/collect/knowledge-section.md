@@ -718,3 +718,12 @@ document.addEventListener('click', function (e) {
 参考文档：
 
 -   [https://github.com/chimurai/http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
+
+## 监听浏览器切换标签页、最小化窗口
+
+通过 `document` 的 `visibilitychange` 进行监听，通过 `document.hidden`、`document.visibilityState` 查看页面状态
+
+参考：
+
+-   [https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event)
+-   [https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilityState](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilityState)

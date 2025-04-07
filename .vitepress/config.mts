@@ -374,6 +374,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
                 {
                     text: '代码执行结果',
                     link: 'code-result'
+                },
+                {
+                    text: '问题收藏',
+                    link: 'collection'
                 }
             ]
         },
