@@ -14,6 +14,6 @@
 2. 修改定时器回调函数，每次执行函数时修正定时器
 3. 使用 `web worker`(worker 中的定时器不受切换标签、最小化窗口影响)
 
-手撕代码：[待补充]()
+手撕代码：[interview/setTimeout](https://github.com/lvdengming/case-collection/tree/master/src/interview/setTimeout)
 
 参考：[https://juejin.cn/post/7478687361737768986](https://juejin.cn/post/7478687361737768986)
