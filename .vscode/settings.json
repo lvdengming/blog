@@ -1,3 +1,13 @@
 {
-    "cSpell.words": ["beforeunload", "visibilitychange"]
+    "cSpell.words": ["beforeunload", "visibilitychange"],
+    "fileheader.configObj": {
+        "autoAdd": true,
+        "prohibitAutoAdd": ["json"]
+    },
+    "fileheader.customMade": {
+        "Author": "git config user.email",
+        "Date": "Do not edit",
+        "LastEditors": "git config user.email",
+        "LastEditTime": "Do not edit"
+    }
 }
