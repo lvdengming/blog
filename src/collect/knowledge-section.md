@@ -727,3 +727,15 @@ document.addEventListener('click', function (e) {
 
 -   [https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilitychange_event)
 -   [https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilityState](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilityState)
+
+## git 查看两次提交的文件变更
+
+```sh
+# 查看两次提交的文件变更
+git diff --name-only HEAD~1 HEAD
+
+# 查看两次提交的新增文件
+git diff --name-only --diff-filter=A HEAD~1 HEAD
+
+# diff-filter 选项：Added (A), Copied (C), Deleted (D), Modified (M), Renamed (R)
+```
