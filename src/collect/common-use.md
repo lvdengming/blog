@@ -170,6 +170,10 @@
 -   后端管理系统：
     -   vue-element-plus-admin：[https://github.com/zxwk1998/vue-admin-better](https://github.com/zxwk1998/vue-admin-better)
 -   Algolia 搜索：[https://github.com/algolia/instantsearch](https://github.com/algolia/instantsearch)
+-   拼写检查（cSpell）：[https://cspell.org/](https://cspell.org/)
+-   代码着色（highlight.js）：[https://highlightjs.org/](https://highlightjs.org/)
+-   代码平台编排系统（interact.js）：[https://interactjs.io/](https://interactjs.io/)
+-   GSAP 动画库（官网做炫酷的动画效果）：[https://gsap.com/](https://gsap.com/)
 
 ## 技术概念
 
