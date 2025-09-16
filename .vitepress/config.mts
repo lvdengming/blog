@@ -335,10 +335,10 @@ function sidebarInterview(): DefaultTheme.SidebarItem[] {
             base: '/interview/',
             collapsed: false,
             items: [
-                // {
-                //     text: '2024-面试记录',
-                //     link: '2024'
-                // },
+                {
+                    text: '2024-面试记录',
+                    link: '2024'
+                },
                 {
                     text: '面试知识点（一）',
                     link: 'question'
