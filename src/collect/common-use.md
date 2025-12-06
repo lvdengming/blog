@@ -53,6 +53,7 @@
 -   package.json 中 browserslist 如何书写？官方文档：[https://browsersl.ist/](https://browsersl.ist/)
 -   基于 Rust 的前端构建工具 swc：[https://github.com/swc-project/swc](https://github.com/swc-project/swc)
 -   印记中文：[https://docschina.org/](https://docschina.org/)
+-   ThreeJs 学习：[https://discoverthreejs.com/zh/book/introduction/](https://discoverthreejs.com/zh/book/introduction/)
 
 ## 工具
 
