@@ -68,7 +68,7 @@ export default defineConfig({
         },
         footer: {
             message: '基于 MIT 许可发布',
-            copyright: `版权所有 © 2017-${new Date().getFullYear()} 吕登名`
+            copyright: `版权所有 © 2017-${new Date().getFullYear()} lvdengming@foxmail.com`
         }
     }
 });
