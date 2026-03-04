@@ -294,6 +294,10 @@ function sidebarNonDev(): DefaultTheme.SidebarItem[] {
                 {
                     text: '部署 SSL 服务',
                     link: 'use-ssl'
+                },
+                {
+                    text: 'nginx 相关',
+                    link: 'nginx'
                 }
             ]
         }

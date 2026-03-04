@@ -54,6 +54,7 @@
 -   基于 Rust 的前端构建工具 swc：[https://github.com/swc-project/swc](https://github.com/swc-project/swc)
 -   印记中文：[https://docschina.org/](https://docschina.org/)
 -   ThreeJs 学习：[https://discoverthreejs.com/zh/book/introduction/](https://discoverthreejs.com/zh/book/introduction/)
+-   amandakelake 个人博客（前端面试）：[https://github.com/amandakelake/blog](https://github.com/amandakelake/blog)
 
 ## 工具
 
