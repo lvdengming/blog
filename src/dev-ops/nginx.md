@@ -2,7 +2,7 @@
  * @Author: lvdengming@foxmail.com
  * @Date: 2026-03-05 05:11:10
  * @LastEditors: lvdengming@foxmail.com
- * @LastEditTime: 2026-03-05 06:09:52
+ * @LastEditTime: 2026-03-05 23:00:40
 -->
 
 # nginx 相关
@@ -101,7 +101,7 @@ location / {
   # http 1.0 兼容的 Cache-Control
   add_header Pragma "no-cache";
   # expires 指令可以同时设置 Cache-Control 和 Expires
-  expires off;
+  expires 0;
 }
 
 # 为资源文件配置缓存，优先级更高
