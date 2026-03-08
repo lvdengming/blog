@@ -298,6 +298,10 @@ function sidebarNonDev(): DefaultTheme.SidebarItem[] {
                 {
                     text: 'nginx 相关',
                     link: 'nginx'
+                },
+                {
+                    text: 'linux 常用命令',
+                    link: 'linux'
                 }
             ]
         }
