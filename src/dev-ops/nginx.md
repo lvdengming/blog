@@ -2,7 +2,7 @@
  * @Author: lvdengming@foxmail.com
  * @Date: 2026-03-05 05:11:10
  * @LastEditors: lvdengming@foxmail.com
- * @LastEditTime: 2026-03-09 23:40:42
+ * @LastEditTime: 2026-03-10 01:53:33
 -->
 
 # nginx 相关
@@ -116,6 +116,22 @@ location ~* \.(?:css|js|jpg|jpeg|png|svg|gif|ico|gif|woff|woff2|ttf|eot)$ {
   expires 1y;
   add_header Cache-Control "public, immutable";
   access_log off;
+}
+```
+
+### 微前端配置
+
+> [!TIP]
+> 主应用会加载微应用资源，所以微应用部署需要配置跨域 Header
+
+```nginx
+location xxx {
+  // others...
+
+  # 设置跨域
+  add_header Access-Control-Allow-Origin "main_app_origin";
+  add_header Access-Control-Allow-Methods "GET";
+  add_header Access-Control-Allow-Headers "*";
 }
 ```
 
