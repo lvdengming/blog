@@ -2,7 +2,7 @@
  * @Author: lvdengming@foxmail.com
  * @Date: 2026-03-05 05:11:10
  * @LastEditors: lvdengming@foxmail.com
- * @LastEditTime: 2026-03-05 23:00:40
+ * @LastEditTime: 2026-03-09 23:40:42
 -->
 
 # nginx 相关
@@ -14,6 +14,9 @@
 ## 常用命令
 
 ```sh
+# 启动 nginx
+sudo systemctl start nginx
+
 # 验证配置是否正确
 nginx -t
 
