@@ -176,6 +176,7 @@
 -   代码着色（highlight.js）：[https://highlightjs.org/](https://highlightjs.org/)
 -   代码平台编排系统（interact.js）：[https://interactjs.io/](https://interactjs.io/)
 -   GSAP 动画库（官网做炫酷的动画效果）：[https://gsap.com/](https://gsap.com/)
+-   node 文件匹配模块（glob，例如 angular.json 配置）：[https://github.com/isaacs/node-glob](https://github.com/isaacs/node-glob)
 
 ## 技术概念
 
