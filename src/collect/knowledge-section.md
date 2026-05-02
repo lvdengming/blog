@@ -739,3 +739,23 @@ git diff --name-only --diff-filter=A HEAD~1 HEAD
 
 # diff-filter 选项：Added (A), Copied (C), Deleted (D), Modified (M), Renamed (R)
 ```
+
+## npm 查看三方库的信息
+
+```sh
+# 查看三方库的可用版本
+npm view eslint versions
+
+# 查看三方库的 dependencies
+npm view eslint dependencies
+
+# 查看三方库的 devDependencies
+npm view eslint devDependencies
+
+# 查看三方库的其它信息
+npm view eslint scripts
+```
+
+通过 `npm view eslint xxx`可以查看三方库中 package.json 所有信息
+
+> 通过这种方式 + 自定义 JS 脚本，可以统一设置代码仓的依赖信息
