@@ -98,6 +98,7 @@
 -   前端“幻灯片”样式展示：[https://github.com/hakimel/reveal.js](https://github.com/hakimel/reveal.js)
 -   前端首页高级效果 gsap：[https://github.com/greensock/GSAP](https://github.com/greensock/GSAP)
 -   AI 代码编辑器：[https://www.cursor.com/](https://www.cursor.com/)
+-   在线免费使用的 api mock 接口，支持自定义数据格式：[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
 
 ## NPM
 
