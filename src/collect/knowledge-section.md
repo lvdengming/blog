@@ -770,3 +770,4 @@ npm view eslint scripts
 
 > 注意：`npm view xxx` 查看的是远程 npm 注册表
 > 查看本地信息使用 `npm view . xxx` 或者 `npm list` 命令
+> 更多可参考：[https://chat.deepseek.com/share/5qqriehzrqvmvjnoi1](https://chat.deepseek.com/share/5qqriehzrqvmvjnoi1)
