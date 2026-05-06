@@ -743,6 +743,12 @@ git diff --name-only --diff-filter=A HEAD~1 HEAD
 ## npm 查看三方库的信息
 
 ```sh
+# 查看三方库信息（方便人阅读）
+npm view eslint
+
+# 查看三方库信息（方便代码阅读）
+npm view eslint --json
+
 # 查看三方库的可用版本
 npm view eslint versions
 
@@ -754,8 +760,13 @@ npm view eslint devDependencies
 
 # 查看三方库的其它信息
 npm view eslint scripts
+
+
 ```
 
 通过 `npm view eslint xxx`可以查看三方库中 package.json 所有信息
 
 > 通过这种方式 + 自定义 JS 脚本，可以统一设置代码仓的依赖信息
+
+> 注意：`npm view xxx` 查看的是远程 npm 注册表
+> 查看本地信息使用 `npm view . xxx` 或者 `npm list` 命令
