@@ -760,8 +760,6 @@ npm view eslint devDependencies
 
 # 查看三方库的其它信息
 npm view eslint scripts
-
-
 ```
 
 通过 `npm view eslint xxx`可以查看三方库中 package.json 所有信息
