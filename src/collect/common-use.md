@@ -56,6 +56,7 @@
 -   ThreeJs 学习：[https://discoverthreejs.com/zh/book/introduction/](https://discoverthreejs.com/zh/book/introduction/)
 -   amandakelake 个人博客（前端面试）：[https://github.com/amandakelake/blog](https://github.com/amandakelake/blog)
 -   Fiddler 使用教程（瘦瘦摇）：[https://blog.csdn.net/weixin_44330336/article/details/125522082](https://blog.csdn.net/weixin_44330336/article/details/125522082)
+-   SSO 单点登录详解（JavaGuide）：[https://javaguide.cn/system-design/security/sso-intro.html](https://javaguide.cn/system-design/security/sso-intro.html)
 
 ## 工具
 
