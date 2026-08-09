@@ -101,6 +101,8 @@
 -   前端首页高级效果 gsap：[https://github.com/greensock/GSAP](https://github.com/greensock/GSAP)
 -   AI 代码编辑器：[https://www.cursor.com/](https://www.cursor.com/)
 -   在线免费使用的 api mock 接口，支持自定义数据格式：[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
+-   Apifox 一站式接口调试工具：[https://apifox.com/](https://apifox.com/)
+-   Postman 接口调试工具：[https://www.postman.com/](https://www.postman.com/)
 
 ## NPM
 
