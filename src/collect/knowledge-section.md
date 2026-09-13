@@ -769,3 +769,9 @@ npm view eslint scripts
 > 注意：`npm view xxx` 查看的是远程 npm 注册表
 > 查看本地信息使用 `npm view . xxx` 或者 `npm list` 命令
 > 更多可参考：[https://chat.deepseek.com/share/5qqriehzrqvmvjnoi1](https://chat.deepseek.com/share/5qqriehzrqvmvjnoi1)
+
+## web 吊起系统应用程序
+
+基本原理：各 APP 通过添加注册表的方式，注册自定义协议
+
+浏览器在访问自定义协议链接时，不处理，上报给操作系统，从而开发对应的应用程序
